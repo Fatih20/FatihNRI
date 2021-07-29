@@ -1,0 +1,54 @@
+@media (max-width: 1750px){
+	.elementary-icon {
+		margin: 0px
+	}
+	.xournalpp {
+		margin-right: 30px;
+	}
+	.projects {
+		width: 750px;
+	}
+
+@media (max-width: 865px){
+	.projects {
+		width: 360px;
+	}
+	.experiences {
+		width: 360px;
+	}
+	.banner h1 {
+		padding: 0px 30px;
+	}
+	
+	
+}
+
+@media (max-width: 670px){
+	.hf-container {
+		margin: 0px;
+	}
+	
+	header {
+		padding: 0px;
+		text-align: center;
+	}
+	
+	.footer {
+		text-align: center;
+	}
+}
+
+@media (max-width: 645px){
+	.banner h1 {
+		font-size: 40px;
+	}
+	.educations {
+		width: 260px;
+	}
+}
+
+@media (max-width: 575px){
+	.ospc {
+		width: 300px;
+	}
+}
