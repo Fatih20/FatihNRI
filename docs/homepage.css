@@ -1,0 +1,204 @@
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: #273445ff;
+	position: fixed;
+	z-index: 10;
+	padding: 0px 0px 0px 20px;
+}
+
+.hf-container {
+	display: inline-block;
+	line-height: 50px;
+	/*border: solid 1px white;*/
+}
+
+.margined-link {
+	margin-right: 20px;
+}
+
+.hf-container a {
+	display: inline-block;
+	color: #b1bbc1ff;
+}
+
+.link-header:hover {
+	color: white;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.banner {
+	font-family: serif;
+	color: white;
+	background-color: black;
+	padding: 100px 0px;
+	text-align: center;
+}
+
+.banner h1 {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+.main {
+	padding-top: 30px;
+	background-color: #f2f2f2ff;
+}
+.section {
+	padding: 15px 0px;
+	text-align: center;
+}
+
+.st-container {
+	display: block;
+	margin-bottom: 20px;
+	/*border: solid 1px black;*/
+}
+
+.about {
+	display: block;
+	margin: 0 auto;
+}
+
+.section-title {
+	display: inline;
+}
+
+.st-container-2 {
+	display: inline-block;
+	border-bottom: solid 1px #abacaeff;
+	padding-bottom: 5px;
+}
+
+.experiences {
+	display: inline-block;
+	padding-top: 30px;
+	margin: 0 auto;
+	/*border: solid 1px black;*/
+}
+
+.github {
+	margin-right: 30px;
+}
+
+.experience {
+	height: 100%;
+	width: 300px;
+	margin-bottom: 30px;
+}
+
+.experience p {
+	text-align: center;
+}
+
+.card {
+	position: relative;
+	float: left;
+	padding: 20px 30px 15px 30px;
+	border-radius: 15px;
+	transition: all 0.3s;
+}
+
+.card span {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left: 0;
+
+	z-index: 1;
+}
+
+.card:hover{
+	position: relative;
+	top: -5px;
+	background-color: white;
+	box-shadow: 0px 5px #abacaeff;
+}
+
+.clear {
+	clear: left;
+}
+
+.github-wrapper {
+	/*border: solid 1px black;*/
+}
+
+.projects {
+	display: inline-block;
+	/*max-width: 750px;*/
+	margin: 0 auto;
+	/*border: solid 1px black;*/
+}
+
+.project {
+	height: 280px;
+	width: 300px;
+	margin-bottom: 30px;
+}
+
+.elementary-icon {
+	margin: 0px 30px;
+}
+
+.screenrec {
+	margin-right: 30px;
+}
+
+.smada {
+	margin-right: 30px;
+}
+
+.school{
+	font-size: 20px
+}
+
+.educations {
+	display: inline-block;
+	padding-top: 30px;
+	margin: 0 auto;
+	/*border: solid 1px black;*/
+}
+
+.education-wrapper {
+	/* border: solid 3px black; */
+}
+
+.margined-education {
+	margin-right: 30px;
+}
+
+.education {
+	width: 200px;
+	margin-bottom: 30px;
+}
+
+.footer {
+	padding-left: 20px;
+	display: block;
+	background-color: #273445ff;
+	height: 50px;
+	margin: 0px;
+}
+
+
+.link-footer {
+	color: #b1bbc1ff;
+}
+
+.link-footer:hover {
+	color: white;
+}
