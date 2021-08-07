@@ -22,7 +22,7 @@ header {
 	z-index: 10;
 }
 
-.hf-container {
+.header-container, .footer-container {
 	display: inline-block;
 	line-height: 50px;
 }
@@ -31,7 +31,7 @@ header {
 	margin-right: 20px;
 }
 
-.hf-container a {
+.header-container a, .footer-container a {
 	color: #e5e5e5;
 	display: inline-block;
 }
@@ -86,21 +86,12 @@ header {
 	width: 35%;
 }
 
-.experiences {
+.experiences , .educations {
+	background-color:  #f2f2f2ff;
 }
 
 .experiences-container {
 	width: 60%;
-}
-
-.writer {
-	background-color: white;
-	width: auto;
-}
-
-.foss-contributor {
-	background-color: white;
-	width: auto;
 }
 
 .experiences > * {
@@ -131,9 +122,10 @@ header {
 }
 
 .card {
+	border-radius: 5%;
 	margin: 0 auto;
 	max-width: 225px;
-	padding: 20px 10px;
+	padding: 20px 30px;
 	position: relative;
 	text-align: center;
 }
@@ -147,7 +139,9 @@ header {
 }
 
 .card:hover {
-	
+	background-color: #fafafa;
+	box-shadow: 0px 5px #abacae; 
+	top: -5px;
 }
 
 .card img {
@@ -157,6 +151,7 @@ header {
 
 .card h4 {
 	font-size: 24px;
+	margin-bottom: 10px;
 }
 
 .card h5 {
@@ -168,14 +163,14 @@ header {
 	font-size: 18px;
 }
 
+.educations {
+	padding: 20px 0px;
+}
 
 .education-container {
 	text-align: center;
 	width: 80%;
 }
-
-
-
 
 .footer {
 	background-color: #000;
