@@ -5,7 +5,7 @@
 		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
 		<meta http-equiv="X-UA-Compatible" content = "ie=edge">
 		<link rel = "stylesheet" href = "homepage.css">
-		<link rel = "stylesheet" href = "responsive.css">
+		<link rel = "stylesheet" href = "responsive.css"> 
 		<!--Insert font style Inter -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,8 @@
 	<body>
 		<header>
 			<div class = "hf-container">
-				<a class = "link-header margined-link" href = "#experience-wrapper">Experience</a>
-				<a class = "link-header margined-link" href = "#github-wrapper">Open-Source Contributions</a>
+				<a class = "link-header margined-link" href = "#writer">Writing Experience</a>
+				<a class = "link-header margined-link" href = "#foss-contributor">Open-Source Contributions</a>
 				<a class = "link-header" href = "#education-wrapper">Educations</a>
 			</div>
 		</header>
@@ -30,107 +30,48 @@
 				<img src="Images/Pasfoto.png" class="my-photo">
 			</div>
 		</div>
-		<div class = "main">
-			<div id = "experience-wrapper" class = "experience-wrapper section">
-				<div class = "container">
-					<div class = "st-container">
-						<div class = "st-container-2">
-							<h2 class = "section-title">Experience</h2>
-						</div>
+		<div class="experiences">
+			<div class="writer" id="writer">
+				<div class="container experiences-container">
+					<div class="text">
+						<h2>Writer of many things</h2>
+						<p>I believe that writing is a necessary skill for both professional and day-to-day life, regardless of your profession. As such, there are plenty of text and articles I've wrote to hone in on this critical skill.</p> 
 					</div>
-					<div class = "experiences">
-						<div class = "experience github card">
-							<a href = "https://github.com/Fatih20"><span></span></a>
-							<div class = "icons">
-								<img src = "./Images/GitHub-Mark-120px-plus.png">
-								<h3>Github</h3>
-							</div>
-							<p class = "captions">I have contributed to over 20 open-source projects on Github in the form of improved or redesigned app-icon and action-icon.</p>
-						</div>
-						<div class = "experience fireside card">
+					<div class="card-container">
+						<div class="card">
 							<a href = "https://firesidedotreviews.wordpress.com/author/narahamsyah/"><span></span></a>
-							<div class = "icons">
-								<img src = "./Images/Fireside-Icon-500x120.png">
-								<h3>Fireside Review</h3>
-							</div>
-							<p class = "captions">I've written reviews of games from diverse genres, from platforming to immersive sim, on this review website.</p>
+							<img src="./Images/Fireside-Icon-500x120.png">
+							<h4>Fireside Review</h4>
+							<p>Wrote nearly a dozen articles of game reviews to this review site.</p>
 						</div>
-						<div class = "clear">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id = "github-wrapper" class = "github-wrapper section">
-				<div class = "container">
-					<div class = "st-container">
-						<div class = "st-container-2 ospc">
-							<h2 class = "section-title">Open-Source Projects Contributions</h2>
-						</div>
-						<p>Notable example among many others..</p>
-					</div>
-					<div class = "projects">
-						<div class = "project xournalpp card">
-							<a href = "https://github.com/xournalpp/xournalpp/pull/3154"><span></span></a>
-							<div class = "icons">
-								<img src = "./Images/Xournal-120.png">
-								<h3>Xournalpp</h3>
-							</div>
-							<p class = "captions">I have worked together with maintainers and UI designer involved with the project to redesign all of the action icons used within the software.</p>
-						</div>
-						<div class = "project elementary-icon card ">
-							<a href = "https://github.com/elementary/icons/pull/914"><span></span></a>
-							<div class = "icons">
-								<img src = "./Images/eOS icon-120.png">
-								<h3>elementary/icons</h3>
-							</div>
-							<p class = "captions">Added several action icons in the OS's icon pack that are used in design softwares such as Inkscape</p>
-						</div>
-						<div class = "project screenrec card">
-							<a href = "https://github.com/dr-Styki/ScreenRec/pull/20"><span></span></a>
-							<div class = "icons">
-								<img src = "./Images/screenrec icon.png">
-								<h3>ScreenRec</h3>
-							</div>
-							<p class = "captions">Tweak and improve the previous icon to better represent the software</p>
-						</div>
-						<div class = "project hourglass card">
-							<a href = "https://github.com/sgpthomas/hourglass/pull/80"><span></span></a>
-							<div class = "icons">
-								<img src = "./Images/hourglass icon.png">
-								<h3>Hourglass</h3>
-							</div>
-							<p class = "captions">Make a new icon that is both aesthetically pleasing and matches the name of the software</p>
-						</div>
-						<div class = "clear">
+						<div class="card">
+							<a href = "https://xournalpp.github.io"><span></span></a>
+							<img src="./Images/Xournal-120.png">
+							<h4>Xournalpp</h4>
+							<p>Wrote and created all of the content in the software's homepage to entice more people to use it.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div id = "education-wrapper" class = "education-wrapper section">
-				<div class = "container">
-					<div class = "st-container">
-						<div class = "st-container-2">
-							<h2 class = "section-title">Education</h2>
-						</div>
+			<div class="foss-contributor" id="foss-contributor">
+				<div class="container experiences-container">
+					<div class="text">
+						<h2>Seasoned open-source contributor</h2>
+						<p>Ever since my first contribution to open-source software in the middle of 2019, I've made plenty of more contributions. From opening issues to report on an annoying bug or give feedback on potential improvement, to collaborating closely with project maintainers in making pull requests that wound up directly changing the software.</p>
+						<p>There are too many contributions to list them all but there are 2 that I am most proud of.</p>
 					</div>
-					<div class = "educations">
-						<div class = "education smada card">
-							<!-- <a href = "https://github.com/Fatih20"><span></span></a> -->
-							<div class = "icons">
-								<img src = "./Images/SMAN_2_SURABAYA-120.png">
-								<h3 class = "school" >SMAN 2 Surabaya</h3>
-							</div>
-							<p class = "time">2018-2021</p>
+					<div class="card-container">
+						<div class="card">
+							<a href = https://github.com/xournalpp/xournalpp/pull/3154"><span></span></a>
+							<img src="./Images/Xournal-120.png">
+							<h4>Xournalpp</h4>
+							<p>Redesigned all of the action icons within the app to improve its user experience</p>
 						</div>
-						<div class = "education itb card">
-							<!-- <a href = "https://github.com/Fatih20"><span></span></a> -->
-							<div class = "icons">
-								<img src = "./Images/Institut_Teknologi_Bandung_logo-120.png">
-								<h3 class = "school" >Institut Teknologi Bandung</h3>
-							</div>
-							<p class = "time">2021-</p>
-						</div>
-						<div class = "clear">
+						<div class="card">
+							<a href = https://github.com/xournalpp/xournalpp.github.io/pull/49"><span></span></a>
+							<img src="./Images/Xournal-120.png">
+							<h4>Xournalpp</h4>
+							<p>Redesigned and coded the software's homepage to make it more modern and appealing.</p>
 						</div>
 					</div>
 				</div>
