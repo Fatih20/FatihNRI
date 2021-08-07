@@ -94,12 +94,12 @@ header {
 }
 
 .writer {
-	background-color: #9bdb4d;
+	background-color: white;
 	width: auto;
 }
 
 .foss-contributor {
-	background-color: #ffe16b;
+	background-color: white;
 	width: auto;
 }
 
@@ -109,7 +109,7 @@ header {
 	text-align: center;
 }
 
-.experiences > * h2 {
+.experiences > * h2, .educations > * h2 {
 	font-size: 40px;
 	font-weight: 600;
 	margin-bottom: 20px;
@@ -159,8 +159,19 @@ header {
 	font-size: 24px;
 }
 
+.card h5 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
 .card p {
 	font-size: 18px;
+}
+
+
+.education-container {
+	text-align: center;
+	width: 80%;
 }
 
 
