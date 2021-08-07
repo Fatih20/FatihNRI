@@ -1,7 +1,3 @@
-* {
-	font-family: 'Inter';
-}
-
 li {
 	list-style: none;
 }
@@ -11,13 +7,13 @@ a {
 }
 
 header {
-	background-color: #273445ff;
 	display: block;
-	height: 50px;
-	padding: 0px 0px 0px 20px;
-	position: fixed;
 	width: 100%;
+	height: 50px;
+	background-color: #273445ff;
+	position: fixed;
 	z-index: 10;
+	padding: 0px 0px 0px 20px;
 }
 
 .hf-container {
@@ -31,8 +27,8 @@ header {
 }
 
 .hf-container a {
-	color: #b1bbc1ff;
 	display: inline-block;
+	color: #b1bbc1ff;
 }
 
 .link-header:hover {
@@ -40,57 +36,26 @@ header {
 }
 
 .container {
+	width: 90%;
 	margin: 0 auto;
 }
 
 .banner {
-	background-color: #2a74df;
-	padding-top: 100px;
-	
-}
-
-.banner-container {
+	font-family: serif;
 	color: white;
-	display: flex;
-	height: 100%;
-	max-width: 1600px;
-	text-align: left;
-	width: 80%;
+	background-color: black;
+	padding: 100px 0px;
+	text-align: center;
 }
 
-.banner-text {
-	width: 65%;
-}
-
-.banner-text h1 {
-	font-size: 54px;
-	vertical-align: top;
-	margin-top: 0px;
+.banner h1 {
+	font-size: 50px;
 	margin-bottom: 10px;
-	
-}
-
-.banner-text h2 {
-	color: rgba(255, 255, 255, 0.85);
-	font-size: 32px;
-	font-weight: 600;
-	margin-top: 0px;
-	margin-bottom: 50px;
-}
-
-.banner-text p {
-	font-size: 21px;
-	margin-top: 0px;
-}
-
-.my-photo {
-	align-self: flex-start;
-	width: 35%;
 }
 
 .main {
-	background-color: #f2f2f2ff;
 	padding-top: 30px;
+	background-color: #f2f2f2ff;
 }
 .section {
 	padding: 15px 0px;
@@ -113,15 +78,15 @@ header {
 }
 
 .st-container-2 {
-	border-bottom: solid 1px #abacaeff;
 	display: inline-block;
+	border-bottom: solid 1px #abacaeff;
 	padding-bottom: 5px;
 }
 
 .experiences {
 	display: inline-block;
-	margin: 0 auto;
 	padding-top: 30px;
+	margin: 0 auto;
 	/*border: solid 1px black;*/
 }
 
@@ -131,8 +96,8 @@ header {
 
 .experience {
 	height: 100%;
-	margin-bottom: 30px;
 	width: 300px;
+	margin-bottom: 30px;
 }
 
 .experience p {
@@ -140,27 +105,28 @@ header {
 }
 
 .card {
-	border-radius: 15px;
+	position: relative;
 	float: left;
 	padding: 20px 30px 15px 30px;
-	position: relative;
+	border-radius: 15px;
 	transition: all 0.3s;
 }
 
 .card span {
-	height:100%;
-	width:100%;
-	left: 0;
 	position: absolute;
-	top: 0;
+	width:100%;
+	height:100%;
+	top:0;
+	left: 0;
+
 	z-index: 1;
 }
 
 .card:hover{
-	background-color: white;
-	box-shadow: 0px 5px #abacaeff;
 	position: relative;
 	top: -5px;
+	background-color: white;
+	box-shadow: 0px 5px #abacaeff;
 }
 
 .clear {
@@ -180,8 +146,8 @@ header {
 
 .project {
 	height: 280px;
-	margin-bottom: 30px;
 	width: 300px;
+	margin-bottom: 30px;
 }
 
 .elementary-icon {
@@ -202,8 +168,8 @@ header {
 
 .educations {
 	display: inline-block;
-	margin: 0 auto;
 	padding-top: 30px;
+	margin: 0 auto;
 	/*border: solid 1px black;*/
 }
 
@@ -216,16 +182,16 @@ header {
 }
 
 .education {
-	margin-bottom: 30px;
 	width: 200px;
+	margin-bottom: 30px;
 }
 
 .footer {
-	background-color: #273445ff;
+	padding-left: 20px;
 	display: block;
+	background-color: #273445ff;
 	height: 50px;
 	margin: 0px;
-	padding-left: 20px;
 }
 
 
