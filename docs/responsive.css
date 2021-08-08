@@ -137,4 +137,8 @@
 		padding: 0px 10px;
 		width: 100%;
 	}
+
+	.card {
+		border-radius: 5px;
+	}
 }
