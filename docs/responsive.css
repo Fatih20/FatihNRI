@@ -111,4 +111,20 @@
 	.banner-text p {
 		font-size: 16px;
 	}
+
+	.card-container {
+		box-sizing: border-box;
+		display: block;
+		width: 60%;
+	}
+	.card {
+		margin-bottom: 40px;
+		width: 100%;
+	}
+}
+
+@media(max-width: 620px) {
+	header {
+		display: none;
+	}
 }
