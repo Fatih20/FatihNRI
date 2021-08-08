@@ -83,6 +83,17 @@ header {
 	font-size: 21px;
 }
 
+.smaller-photo {
+	background-image: url(./Images/Pasfoto.png);
+	background-repeat: no-repeat;
+  	background-size: cover;
+	background-position: -10px 0px;
+	border-radius: 50%;
+	display: none;
+	width: 400px;
+	height: 400px;
+}
+
 .my-photo {
 	align-self: flex-end;
 	width: 35%;

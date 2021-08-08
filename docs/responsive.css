@@ -35,24 +35,39 @@
 }
 
 @media (max-width: 1200px){
-	
-	.banner-text h1 {
-		font-size: 3vw;
- 	}
-	
- 	.banner-text h2 {
- 		font-size: 2vw;
- 	}
+	.my-photo {
+		display: none;
+	}
+
+	.smaller-photo {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.banner-text {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+	}
 	
 	.experiences-container {
 		width: 90%;
 	}
 }
 
-@media (max-width: 1000px){	
+@media (max-width: 1150px){
 	
-	.banner-text p {
-		font-size: 1.5vw;
+}
+
+@media (max-width: 1000px){
+	
+	.banner-text {
+		width: 80%;
+	}
+	
+	.my-photo {
+		width: 20%;
 	}
 	
 	.experiences-container {
