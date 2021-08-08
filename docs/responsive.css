@@ -56,13 +56,10 @@
 	}
 }
 
-@media (max-width: 1150px){
-	
-}
-
 @media (max-width: 1000px){
 	
 	.banner-text {
+		margin-top: 25px;
 		width: 80%;
 	}
 	
@@ -85,6 +82,13 @@
 }
 
 @media (max-width: 800px){
+	header {
+		text-align: center;
+	}
+	.header-container {
+		margin: 0 auto;
+	}
+
 	.experiences-container {
 		width: 100%;
 		padding: 0px 5px;
@@ -92,5 +96,19 @@
 	
 	.experiences > * {
 		padding: 50px 15px;
+	}
+}
+
+@media (max-width: 670px){
+	.banner-text h1 {
+		font-size: 36px;
+ 	}
+	
+ 	.banner-text h2 {
+ 		font-size: 24px;
+ 	}
+	
+	.banner-text p {
+		font-size: 16px;
 	}
 }
