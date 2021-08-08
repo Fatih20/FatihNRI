@@ -112,6 +112,10 @@
 		font-size: 16px;
 	}
 
+	.to-github {
+		margin-top: 0px;
+	}
+
 	.card-container {
 		box-sizing: border-box;
 		display: block;
