@@ -63,10 +63,6 @@
 		width: 80%;
 	}
 	
-	.my-photo {
-		width: 20%;
-	}
-	
 	.experiences-container {
 		width: 100%;
 		padding: 0px 20px;
@@ -85,6 +81,12 @@
 	header {
 		text-align: center;
 	}
+
+	.smaller-photo {
+		height: 100px;
+		width: 100px;
+	}
+
 	.header-container {
 		margin: 0 auto;
 	}
@@ -130,10 +132,6 @@
 }
 
 @media (max-width: 600px;) {
-	.smaller-photo {
-		height: 100px;
-		width: 100px;
-	}
 
 	.card-container {
 		padding: 0px 10px;
