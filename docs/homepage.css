@@ -87,17 +87,24 @@ header {
 }
 
 .experiences , .educations {
-	background-color:  #f2f2f2ff;
+	background-color:  #0e274d;
+	color: white;
+}
+
+.experiences {
+	display: flex;
 }
 
 .experiences-container {
+	margin: 0 auto;
+	max-width: 800px;
 	width: 60%;
 }
 
 .experiences > * {
 	flex-grow: 1;
 	padding: 50px;
-	text-align: center;
+	text-align: left;
 }
 
 .experiences > * h2, .educations > * h2 {
@@ -124,9 +131,10 @@ header {
 .card {
 	border-radius: 5%;
 	margin: 0 auto;
-	max-width: 225px;
+	max-width: 250px;
 	padding: 20px 30px;
 	position: relative;
+	transition: all 0.5s;
 	text-align: center;
 }
 
@@ -140,6 +148,7 @@ header {
 
 .card:hover {
 	background-color: #fafafa;
+	color: black;
 	box-shadow: 0px 5px #abacae; 
 	top: -5px;
 }
@@ -170,6 +179,7 @@ header {
 .education-container {
 	text-align: center;
 	width: 80%;
+	max-width: 800px;
 }
 
 .footer {
