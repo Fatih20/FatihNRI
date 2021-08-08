@@ -83,8 +83,8 @@
 	}
 
 	.smaller-photo {
-		height: 100px;
-		width: 100px;
+		height: 300px;
+		width: 300px;
 	}
 
 	.header-container {
@@ -120,9 +120,10 @@
 		width: 60%;
 	}
 	.card {
-		margin-bottom: 40px;
+		margin-top: 40px;
 		width: 100%;
 	}
+
 }
 
 @media(max-width: 620px) {
