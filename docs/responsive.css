@@ -124,6 +124,18 @@
 		width: 100%;
 	}
 
+	.footer {
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	.footer-container {
+		display: inline-block;
+	}
+
+	.margined-link {
+		margin-right: 50px;
+	}
 }
 
 @media(max-width: 620px) {
