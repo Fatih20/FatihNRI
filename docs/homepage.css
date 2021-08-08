@@ -129,10 +129,50 @@ header {
 	margin-bottom: 20px;
 }
 
-.experiences> * p {
+.experiences > * p {
 	font-size: 24px;
 	font-weight: 500;
 }
+
+.to-github-wrapper {
+	text-align: center;
+}
+
+.to-github {
+	background-color: white;
+	border-radius: 7px 7px;
+	color: black;
+	display: inline-block;
+	margin-top: 25px;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 0.2s;
+	text-align: center;
+}
+
+.to-github {
+
+}
+
+.to-github span {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+
+}
+
+.to-github p {
+	font-size: 20px;
+}
+
+.to-github:hover {
+	background-color: black;
+	color: white;
+
+}
+
 
 .text {
 	margin-bottom: 30px;
