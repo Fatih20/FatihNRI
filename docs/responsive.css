@@ -102,6 +102,11 @@
 }
 
 @media (max-width: 670px){
+	.smaller-photo {
+		height: 270px;
+		width: 270px;
+	}
+	
 	.banner-text h1 {
 		font-size: 36px;
  	}
@@ -117,11 +122,17 @@
 	.card-container {
 		box-sizing: border-box;
 		display: block;
-		width: 60%;
+		padding: 0px 20px;
+		width: 100%;
 	}
+
 	.card {
 		margin-top: 40px;
 		width: 100%;
+	}
+
+	.card {
+		border-radius: 15px;
 	}
 
 	.footer {
@@ -141,17 +152,5 @@
 @media(max-width: 620px) {
 	header {
 		display: none;
-	}
-}
-
-@media (max-width: 600px;) {
-
-	.card-container {
-		padding: 0px 10px;
-		width: 100%;
-	}
-
-	.card {
-		border-radius: 5px;
 	}
 }
