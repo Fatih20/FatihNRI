@@ -1,0 +1,81 @@
+@media (max-width: 1921px) {
+	.experiences {
+		padding-bottom: 0px;
+	}
+}
+
+@media (max-width: 1585px) {
+	.banner-text h1 {
+		font-size: 44px;
+ 	}
+	
+ 	.banner-text h2 {
+ 		font-size: 28px;
+ 	}
+	
+	.banner-text p {
+		font-size: 16px;
+	}
+	
+	.experiences > * h2, .educations > * h2 {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	
+	.experiences> * p {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1400px) {
+	
+	.banner-container {
+		width: 90%;
+	}
+}
+
+@media (max-width: 1200px){
+	
+	.banner-text h1 {
+		font-size: 3vw;
+ 	}
+	
+ 	.banner-text h2 {
+ 		font-size: 2vw;
+ 	}
+	
+	.experiences-container {
+		width: 90%;
+	}
+}
+
+@media (max-width: 1000px){	
+	
+	.banner-text p {
+		font-size: 1.5vw;
+	}
+	
+	.experiences-container {
+		width: 100%;
+		padding: 0px 20px;
+	}
+	
+	.experiences > * {
+		padding: 50px 25px;
+	}
+	
+	.card-container {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 800px){
+	.experiences-container {
+		width: 100%;
+		padding: 0px 5px;
+	}
+	
+	.experiences > * {
+		padding: 50px 15px;
+	}
+}
