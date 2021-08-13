@@ -28,13 +28,37 @@ header {
 	line-height: 50px;
 }
 
-.burger-menu {
+.burger-menu-button {
 	display: none;	
 }
 
-.burger-menu .fa-bars {
+.burger-menu-button .fa-bars {
 	color: white;
-	font-size: 20px;
+	font-size: 30px;
+}
+
+.burger-menu {
+	left: 20px;
+	position: absolute;
+	top: 70px;
+}
+
+.burger-menu-closed {
+	display: none;
+}
+
+.burger-menu-open {
+	display: flex;
+	flex-direction: column;
+}
+
+.burger-menu-option {
+	background-color: white;
+	border-radius: 10px;
+	color: black;
+	line-height: none;
+	margin-bottom: 20px;
+	padding: 0px 10px;
 }
 
 .link-header, .link-footer {
@@ -45,7 +69,7 @@ header {
 	margin-right: 0px;
 }
 
-.header-container a, .footer-container a {
+.header-container .link-header, .footer-container .link-footer {
 	color: #e5e5e5;
 	display: inline-block;
 }
