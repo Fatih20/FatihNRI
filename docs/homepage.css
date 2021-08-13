@@ -22,9 +22,19 @@ header {
 	z-index: 10;
 }
 
+
 .header-container, .footer-container {
 	display: inline-block;
 	line-height: 50px;
+}
+
+.burger-menu {
+	display: none;	
+}
+
+.burger-menu .fa-bars {
+	color: white;
+	font-size: 20px;
 }
 
 .link-header, .link-footer {

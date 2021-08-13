@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="73.339302mm"
+   height="75.568291mm"
+   viewBox="0 0 73.339302 75.568291"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202106031931+af4d65493e)"
+   sodipodi:docname="burger-menu.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.344725"
+     inkscape:cx="192.34665"
+     inkscape:cy="103.85013"
+     inkscape:window-width="2560"
+     inkscape:window-height="1379"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.906762,-34.577696)">
+    <g
+       id="g1684"
+       transform="translate(-30.639861,-27.767374)">
+      <rect
+         style="fill:#fafafa;stroke-width:0.127186"
+         id="rect846"
+         width="73.339302"
+         height="14.977437"
+         x="63.546623"
+         y="62.34507"
+         rx="4.4348598"
+         ry="4.4348598" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#rect846"
+         id="use1517"
+         transform="translate(0,30.295425)"
+         width="100%"
+         height="100%" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#rect846"
+         id="use1599"
+         transform="translate(0,60.590851)"
+         width="100%"
+         height="100%" />
+    </g>
+  </g>
+</svg>

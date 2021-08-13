@@ -4,8 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
 		<meta http-equiv="X-UA-Compatible" content = "ie=edge">
+		<!-- Insert stylesheets -->
 		<link rel = "stylesheet" href = "homepage.css">
 		<link rel = "stylesheet" href = "responsive.css"> 
+		<!-- Insert font awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!--Insert font style Inter -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +17,15 @@
 	</head>
 	<body>
 		<header>
-
-			<div class = "container header-container">
-				<a class = "link-header" href = "#writer">Writing Experience</a>
-				<a class = "link-header" href = "#foss-contributor">Open-Source Contributions</a>
-				<a class = "link-header" href = "#education">Educations</a>
+			<div class="header-container container">
+				<div class="burger-menu">
+					<i class="fa fa-bars"></i>
+				</div>
+				<div class = "link-header-container">
+					<a class = "link-header" href = "#writer">Writing Experience</a>
+					<a class = "link-header" href = "#foss-contributor">Open-Source Contributions</a>
+					<a class = "link-header" href = "#education">Educations</a>
+			</div>
 			</div>
 		</header>
 		<div class = "banner">
@@ -107,5 +114,6 @@
 				<a class = "link-footer" href = "https://github.com/Fatih20">Github</a>
 			</div>
 		</div>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>

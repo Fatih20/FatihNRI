@@ -150,7 +150,16 @@
 }
 
 @media(max-width: 620px) {
-	header {
+	.link-header-container {
 		display: none;
+	}
+
+	.header-container {
+		width: 100%;
+		text-align: left;
+	}
+
+	.burger-menu {
+		display: inline-block;
 	}
 }
