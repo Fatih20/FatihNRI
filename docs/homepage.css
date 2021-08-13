@@ -38,7 +38,10 @@ header {
 }
 
 .burger-menu {
-	left: 20px;
+	background-color: white;
+	border-radius: 10px;
+	right: 20px;
+	padding: 10px 10px;
 	position: absolute;
 	top: 70px;
 }
@@ -53,12 +56,16 @@ header {
 }
 
 .burger-menu-option {
-	background-color: white;
-	border-radius: 10px;
+	border-bottom: solid 1px black;
 	color: black;
-	line-height: none;
-	margin-bottom: 20px;
-	padding: 0px 10px;
+}
+
+.burger-menu-option:first-child, .burger-menu-option:last-child {
+	margin-bottom: 0px;
+}
+
+.burger-menu-option:last-child {
+	border: none;
 }
 
 .link-header, .link-footer {
