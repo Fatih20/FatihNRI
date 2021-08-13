@@ -27,8 +27,12 @@ header {
 	line-height: 50px;
 }
 
-.margined-link {
+.link-header, .link-footer {
 	margin-right: 20px;
+}
+
+.link-header:last-child, .link-footer:last-child {
+	margin-right: 0px;
 }
 
 .header-container a, .footer-container a {
