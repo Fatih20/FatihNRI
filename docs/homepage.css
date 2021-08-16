@@ -40,19 +40,20 @@ header {
 .burger-menu {
 	background-color: white;
 	border-radius: 10px;
-	right: 20px;
+	display: flex;
+	flex-direction: column;
 	padding: 10px 10px;
 	position: absolute;
+	transition: all 0.2s;
 	top: 70px;
 }
 
 .burger-menu-closed {
-	display: none;
+	right: -250px;
 }
 
 .burger-menu-open {
-	display: flex;
-	flex-direction: column;
+	right: 20px;
 }
 
 .burger-menu-option {
