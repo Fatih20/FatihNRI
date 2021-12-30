@@ -5,12 +5,33 @@ import options from "../content/options";
 
 const Main = styled.div`
     align-items: center;
+    color: white;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 `;
 
-const Profile = styled.div`
+const ProfileContainer = styled.div`
     display: flex;
+    justify-content: center;
+    gap: 20px;
+`;
+
+const Photo = styled.img`
+    display: inline-block;
+    clip-path: circle(50% at center);
+    width: ${({size}) => `${size}px`};
+    height: ${({size}) => `${size}px`};
+`;
+
+const AboutContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+`;
+
+const Name = styled.h1`
+    
 `;
 
 const OptionsContainer = styled.div`
@@ -22,7 +43,6 @@ const OptionsContainer = styled.div`
 
 const Option = styled.div`
     background-color: #333333;
-    color: white;
     padding: 15px;
     border-radius: 5px;
 
@@ -31,7 +51,6 @@ const Option = styled.div`
         font-weight: 600;
         text-align: center;
     }
-
 `;
 
 function optionMaker({name}) {
@@ -45,9 +64,12 @@ function optionMaker({name}) {
 export default function Body (){
     return (
         <Main>
-            <Profile>
-
-            </Profile>
+            <ProfileContainer>
+                <Photo src="Pasfoto.png" size={175}/>
+                <AboutContainer>
+                    <Name>Fatih Nararya R. I. </Name>
+                </AboutContainer>
+            </ProfileContainer>
             <OptionsContainer>
                 {options.map((option) => optionMaker(option))}
             </OptionsContainer>
