@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { GlobalTransition } from "./GlobalComponent";
 import Footer from "./components/footer";
-import Body from "./components/body";
+import Body from "./components/body/body";
 
 const Main = styled.div`
   display: flex;
