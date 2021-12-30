@@ -24,25 +24,40 @@ const Option = styled(VanillaButton)`
 `;
 
 const Event = styled.div`
-    border-radius: 3px;
+    background-color: #333333;
+    border-radius: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    gap: 1px;
     padding: 10px;
     width: 400px;
 
 `;
 
+const Title = styled.h2`
+    font-size: 18px;
+`; 
+
+const Subtitle = styled.p`
+    font-weight: 500;
+`;
+
 export default function Content ({choiceDisplayed, handleChoiceClick}){
 
     function cardMaker ({title, subtitle, timeStart, timeEnd, summary, relevantLink }) {
+        const parser = new DOMParser();
+        const correctedSubtitle = parser.parseFromString(subtitle, 'text/html').body.innerHTML;
+        console.log(parser.parseFromString(subtitle, 'text/html').body);
+
+        const time = timeEnd === null ? `(${timeStart})` : `(${timeStart} — ${timeEnd})`
+
         return (
             <Event>
-                <p>{title}</p>
-                <p>{subtitle}</p>
-                <p>{timeStart}</p>
-                <p>{timeEnd}</p>
-                <p>{summary}</p>
+                <Title>{title}</Title>
+                <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }}/>
+                <Subtitle>{time}</Subtitle>
+                <p dangerouslySetInnerHTML={{ __html: summary }} />
             </Event>
         )
     }
@@ -64,6 +79,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
     } else {
         return (
             <Main>
+
                 {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => cardMaker(event))}
             </Main>
         )
