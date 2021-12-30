@@ -6,10 +6,13 @@ import Content from "./content";
 
 const Main = styled.div`
     align-items: center;
+    box-sizing: border-box;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 1080px;
+    padding: 20px 10px 0 10px;
 `;
 
 export default function Body (){
