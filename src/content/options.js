@@ -17,9 +17,6 @@ const options = [
     {
         "name" : "Kursus dan Pelatihan"
     },
-    {
-        "name" : "Pengalaman Organisasi"
-    },
 ];
 
 export default options;

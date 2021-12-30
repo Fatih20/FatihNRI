@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 import Profile from "./profile";
@@ -13,10 +13,22 @@ const Main = styled.div`
 `;
 
 export default function Body (){
+    const[choiceDisplayed, setChoiceDisplayed] = useState("selection");
+
+    function handleChoiceClick(newChoiceDisplayed) {
+        if (newChoiceDisplayed !== choiceDisplayed){
+            setChoiceDisplayed(newChoiceDisplayed);
+        }
+    }
+
+    function backToSelection (){
+        setChoiceDisplayed("selection");
+    }
+
     return (
         <Main>
             <Profile />
-            <Content />
+            <Content choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick}/>
         </Main>
     )
 }

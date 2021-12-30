@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import options from "../../content/options";
+import { VanillaButton } from "../../GlobalComponent";
 
 const Main = styled.div`
     display: flex;
@@ -9,8 +10,9 @@ const Main = styled.div`
     gap: 20px;
 `;
 
-const Option = styled.div`
+const Option = styled(VanillaButton)`
     background-color: #333333;
+    color: white;
     padding: 15px;
     border-radius: 5px;
 
@@ -21,18 +23,25 @@ const Option = styled.div`
     }
 `;
 
-function optionMaker({name}) {
-    return (
-        <Option id={name}>
-            <h2>{name}</h2>
-        </Option>
-    )
-}
+export default function Content ({choiceDisplayed, handleChoiceClick}){
 
-export default function Content (){
-    return (
-        <Main>
-            {options.map((option) => optionMaker(option))}
-        </Main>
-    )
+    function optionMaker({name}) {
+        return (
+            <Option onClick={() => handleChoiceClick(name)} key={name}>
+                <h2>{name}</h2>
+            </Option>
+        )
+    }
+
+    if (choiceDisplayed === "selection"){
+        return (
+            <Main>
+                {options.map((option) => optionMaker(option))}
+            </Main>
+        )
+    } else {
+        return (
+            <></>
+        )
+    }
 }
