@@ -1,21 +1,94 @@
 const options = [
     {
-        "name" : "Kontribusi Open-Source"
+        "name" : "Kontribusi Open-Source",
+        "content" : [
+            {
+                "title" : "Xournalpp",
+                "subtitle" : "Desain Ulang <em>Home Page</em>",
+                "timeStart" : "2021",
+                "timeEnd" : null,
+                "summary" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
+                "relevantLink" : [
+                    "https://github.com/xournalpp/xournalpp.github.io/pull/49",
+                    "https://xournalpp.github.io/"
+                ],
+            }
+        ]
     },
     {
-        "name" : "Proyek Pribadi"
+        "name" : "Proyek Pribadi",
+        "content" : [
+            {
+                "title" : "",
+                "subtitle" : "",
+                "timeStart" : "",
+                "timeEnd" : "",
+                "summary" : "",
+                "relevantLink" : [
+                    
+                ],
+            }
+        ]
     },
     {
-        "name" : "Pengalaman Menulis"
+        "name" : "Pengalaman Menulis",
+        "content" : [
+            {
+                "title" : "",
+                "subtitle" : "",
+                "timeStart" : "",
+                "timeEnd" : "",
+                "summary" : "",
+                "relevantLink" : [
+                    
+                ],
+            }
+        ]
     },
     {
-        "name" : "Pengalaman Organisasi"
+        "name" : "Pengalaman Organisasi",
+        "content" : [
+            {
+                "title" : "",
+                "subtitle" : "",
+                "timeStart" : "",
+                "timeEnd" : "",
+                "summary" : "",
+                "relevantLink" : [
+                    
+                ],
+            }
+        ]
     },
     {
-        "name" : "Pendidikan"
+        "name" : "Pendidikan",
+        "content" : [
+            {
+                "title" : "",
+                "subtitle" : "",
+                "timeStart" : "",
+                "timeEnd" : "",
+                "summary" : "",
+                "relevantLink" : [
+                    
+                ],
+            }
+        ]
     },
     {
-        "name" : "Kursus dan Pelatihan"
+        "name" : "Kursus dan Pelatihan",
+        "content" : [
+            {
+                "title" : "",
+                "subtitle" : "",
+                "timeStart" : "",
+                "timeEnd" : "",
+                "summary" : "",
+                "relevantLink" : [
+                    
+                ],
+            }
+        ]
     },
 ];
 

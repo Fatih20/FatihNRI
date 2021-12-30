@@ -23,7 +23,29 @@ const Option = styled(VanillaButton)`
     }
 `;
 
+const Event = styled.div`
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 400px;
+
+`;
+
 export default function Content ({choiceDisplayed, handleChoiceClick}){
+
+    function cardMaker ({title, subtitle, timeStart, timeEnd, summary, relevantLink }) {
+        return (
+            <Event>
+                <p>{title}</p>
+                <p>{subtitle}</p>
+                <p>{timeStart}</p>
+                <p>{timeEnd}</p>
+                <p>{summary}</p>
+            </Event>
+        )
+    }
 
     function optionMaker({name}) {
         return (
@@ -41,7 +63,9 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
         )
     } else {
         return (
-            <></>
+            <Main>
+                {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => cardMaker(event))}
+            </Main>
         )
     }
 }

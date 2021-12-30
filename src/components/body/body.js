@@ -16,7 +16,7 @@ const Main = styled.div`
 `;
 
 export default function Body (){
-    const[choiceDisplayed, setChoiceDisplayed] = useState("selection");
+    const[choiceDisplayed, setChoiceDisplayed] = useState("Kontribusi Open-Source");
 
     function handleChoiceClick(newChoiceDisplayed) {
         if (newChoiceDisplayed !== choiceDisplayed){
