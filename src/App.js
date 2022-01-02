@@ -23,7 +23,7 @@ const Buffer = styled.div`
 
 const First = styled.div`
     display: flex;
-    height: 90vh;
+    flex-grow: 1;
     width: 100%;
 
 

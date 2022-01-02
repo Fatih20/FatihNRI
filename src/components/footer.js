@@ -7,11 +7,12 @@ import socialMediaList from "../content/socialMedia";
 
 const Main = styled.div`
     align-items: center;
-    background-color: #68b723;
+    /* background-color: #68b723; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 10vh;
+    height: 7.5vh;
+    justify-content: center;
     max-height: 100px;
     margin: 0;
     padding: 10px;
@@ -42,7 +43,6 @@ const Icons = styled.a`
 export default function Footer (){
     return (
         <Main>
-            <p>Contact Me</p>
             <IconsContainer>
                 <Icons href="https://www.instagram.com/fatih_nararya/"><FontAwesomeIcon icon={faInstagram} /></Icons>
                 <Icons href="https://www.linkedin.com/in/fatih-nararya-088a86215/"><FontAwesomeIcon icon={faLinkedin} /></Icons>
