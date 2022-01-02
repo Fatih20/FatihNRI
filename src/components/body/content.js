@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 import options from "../../content/options";
 import { VanillaButton } from "../../GlobalComponent";
 
@@ -11,7 +14,7 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: ${({verticalCenter}) => verticalCenter ? "center" : "flex-start"};
+    justify-content: center;
     height: 100%;
     width: 100%;
 
@@ -29,7 +32,6 @@ const OptionContainer = styled.div`
     gap: 10px;
     justify-content: center;
 `;
-
 
 const Option = styled(VanillaButton)`
     background-color: #333333;
@@ -54,7 +56,60 @@ const Option = styled(VanillaButton)`
     }
 `;
 
-export default function Content ({choiceDisplayed, handleChoiceClick}){
+const ShowingEventContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    width: 60%;
+
+    /* border : solid 1px white; */
+`;
+
+const EventContainer = styled.div`
+    -ms-overflow-style :none;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    scrollbar-width: none;
+    overflow: auto;
+    gap: 20px;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    /* border : solid 1px white; */
+`;
+
+const BackContainer = styled.div`
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+`;
+
+const BackButton = styled(VanillaButton)`
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    display: flex;
+    font-size: 18px;
+    gap: 5px;
+    justify-content: center;
+    padding-left: 3px;
+    transition: padding-left 0.15s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+        padding-left: 0;
+    }
+`;
+
+const Spacer = styled.div`
+    flex-grow: 1;
+`;
+
+export default function Content ({choiceDisplayed, handleChoiceClick, backToSelection}){
 
     function optionMaker({name}) {
         return (
@@ -66,7 +121,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
 
     if (choiceDisplayed === "selection"){
         return (
-            <Main verticalCenter={true}>
+            <Main>
                 <Title>See all the things I've done</Title>
                 <OptionContainer>
                     {options.map((option) => optionMaker(option))}
@@ -75,8 +130,18 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
         )
     } else {
         return (
-            <Main verticalCenter={false}>
-                {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
+            <Main>
+                <ShowingEventContainer>
+                    <EventContainer>
+                        {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
+                    </EventContainer>
+                    <BackContainer>
+                        <BackButton onClick={backToSelection}>
+                            <FontAwesomeIcon icon={faArrowLeft}/>
+                        </BackButton>
+                        <Spacer />
+                    </BackContainer>
+                </ShowingEventContainer>
             </Main>
         )
     }

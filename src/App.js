@@ -22,7 +22,9 @@ const FirstContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    height: 100%;
     justify-content: center;
+    overflow: hidden;
     padding: 0 20px;
     width: 100%;
 `;

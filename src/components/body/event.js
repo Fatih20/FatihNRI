@@ -15,7 +15,7 @@ const Main = styled.div`
     flex-direction: column;
     gap: 0;
     padding: 15px 20px;
-    width: 60%;
+    width: 100%;
 
 `;
 

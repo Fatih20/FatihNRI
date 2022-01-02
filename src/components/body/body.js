@@ -41,7 +41,7 @@ export default function Body (){
 
     return (
         <Main>
-            <Content choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick}/>
+            <Content choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
         </Main>
     )
 }
