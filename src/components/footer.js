@@ -7,7 +7,6 @@ import socialMediaList from "../content/socialMedia";
 
 const Main = styled.div`
     align-items: center;
-    background-color: black;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -27,7 +26,7 @@ const IconsContainer = styled.div`
     display: flex;
     font-size: 30px;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
 `;
 
 const Icons = styled.a`

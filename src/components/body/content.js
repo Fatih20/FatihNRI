@@ -12,14 +12,23 @@ const Main = styled.div`
 
 const Option = styled(VanillaButton)`
     background-color: #333333;
+    border-radius: 5px;
+    border: solid 1px black;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
     color: white;
     padding: 15px;
-    border-radius: 5px;
+    transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
         font-size: 24px;
         font-weight: 600;
         text-align: center;
+    }
+
+    &:hover {
+        background-color: #fafafa;
+        box-shadow: 0 3px 5px rgba(255, 255, 255, 0.35);
+        color: #333333;
     }
 `;
 
@@ -29,8 +38,8 @@ const Event = styled.div`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    padding: 10px;
+    gap: 2px;
+    padding: 20px;
     width: 400px;
 
 `;
