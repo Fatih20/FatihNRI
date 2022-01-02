@@ -8,13 +8,18 @@ const options = [
                 "timeStart" : "2021",
                 "timeEnd" : null,
                 "summary" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
-                "relevantLink" : {
-                    "progress" : [
-                        "https://github.com/xournalpp/xournalpp.github.io/pull/49"
-                    ],
-                    "result" : "https://xournalpp.github.io/",
+                "attachmentType" : "both",
+                "relevantLink" : [
+                    "https://github.com/xournalpp/xournalpp.github.io/pull/49",
+                    "https://xournalpp.github.io/",
+                ],
+                // "relevantLink" : {
+                //     "progress" : [
+                //         "https://github.com/xournalpp/xournalpp.github.io/pull/49"
+                //     ],
+                //     "result" : "https://xournalpp.github.io/",
                     
-                },
+                // },
             }
         ]
     },
