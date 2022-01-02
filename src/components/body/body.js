@@ -25,7 +25,7 @@ const OptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 150px;
+    gap: 10px;
     justify-content: center;
 `;
 
