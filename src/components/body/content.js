@@ -8,6 +8,7 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 `;
 
 const Option = styled(VanillaButton)`
@@ -15,6 +16,7 @@ const Option = styled(VanillaButton)`
     border-radius: 5px;
     border: solid 1px black;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
     color: white;
     padding: 15px;
     transition: color 0s, background-color 0s, box-shadow 0s;
@@ -40,7 +42,6 @@ const Event = styled.div`
     flex-direction: column;
     gap: 2px;
     padding: 20px;
-    width: 400px;
 
 `;
 
@@ -88,7 +89,6 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
     } else {
         return (
             <Main>
-
                 {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => cardMaker(event))}
             </Main>
         )

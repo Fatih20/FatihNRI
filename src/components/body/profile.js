@@ -32,7 +32,7 @@ const AboutContainer = styled.div`
 `;
 
 const Name = styled.h1`
-    font-size: 84px;
+    font-size: 64px;
     font-weight: 800;
     text-align: center;
 `;
