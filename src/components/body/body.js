@@ -78,6 +78,7 @@ export default function Body (){
             <OptionContainer>
                 {options.map((option) => optionMaker(option))}
             </OptionContainer>
+            <Content choiceDisplayed={choiceDisplayed}/>
         </Main>
     )
 }
