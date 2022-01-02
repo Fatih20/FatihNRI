@@ -17,18 +17,21 @@ const Main = styled.div`
   /* border: solid 1px white; */
 `;
 
-const Buffer = styled.div`
+const FirstContainer = styled.div`
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
 `;
 
 const First = styled.div`
-    box-sizing: border-box;
     display: flex;
-    flex-grow: 1;
-    padding: 0 20px;
+    height: 80%;
     position: relative;
     width: 100%;
-
 
     & > * {
       width: 50%;
@@ -52,7 +55,7 @@ const FloatContainer = styled.div`
 
 const Border = styled.div`
     border-right: solid 2px white;
-    height: 80%;
+    height: 100%;
     margin-right: -2px;
     width: 100%;
 
@@ -65,14 +68,15 @@ function App() {
     <>
       <GlobalTransition />
       <Main>
-        <First>
-          <FloatContainer>
-            <Border />
-          </FloatContainer>
-          <Profile />
-          <Body/>
-        </First>
-        {/* <Buffer /> */}
+        <FirstContainer>
+          <First>
+            <FloatContainer>
+              <Border />
+            </FloatContainer>
+            <Profile />
+            <Body/>
+          </First>
+        </FirstContainer>
         <Footer />
     </Main>
     </>
