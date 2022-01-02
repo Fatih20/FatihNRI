@@ -11,17 +11,18 @@ const Main = styled.div`
     display: flex;
 `;
 
-const Filler = styled.div`
-`;
-
 const Content = styled.div`
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
+    width: 100%;
+
+    /* border: solid 1px white; */
 `;
 
 const Title = styled.h1`
-    
+    font-size: 84px;
+    margin-top: 100px;
 `;
 
 const Buffer = styled.div`
@@ -31,15 +32,23 @@ const Buffer = styled.div`
 const BottomContainer = styled.div`
     align-items: center;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+
+    & > * {
+        width: 50%;
+    }
 `;
 
 const OccupationContainer = styled.div`
-    align-items: center;
+    align-items: flex-start;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    width: 100%;
 
+    /* border: solid 1px white; */
+`;
+
+const SummaryContainer = styled.div`
     /* border: solid 1px white; */
 `;
 
@@ -81,17 +90,16 @@ export default function Profile (){
     return (
         <Main>
             <Content>
-                <Title>Hello! I am Fatih Nararya R. I.</Title>
-                <Buffer />
+                <Title>Hello! I am <br/>Fatih Nararya R. I.</Title>
                     <BottomContainer>
-                        <h2>Who am I?</h2>
                         <OccupationContainer>
                             {occupations.map(occupationMaker)}
                         </OccupationContainer>
-                        <p>{occupations[indexOfShownOccupation]["summary"]}</p>
+                        <SummaryContainer>
+                            <p>{occupations[indexOfShownOccupation]["summary"]}</p>
+                        </SummaryContainer>
                     </BottomContainer>
             </Content>
-            <Filler />
         </Main>
     )
 }
