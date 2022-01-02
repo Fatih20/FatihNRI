@@ -43,6 +43,7 @@ const First = styled.div`
 `;
 
 const FloatContainer = styled.div`
+    background-color: rgba(0,0,0,0);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -51,6 +52,7 @@ const FloatContainer = styled.div`
     position: absolute;
     top: 0;
     width: 50%;
+    z-index: -1;
 
 
     /* border: solid 1px white; */
