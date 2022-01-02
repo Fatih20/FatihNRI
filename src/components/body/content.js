@@ -56,6 +56,7 @@ const Event = styled.div`
     flex-direction: column;
     gap: 2px;
     padding: 20px;
+    width: 60%;
 
 `;
 
@@ -70,7 +71,7 @@ const Subtitle = styled.p`
 export default function Content ({choiceDisplayed, handleChoiceClick}){
 
     function cardMaker ({title, subtitle, timeStart, timeEnd, summary, relevantLink }) {
-        const time = timeEnd === null ? `(${timeStart})` : `(${timeStart} — ${timeEnd})`
+        const time = timeEnd === null || timeEnd === undefined ? `(${timeStart})` : `(${timeStart} — ${timeEnd})`
 
         return (
             <Event>

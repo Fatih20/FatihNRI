@@ -7,15 +7,11 @@ import occupations from "../content/occupation";
 
 
 const Main = styled.div`
+    align-items: flex-start;
     color: white;
     display: flex;
-`;
-
-const Content = styled.div`
-    align-items: flex-start;
-    display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
 
     /* border: solid 1px white; */
 `;
@@ -44,6 +40,7 @@ const OccupationContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: 10px;
 
     /* border: solid 1px white; */
 `;
@@ -56,7 +53,6 @@ const Occupation = styled(VanillaButton)`
     background-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
     color: ${({chosen}) => chosen ? "white" : "black"};
-    padding: 15px;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
@@ -89,17 +85,15 @@ export default function Profile (){
 
     return (
         <Main>
-            <Content>
-                <Title>Hello! I am <br/>Fatih Nararya R. I.</Title>
-                    <BottomContainer>
-                        <OccupationContainer>
-                            {occupations.map(occupationMaker)}
-                        </OccupationContainer>
-                        <SummaryContainer>
-                            <p>{occupations[indexOfShownOccupation]["summary"]}</p>
-                        </SummaryContainer>
-                    </BottomContainer>
-            </Content>
+            <Title>Hello! I am <br/>Fatih Nararya R. I.</Title>
+            <BottomContainer>
+                <OccupationContainer>
+                    {occupations.map(occupationMaker)}
+                </OccupationContainer>
+                <SummaryContainer>
+                    <p>{occupations[indexOfShownOccupation]["summary"]}</p>
+                </SummaryContainer>
+            </BottomContainer>
         </Main>
     )
 }

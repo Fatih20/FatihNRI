@@ -10,11 +10,11 @@ import { VanillaButton } from "../../GlobalComponent";
 
 const Main = styled.div`
     align-items: center;
-    /* background-color: #f9c440; */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px 0;
     overflow: auto;
 
     /* border: solid 1px white; */
