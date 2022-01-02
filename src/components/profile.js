@@ -12,6 +12,7 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 
     /* border: solid 1px white; */
 `;
@@ -46,13 +47,14 @@ const OccupationContainer = styled.div`
 `;
 
 const SummaryContainer = styled.div`
+    align-self: flex-start;
     /* border: solid 1px white; */
 `;
 
 const Occupation = styled(VanillaButton)`
     background-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
-    color: ${({chosen}) => chosen ? "white" : "black"};
+    color: ${({chosen}) => chosen ? "white" : "#333333"};
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
@@ -76,9 +78,10 @@ export default function Profile (){
 
     function occupationMaker ({name}) {
         const occupationIndex = occupations.findIndex(element => element["name"] === name)
+        const chosen = indexOfShownOccupation === occupationIndex ? true : false
         return (
-            <Occupation onClick={() => handleOccupationClick(occupationIndex)} chosen={indexOfShownOccupation === occupationIndex ? true : false}>
-                <h2>{name}</h2>
+            <Occupation onClick={() => handleOccupationClick(occupationIndex)} chosen={chosen}>
+                <h2>{name}{chosen ? "," : null}</h2>
             </Occupation>
         )
     }
@@ -88,6 +91,7 @@ export default function Profile (){
             <Title>Hello! I am <br/>Fatih Nararya R. I.</Title>
             <BottomContainer>
                 <OccupationContainer>
+                    <h2>As {occupations[indexOfShownOccupation]["a"] ? "a" : "an"}...</h2>
                     {occupations.map(occupationMaker)}
                 </OccupationContainer>
                 <SummaryContainer>
