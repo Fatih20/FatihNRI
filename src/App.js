@@ -6,6 +6,9 @@ import Footer from "./components/footer";
 import Body from "./components/body/body";
 import Profile from "./components/profile";
 
+import IsEnglishProvider from "./context/language";
+import IsDarkProvider from "./context/darkTheme";
+
 const Main = styled.div`
   align-items: center;
   display: flex;
@@ -73,18 +76,22 @@ function App() {
   return (
     <>
       <GlobalTransition />
-      <Main>
-        <FirstContainer>
-          <First>
-            <FloatContainer>
-              <Border />
-            </FloatContainer>
-            <Profile />
-            <Body/>
-          </First>
-        </FirstContainer>
-        <Footer />
-    </Main>
+      <IsEnglishProvider>
+        <IsDarkProvider>
+          <Main>
+              <FirstContainer>
+                <First>
+                  <FloatContainer>
+                    <Border />
+                  </FloatContainer>
+                  <Profile />
+                  <Body/>
+                </First>
+              </FirstContainer>
+              <Footer />
+          </Main>
+        </IsDarkProvider>
+      </IsEnglishProvider>
     </>
   )
 }

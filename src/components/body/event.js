@@ -17,7 +17,6 @@ const Main = styled.div`
     gap: 0;
     padding: 15px 20px;
     width: 100%;
-
 `;
 
 const EventSectionContainer = styled.div`
