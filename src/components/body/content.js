@@ -66,6 +66,12 @@ const ShowingEventContainer = styled.div`
     /* border : solid 1px white; */
 `;
 
+const EventContainerTitle = styled.h2`
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-align: center;
+`;
+
 const EventContainer = styled.div`
     -ms-overflow-style :none;
     align-items: center;
@@ -122,7 +128,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick, backToSele
     if (choiceDisplayed === "selection"){
         return (
             <Main>
-                <Title>See all the things I've done</Title>
+                <Title>Things I've done</Title>
                 <OptionContainer>
                     {options.map((option) => optionMaker(option))}
                 </OptionContainer>
@@ -132,6 +138,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick, backToSele
         return (
             <Main>
                 <ShowingEventContainer>
+                    <EventContainerTitle>{choiceDisplayed}</EventContainerTitle>
                     <EventContainer>
                         {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
                     </EventContainer>

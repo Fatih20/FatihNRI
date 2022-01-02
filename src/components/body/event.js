@@ -10,6 +10,7 @@ import { VanillaButton } from "../../GlobalComponent";
 const Main = styled.div`
     background-color: #333333;
     border-radius: 7.5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
