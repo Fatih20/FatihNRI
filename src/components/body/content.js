@@ -11,7 +11,11 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: ${({verticalCenter}) => verticalCenter ? "center" : "flex-start"};
+    height: 100%;
     width: 100%;
+
+    /* border : solid 1px white; */
 `;
 
 const Title = styled.h2`
@@ -62,7 +66,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
 
     if (choiceDisplayed === "selection"){
         return (
-            <Main>
+            <Main verticalCenter={true}>
                 <Title>See all the things I've done</Title>
                 <OptionContainer>
                     {options.map((option) => optionMaker(option))}
@@ -71,7 +75,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
         )
     } else {
         return (
-            <Main>
+            <Main verticalCenter={false}>
                 {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
             </Main>
         )

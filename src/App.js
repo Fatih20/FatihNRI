@@ -36,6 +36,8 @@ const First = styled.div`
     & > * {
       width: 50%;
     }
+
+    /* border : solid 1px white; */
 `;
 
 const FloatContainer = styled.div`
