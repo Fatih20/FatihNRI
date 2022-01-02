@@ -4,6 +4,8 @@ import styled from "styled-components";
 import options from "../../content/options";
 import { VanillaButton } from "../../GlobalComponent";
 
+import Event from "./event";
+
 const Main = styled.div`
     align-items: center;
     display: flex;
@@ -48,40 +50,7 @@ const Option = styled(VanillaButton)`
     }
 `;
 
-const Event = styled.div`
-    background-color: #333333;
-    border-radius: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    padding: 20px;
-    width: 60%;
-
-`;
-
-const EventTitle = styled.h2`
-    font-size: 18px;
-`; 
-
-const Subtitle = styled.p`
-    font-weight: 500;
-`;
-
 export default function Content ({choiceDisplayed, handleChoiceClick}){
-
-    function cardMaker ({title, subtitle, timeStart, timeEnd, summary, relevantLink }) {
-        const time = timeEnd === null || timeEnd === undefined ? `(${timeStart})` : `(${timeStart} — ${timeEnd})`
-
-        return (
-            <Event>
-                <EventTitle>{title}</EventTitle>
-                <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }}/>
-                <Subtitle>{time}</Subtitle>
-                <p dangerouslySetInnerHTML={{ __html: summary }} />
-            </Event>
-        )
-    }
 
     function optionMaker({name}) {
         return (
@@ -103,7 +72,7 @@ export default function Content ({choiceDisplayed, handleChoiceClick}){
     } else {
         return (
             <Main>
-                {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => cardMaker(event))}
+                {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
             </Main>
         )
     }
