@@ -7,17 +7,8 @@ import occupations from "../content/occupation";
 
 
 const Main = styled.div`
-    background-color: #c6262e;
     color: white;
     display: flex;
-    height: 60vh;
-    width: 100%;
-
-    & > * {
-        box-sizing: border-box;
-        border: solid 1px white;
-        width: 50%;
-    }
 `;
 
 const Filler = styled.div`
@@ -74,19 +65,11 @@ const Occupation = styled(VanillaButton)`
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
 
-    const sliderSettings = {
-        infinite : true,
-        speed : 500,
-        slidesToShow : 1,
-        slidesToScroll : 1,
-        centerMode: true,
-    }
-
     function handleOccupationClick (newIndex){
         setIndexOfShownOccupation(newIndex)
     }
 
-    function occupationMaker ({name, summary}) {
+    function occupationMaker ({name}) {
         const occupationIndex = occupations.findIndex(element => element["name"] === name)
         return (
             <Occupation onClick={() => handleOccupationClick(occupationIndex)} chosen={indexOfShownOccupation === occupationIndex ? true : false}>

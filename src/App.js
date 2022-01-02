@@ -21,13 +21,26 @@ const Buffer = styled.div`
     flex-grow: 1;
 `;
 
+const First = styled.div`
+    display: flex;
+    height: 90vh;
+    width: 100%;
+
+
+    & > * {
+      width: 50%;
+    }
+`;
+
 function App() {
   return (
     <>
       <GlobalTransition />
       <Main>
-        <Profile />
-        <Body/>
+        <First>
+          <Profile />
+          <Body/>
+        </First>
         {/* <Buffer /> */}
         <Footer />
     </Main>

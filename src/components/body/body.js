@@ -14,9 +14,7 @@ const Main = styled.div`
     color: white;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    min-height: 30vh;
-    width: 100%;
+    overflow: auto;
 `;
 
 const Title = styled.h2`
@@ -25,8 +23,9 @@ const Title = styled.h2`
 
 const OptionContainer = styled.div`
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 150px;
     justify-content: center;
 `;
 
