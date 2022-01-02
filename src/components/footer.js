@@ -7,7 +7,6 @@ import socialMediaList from "../content/socialMedia";
 
 const Main = styled.div`
     align-items: center;
-    /* background-color: #68b723; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

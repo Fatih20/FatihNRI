@@ -5,6 +5,7 @@ import { GlobalTransition } from "./GlobalComponent";
 import Footer from "./components/footer";
 import Body from "./components/body/body";
 import Profile from "./components/profile";
+import Header from "./components/header";
 
 import IsEnglishProvider from "./context/language";
 import IsDarkProvider from "./context/darkTheme";
@@ -79,6 +80,7 @@ function App() {
       <IsEnglishProvider>
         <IsDarkProvider>
           <Main>
+            <Header />
               <FirstContainer>
                 <First>
                   <FloatContainer>
