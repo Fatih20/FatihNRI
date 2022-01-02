@@ -59,6 +59,8 @@ const SeeWork = styled.p`
 const IconContainer = styled.div`
     display: inline-block;
     transform: ${({flip}) => flip ? "rotate(180deg)" : null};
+    transition: transform 0.15s;
+    transition-timing-function: ease-in-out;
 
     /* border: solid 1px white; */
 `;
