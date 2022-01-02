@@ -4,13 +4,15 @@ import styled from "styled-components";
 import { GlobalTransition } from "./GlobalComponent";
 import Footer from "./components/footer";
 import Body from "./components/body/body";
+import Profile from "./components/profile";
 
 const Main = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 100vh;
+
+  height: 100vh;
 
   /* border: solid 1px white; */
 `;
@@ -24,8 +26,9 @@ function App() {
     <>
       <GlobalTransition />
       <Main>
-        <Body />
-        <Buffer />
+        <Profile />
+        <Body/>
+        {/* <Buffer /> */}
         <Footer />
     </Main>
     </>

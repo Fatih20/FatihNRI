@@ -5,14 +5,10 @@ import Profile from "./profile";
 import Content from "./content";
 
 const Main = styled.div`
-    align-items: center;
-    box-sizing: border-box;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 400px;
-    padding: 20px 10px 0 10px;
+    background-color: #f9c440;
+    flex-grow: 1;
+    height: 30vh;
+    width: 100%;
 `;
 
 export default function Body (){
@@ -30,8 +26,7 @@ export default function Body (){
 
     return (
         <Main>
-            <Profile />
-            <Content choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick}/>
+
         </Main>
     )
 }
