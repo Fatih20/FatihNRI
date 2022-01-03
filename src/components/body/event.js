@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-import options from "../../content/options";
+import options from "../../content/allContent";
 import { VanillaButton } from "../../GlobalComponent";
 
 import { shadeColor } from "../../theme";

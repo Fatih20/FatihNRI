@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 import { VanillaButton } from "../GlobalComponent";
 
-import occupations from "../content/occupation";
+import { useContent } from "../context/language";
+
 
 
 const Main = styled.div`
@@ -71,6 +72,8 @@ const Occupation = styled(VanillaButton)`
 
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
+    const {greeting, occupations} = useContent();
+
 
     function handleOccupationClick (newIndex){
         setIndexOfShownOccupation(newIndex)
@@ -88,7 +91,7 @@ export default function Profile (){
 
     return (
         <Main>
-            <Title>Hello! I am <br/>Fatih Nararya R. I.</Title>
+            <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
             <BottomContainer>
                 <OccupationContainer>
                     <h2>As {occupations[indexOfShownOccupation]["a"] ? "a" : "an"}...</h2>

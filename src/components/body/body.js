@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import styled from "styled-components";
 
 import Profile from "./profile";
-import Content from "./content";
+import MainContent from "./mainContent";
 
-import options from "../../content/options";
+import options from "../../content/allContent";
 import { VanillaButton } from "../../GlobalComponent";
 
 
@@ -41,7 +41,7 @@ export default function Body (){
 
     return (
         <Main>
-            <Content choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
+            <MainContent choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
         </Main>
     )
 }

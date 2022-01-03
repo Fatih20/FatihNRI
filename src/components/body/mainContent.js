@@ -4,8 +4,10 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import options from "../../content/options";
+import options from "../../content/allContent";
 import { VanillaButton } from "../../GlobalComponent";
+
+import { useContent } from "../../context/language";
 
 import Event from "./event";
 
@@ -116,7 +118,9 @@ const Spacer = styled.div`
     flex-grow: 1;
 `;
 
-export default function Content ({choiceDisplayed, handleChoiceClick, backToSelection}){
+export default function MainContent ({choiceDisplayed, handleChoiceClick, backToSelection}){
+    const {options} = useContent(); 
+
 
     function optionMaker({name}) {
         return (
