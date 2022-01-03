@@ -34,12 +34,12 @@ const OptionContainer = styled.div`
 `;
 
 const Option = styled(VanillaButton)`
-    background-color: #333333;
+    background-color: ${({theme}) => theme.regularContainer};
     border-radius: 5px;
-    border: solid 1px black;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    border: solid 1px ${({theme}) => theme.regularContainerBorder};
+    box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
     box-sizing: border-box;
-    color: white;
+    color: ${({theme}) => theme.regularText};
     padding: 15px;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
@@ -50,9 +50,10 @@ const Option = styled(VanillaButton)`
     }
 
     &:hover {
-        background-color: #fafafa;
-        box-shadow: 0 3px 5px rgba(255, 255, 255, 0.35);
-        color: #333333;
+        background-color: ${({theme}) => theme.emphasizedContainer};
+        border: solid 1px ${({theme}) => theme.emphasizedContainerBorder};
+        box-shadow: 0 3px 5px ${({theme}) => theme.emphasizedContainerShadow};
+        color: ${({theme}) => theme.emphasizedText} ;
     }
 `;
 
@@ -97,7 +98,7 @@ const BackContainer = styled.div`
 
 const BackButton = styled(VanillaButton)`
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: ${({theme}) => theme.regularText};
     display: flex;
     font-size: 18px;
     gap: 5px;

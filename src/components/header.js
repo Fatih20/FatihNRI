@@ -13,7 +13,7 @@ import { mdiWeatherNight } from '@mdi/js';
 const Main = styled.div`
     align-items: center;
     box-sizing: border-box;
-    color: white;
+    color: ${({theme}) => theme.regularText};
     display: flex;
     gap: 20px;
     height: 7.5vh;
@@ -27,15 +27,14 @@ const Main = styled.div`
 `;
 
 const IconContainer = styled.div`
-    color: white;
+    color: ${({theme}) => theme.regularText};
 
     /* border : solid 1px white; */
 `;
 
 const Language = styled(VanillaButton)`
-    /* color: ${({chosen}) => chosen ? "white" : ""}; */
     background-color: rgba(0, 0, 0, 0);
-    color: ${({chosen}) => chosen ? "white" : "#333333"};
+    color: ${({chosen, theme}) => chosen ? theme.regularText : theme.unselectedBareText};
     font-size: 20px;
     font-weight: 600;
 `;
@@ -44,10 +43,6 @@ const LanguageContainer = styled.div`
     display: flex;
     gap: 10px;
 `;
-
-// const IconContainer = styled.div`
-//     color: ${({chosen}) => chosen ? "white" : "#333333"};
-// `;
 
 export default function Header (){
     const[isDark, setIsDark] = useIsDark(true);

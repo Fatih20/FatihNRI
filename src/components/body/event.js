@@ -7,11 +7,14 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import options from "../../content/options";
 import { VanillaButton } from "../../GlobalComponent";
 
+import { shadeColor } from "../../theme";
+
 const Main = styled.div`
-    background-color: #333333;
+    background-color: ${({theme}) => theme.regularContainer};
     border-radius: 7.5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
     box-sizing: border-box;
+    color : ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -20,7 +23,7 @@ const Main = styled.div`
 `;
 
 const EventSectionContainer = styled.div`
-    border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+    border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
     margin-bottom: 8px;
     padding-bottom: 8px;
 `;
@@ -72,7 +75,7 @@ const LinkContainer = styled.a`
 `;
 
 const Link = styled.a`
-    color: white;
+    color : ${({theme}) => theme.regularText};
     text-overflow: ellipsis;
 `;
 

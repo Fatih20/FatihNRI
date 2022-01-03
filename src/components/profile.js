@@ -8,7 +8,7 @@ import occupations from "../content/occupation";
 
 const Main = styled.div`
     align-items: flex-start;
-    color: white;
+    color: ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +54,7 @@ const SummaryContainer = styled.div`
 const Occupation = styled(VanillaButton)`
     background-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
-    color: ${({chosen}) => chosen ? "white" : "#333333"};
+    color: ${({chosen, theme}) => chosen ? theme.regularText : theme.unselectedBareText};
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
@@ -65,7 +65,7 @@ const Occupation = styled(VanillaButton)`
 
     &:hover {
         /* box-shadow: 0 3px 5px rgba(255, 255, 255, 0.35); */
-        color: white;
+        color: ${({theme}) => theme.regularText};
     }
 `;
 

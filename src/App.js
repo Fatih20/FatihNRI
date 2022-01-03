@@ -64,7 +64,7 @@ const FloatContainer = styled.div`
 `;
 
 const Border = styled.div`
-    border-right: solid 2px white;
+    border-right: solid 2px ${({theme}) => theme.standaloneBorder};
     height: 100%;
     margin-right: -2px;
     width: 100%;

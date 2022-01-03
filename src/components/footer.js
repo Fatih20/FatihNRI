@@ -32,10 +32,10 @@ const IconsContainer = styled.div`
 `;
 
 const Icons = styled.a`
-    color: #d4d4d4;
+    color : ${({theme}) => theme.unselectedBareText};
 
     &:hover {
-        color: white;
+        color: ${({theme}) => theme.regularText};
     }
 `;
 
