@@ -83,7 +83,8 @@ const EventContainer = styled.div`
     justify-content: flex-start;
     gap: 20px;
     padding-right: 0.5vw;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: ${({theme}) => theme.scrollbarThumbFill} ${({theme}) => theme.scrollbarTrackFill};
     overflow: auto;
 
     &::-webkit-scrollbar{
@@ -91,17 +92,24 @@ const EventContainer = styled.div`
     }
 
     &::-webkit-scrollbar-thumb{
-        background-color: ${({theme}) => theme.regularContainer};
-        border: solid 1px ${({theme}) => theme.scrollbarBorder};
+        background-color: ${({theme}) => theme.scrollbarThumbFill};
+        border: solid 1px ${({theme}) => theme.scrollbarThumbBorder};
         border-radius: 4px;
     }
 
     &::-webkit-scrollbar-thumb:hover{
-        background-color: ${({theme}) => theme.scrollbarHoveredFill};
+        background-color: ${({theme}) => theme.scrollbarThumbHoveredFill};
+        border: solid 1px ${({theme}) => theme.scrollbarThumbHoveredBorder};
     }
 
     &::-webkit-scrollbar-track{
-        background-color: rgba(0, 0, 0, 0);
+        background-color: ${({theme}) => theme.scrollbarTrackFill};
+        border: solid 1px ${({theme}) => theme.scrollbarTrackBorder};
+    }
+
+    &::-webkit-scrollbar-track:hover{
+        background-color: ${({theme}) => theme.scrollbarTrackHoveredFill};
+        border: solid 1px ${({theme}) => theme.scrollbarTrackHoveredBorder};
     }
 
     /* border : solid 1px white; */

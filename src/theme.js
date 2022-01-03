@@ -11,10 +11,15 @@ export const dark = {
     emphasizedContainerShadow : "rgba(255, 255, 255, 0.35)",
     unselectedBareText : "#333333",
     standaloneBorder : "#ffffff",
-    scrollbarBorder : "#000000",
-    scrollbarFill : "#333333",
-    scrollbarHoveredBorder : "#000000",
-    scrollbarHoveredFill : "#666666",
+    scrollbarThumbFill : "#333333",
+    scrollbarThumbBorder : "#000000",
+    scrollbarThumbHoveredFill : "#666666",
+    scrollbarThumbHoveredBorder : "#000000",
+    scrollbarTrackFill : "rgba(0, 0, 0, 0)",
+    scrollbarTrackBorder : "rgba(0, 0, 0, 0)",
+    scrollbarTrackHoveredFill : "rgba(0, 0, 0, 0)",
+    scrollbarTrackHoveredBorder : "rgba(0, 0, 0, 0)",
+    
 
 
 };
