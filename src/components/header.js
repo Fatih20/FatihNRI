@@ -48,7 +48,6 @@ export default function Header (){
     const[isDark, setIsDark] = useIsDark(true);
     const[isEnglish, setIsEnglish] = useIsEnglish(true);
     const themeFromHook = useTheme();
-    console.log(themeFromHook);
 
     return (
         <Main>

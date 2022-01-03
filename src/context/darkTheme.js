@@ -20,7 +20,6 @@ export default function IsDarkProvider({children}) {
     const bodyDocument = document.querySelectorAll("body")[0];
 
     useEffect(() => {
-        console.log(theme);
         bodyDocument.style.backgroundImage = `linear-gradient(${theme.backgroundTopStop}, ${theme.backgroundBelowStop})`
     }, [isDark])
     
