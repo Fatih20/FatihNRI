@@ -6,6 +6,8 @@ import { useIsEnglish } from "../context/language";
 
 import { VanillaButton } from "../GlobalComponent";
 
+import { useTheme } from "styled-components";
+
 import Icon from '@mdi/react'
 import { mdiWeatherSunny } from '@mdi/js';
 import { mdiWeatherNight } from '@mdi/js';
@@ -27,7 +29,7 @@ const Main = styled.div`
 `;
 
 const IconContainer = styled.div`
-    color: ${({theme}) => theme.regularText};
+    color: ${({theme}) => "red"};
 
     /* border : solid 1px white; */
 `;
@@ -47,11 +49,13 @@ const LanguageContainer = styled.div`
 export default function Header (){
     const[isDark, setIsDark] = useIsDark(true);
     const[isEnglish, setIsEnglish] = useIsEnglish(true);
+    const themeFromHook = useTheme();
+    console.log(themeFromHook);
 
     return (
         <Main>
             <IconContainer>
-                <Icon onClick={() => setIsDark(prevIsDark => !prevIsDark)} path={isDark ? mdiWeatherNight : mdiWeatherSunny} color="white" size={1} />
+                <Icon onClick={() => setIsDark(prevIsDark => !prevIsDark)} path={isDark ? mdiWeatherNight : mdiWeatherSunny} color={themeFromHook.regularText} size={1} />
             </IconContainer>
             <LanguageContainer>
                 <Language chosen={!isEnglish} onClick={() => setIsEnglish(false)}>ID</Language>
