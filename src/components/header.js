@@ -29,8 +29,6 @@ const Main = styled.div`
 `;
 
 const IconContainer = styled.div`
-    color: ${({theme}) => "red"};
-
     /* border : solid 1px white; */
 `;
 

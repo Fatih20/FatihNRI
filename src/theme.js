@@ -1,7 +1,7 @@
 export const dark = {
     backgroundTopStop : "#212121",
     backgroundBelowStop : "#1a1a1a",
-    regularText : "white",
+    regularText : "#ffffff",
     regularContainer : "#333333",
     regularContainerBorder : "black",
     regularContainerShadow : "rgba(0, 0, 0, 0.35)",
@@ -17,15 +17,16 @@ export const dark = {
 export const light = {
     backgroundTopStop : "#ffffff",
     backgroundBelowStop : "#d4d4d4",
-    regularText : "#ffffff",
-    regularContainer : "#333333",
-    regularContainerBorder : "black",
+    regularText : "#1a1a1a",
+    regularContainer : "#d4d4d4",
+    regularContainerBorder : "#abacae",
     regularContainerShadow : "rgba(0, 0, 0, 0.35)",
-    emphasizedText : "#333333",
-    emphasizedContainer : "#fafafa",
+    emphasizedText : "#ffffff",
+    emphasizedContainer : "#333333",
     emphasizedContainerBorder : "black",
-    emphasizedContainerShadow : "rgba(255, 255, 255, 0.35)",
-    unselectedBareText : "#333333",
+    emphasizedContainerShadow : "rgba(0, 0, 0, 0.35)",
+    unselectedBareText : "#95a3ab",
+    standaloneBorder : "#000000",
 
 };
 
