@@ -52,9 +52,9 @@ export default function Header (){
 
     return (
         <Main>
-            <IconContainer>
+            {/* <IconContainer>
                 <Icon onClick={() => setIsDark(prevIsDark => !prevIsDark)} path={isDark ? mdiWeatherNight : mdiWeatherSunny} color={themeFromHook.regularText} size={1} />
-            </IconContainer>
+            </IconContainer> */}
             <LanguageContainer>
                 <Language chosen={!isEnglish} onClick={() => setIsEnglish(false)}>ID</Language>
                 <Language chosen={isEnglish} onClick={() => setIsEnglish(true)}>EN</Language>
