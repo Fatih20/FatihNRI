@@ -81,12 +81,27 @@ const EventContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 20px;
+    padding-right: 0.5vw;
     scrollbar-width: none;
     overflow: auto;
-    gap: 20px;
 
     &::-webkit-scrollbar{
-        display: none;
+        width: 0.5vw;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: ${({theme}) => theme.regularContainer};
+        border: solid 1px ${({theme}) => theme.scrollbarBorder};
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+        background-color: ${({theme}) => theme.scrollbarHoveredFill};
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: rgba(0, 0, 0, 0);
     }
 
     /* border : solid 1px white; */
