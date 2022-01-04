@@ -26,6 +26,7 @@ const Main = styled.div`
 `;
 
 const EventSectionContainer = styled.div`
+    display: ${({show}) => show === undefined || show === true ? "block" : "none"};
     border-top: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
     margin-top: 0.5em;
     padding-top: 0.5em;
@@ -112,7 +113,7 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
             <EventSectionContainer>
                 <Summary dangerouslySetInnerHTML={{ __html: summary }} />
             </EventSectionContainer>
-            <EventSectionContainer>
+            <EventSectionContainer show={attachmentType !== "none"}>
                 <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText[attachmentType]} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
                 <LinkContainer show={showAttachment}>
                     {relevantLink.map((link) => <Link href={link}>{link}</Link>)}
