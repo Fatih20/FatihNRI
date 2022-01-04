@@ -3,22 +3,23 @@ const allContent = {
         "greeting" : "Halo! Namaku",
         "occupations" : [
             {
-                "name" : "Web Developer",
-                "summary" : "I make sites",
+                "name" : "Pengembang Web",
+                "summary" : "Saya memiliki <em>skill</em> HTML, CSS, Javascript, dan bahkan sudah mempelajari <em>framework</em> React.js. Semua<em>skill</em> tersebut telah saya praktikkan dalam pembuatan proyek-proyek pribadi saya maupun situs milik pihak lain. Saya sekarang sedang mempelajari <em>back-end development</em>.",
                 "a" : true,
             },
             {
-                "name" : "Open Source Contributor",
-                "summary" : "I contribute to open-source project",
+                "name" : "Kontributor <em>Open-Source</em>",
+                "summary" : "Telah banyak kontribusi saya ke beragam proyek <em>open-source</em>, mulai dari yang besar sampai yang kecil. ",
                 "a" : false,
             },
             {
-                "name" : "Writer",
-                "summary" : "I write",
+                "name" : "Penulis",
+                "summary" : "Karya saya sangat beragam, mulai dari <em>review game</em> sampai ",
                 "a" : true,
             },
         
         ],
+        "asA" : "Saya adalah",
         "attachmentText" : {
             "both" : "Pekerjaan saya dan proses pengerjaannya",
             "progress" : "Proses pengerjaan saya",
@@ -347,6 +348,7 @@ const allContent = {
             },
         
         ],
+        "asA" : "As",
         "attachmentText" : {
             "both" : "My work and how it was completed",
             "progress" : "How my work was completed",
