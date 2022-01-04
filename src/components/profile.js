@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { VanillaButton } from "../GlobalComponent";
 
 import { useContent } from "../context/language";
-
+import { useIsEnglish } from "../context/language";
 
 
 const Main = styled.div`
@@ -93,22 +93,38 @@ const Occupation = styled(VanillaButton)`
 
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
-    const {greeting, occupations} = useContent();
+    const {greeting, occupations, asA} = useContent();
+    const[isEnglish, setIsEnglish] = useIsEnglish();
+
 
 
     function handleOccupationClick (newIndex){
         setIndexOfShownOccupation(newIndex)
     }
 
+    function asAMaker() {
+        if (isEnglish){
+            if (occupations[indexOfShownOccupation]["a"]) {
+                return `${asA} a`
+            } else {
+                return `${asA} an`
+            }
+        } else {
+            return (asA)
+        }
+    }
+
     function occupationMaker ({name}) {
         const occupationIndex = occupations.findIndex(element => element["name"] === name)
         const chosen = indexOfShownOccupation === occupationIndex ? true : false
+        const content = `<h2>${name}${chosen ? "." : ""}</h2>`;
         return (
-            <Occupation onClick={() => handleOccupationClick(occupationIndex)} chosen={chosen}>
-                <h2>{name}{chosen ? "," : null}</h2>
+            <Occupation onClick={() => handleOccupationClick(occupationIndex)} chosen={chosen} dangerouslySetInnerHTML={{ __html: content }}>
             </Occupation>
         )
     }
+
+
 
     return (
         <Main>
@@ -116,11 +132,11 @@ export default function Profile (){
                 <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
                 <BottomContainer>
                     <OccupationContainer>
-                        <h2>As {occupations[indexOfShownOccupation]["a"] ? "a" : "an"}...</h2>
+                        <h2>{asAMaker(indexOfShownOccupation)}...</h2>
                         {occupations.map(occupationMaker)}
                     </OccupationContainer>
                     <SummaryContainer>
-                        <p>{occupations[indexOfShownOccupation]["summary"]}</p>
+                        <p dangerouslySetInnerHTML={{ __html : occupations[indexOfShownOccupation]["summary"] }} />
                     </SummaryContainer>
                 </BottomContainer>
             </MainWithinPadding>
