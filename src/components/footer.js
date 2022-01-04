@@ -14,8 +14,10 @@ const Main = styled.div`
     justify-content: center;
     max-height: 6rem;
     margin: 0;
-    padding: 10px;
+    padding: 0.5rem;
     width: 100%;
+
+    /* border : solid 1px white; */
 
     & > p {
         color: #d4d4d4;

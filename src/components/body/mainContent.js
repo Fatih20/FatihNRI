@@ -42,7 +42,7 @@ const Option = styled(VanillaButton)`
     box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
     box-sizing: border-box;
     color: ${({theme}) => theme.regularText};
-    padding: 15px;
+    padding: 1rem;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
@@ -117,8 +117,10 @@ const EventContainer = styled.div`
 
 const BackContainer = styled.div`
     display: flex;
-    padding: 20px 0;
+    padding: 0.4rem 0;
     width: 100%;
+
+    /* border : solid 1px white; */
 `;
 
 const BackButton = styled(VanillaButton)`
@@ -126,7 +128,6 @@ const BackButton = styled(VanillaButton)`
     color: ${({theme}) => theme.regularText};
     display: flex;
     font-size: 1.125rem;
-    gap: 0.3125rem;
     justify-content: center;
     padding-left: 3px;
     padding-right: 0;

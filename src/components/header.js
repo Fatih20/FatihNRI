@@ -22,7 +22,7 @@ const Main = styled.div`
     justify-content: flex-start;
     max-height: 6rem;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 0.5rem;
     width: 100%;
 
     /* border : solid 1px white; */
