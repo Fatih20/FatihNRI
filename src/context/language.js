@@ -14,7 +14,7 @@ export function useContent() {
 }
 
 export default function IsEnglishProvider({children}) {
-    const[isEnglish, setIsEnglish] = useState(true);
+    const[isEnglish, setIsEnglish] = useState(false);
     const content = isEnglish ? allContent["EN"] : allContent["ID"];
     
     return (

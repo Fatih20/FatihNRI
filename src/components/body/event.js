@@ -50,6 +50,12 @@ const Summary = styled.p`
     padding: 0;
 `;
 
+const SummaryContainer = styled(EventSectionContainer)`
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125em;
+`;
+
 const SeeWorkContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -86,33 +92,26 @@ const WorkContainer = styled.div`
     display: ${({show}) => show ? "flex" : "none"};
 `;
 
-export default function Event ({event : {title, subtitle, timeStart, timeEnd, summary, attachmentType, relevantLink}}){
+export default function Event ({event : {title, subtitle, timeStart, timeEnd, summaryList, attachmentType, relevantLink}}){
     const[showAttachment, setShowAttachment] = useState(false);
     const {attachmentText} = useContent(); 
 
-    
     const time = timeEnd === null || timeEnd === undefined ? `(${timeStart})` : `(${timeStart} — ${timeEnd})`
 
-    // function attachmentText() {
-    //     if (attachmentType === "both"){
-    //         return "My work and how it was completed"
-    //     } else if (attachmentType === "progress"){
-    //         return "How my work was completed"
-    //     } else if (attachmentType === "result"){
-    //         return "My work"
-    //     } else if (attachmentType === "none"){
-    //         return null
-    //     }
-    // }
+    function summaryMaker() {
+        return (
+            summaryList.map((summary) => <Summary dangerouslySetInnerHTML={{__html : summary}} />)
+        )
+    }
 
     return (
         <Main>
             <EventTitle dangerouslySetInnerHTML={{ __html: title }}/>
             <EventDate>{time}</EventDate>
             <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: subtitle }}/>
-            <EventSectionContainer>
-                <Summary dangerouslySetInnerHTML={{ __html: summary }} />
-            </EventSectionContainer>
+            <SummaryContainer>
+                {summaryMaker()}
+            </SummaryContainer>
             <EventSectionContainer show={attachmentType !== "none"}>
                 <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText[attachmentType]} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
                 <LinkContainer show={showAttachment}>

@@ -33,7 +33,9 @@ const allContent = {
                         "subtitle" : "Desain Ulang <em>Home Page</em>",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summary" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
+                        "summaryList" : [
+                            "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek"
+                        ],
                         "attachmentType" : "both",
                         "relevantLink" : [
                             "https://github.com/xournalpp/xournalpp.github.io/pull/49",
@@ -45,7 +47,9 @@ const allContent = {
                         "subtitle" : "Desain Ulang Ikon Aksi",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summary" : "Bekerja sama dengan pemelihara proyek dan desainer UI untuk mendesain ulang semua ikon aksi yang digunakan dalam aplikasi",
+                        "summaryList" : [
+                            "Bekerja sama dengan pemelihara proyek dan desainer UI untuk mendesain ulang semua ikon aksi yang digunakan dalam aplikasi"
+                        ],
                         "attachmentType" : "progress",
                         "relevantLink" : [
                             "https://github.com/xournalpp/xournalpp/pull/3154",
@@ -56,7 +60,9 @@ const allContent = {
                         "subtitle" : "Membuat Ikon Aksi",
                         "timeStart" : "2020",
                         "timeEnd" : null,
-                        "summary" : "Menambahkan beberapa ikon aksi ke dalam set ikon yang digunakan oleh distro elementaryOS",
+                        "summaryList" : [
+                            "Menambahkan beberapa ikon aksi ke dalam set ikon yang digunakan oleh distro elementaryOS"
+                        ],
                         "attachmentType" : "progress",
                         "relevantLink" : [
                             "https://github.com/elementary/icons/pull/914",
@@ -70,7 +76,9 @@ const allContent = {
                         "subtitle" : "Membuat Ikon Aplikasi",
                         "timeStart" : "2020",
                         "timeEnd" : null,
-                        "summary" : "Membuat ikon aplikasi baru yang sesuai dengan nama aplikasi",
+                        "summaryList" : [
+                            "Membuat ikon aplikasi baru yang sesuai dengan nama aplikasi"
+                        ],
                         "attachmentType" : "progress",
                         "relevantLink" : [
                             "https://github.com/sgpthomas/hourglass/pull/80",
@@ -87,7 +95,9 @@ const allContent = {
                         "subtitle" : null,
                         "timeStart" : "November 2020",
                         "timeEnd" : null,
-                        "summary" : "Situs daftar film yang paling digemari sekarang. Dibangun dengan database The Movie DB dan framework React.js ",
+                        "summaryList" : [
+                            "Situs daftar film yang paling digemari sekarang. Dibangun dengan database The Movie DB dan framework React.js"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://fatih20.github.io/Info-Film-React-Edition/ ",
@@ -98,7 +108,9 @@ const allContent = {
                         "subtitle" : null,
                         "timeStart" : "Oktober 2020",
                         "timeEnd" : null,
-                        "summary" : "Situs daftar film yang sekarang paling diminati. Dibangun dengan database The Movie DB dan JS, CSS, HTML ",
+                        "summaryList" : [
+                            "Situs daftar film yang sekarang paling diminati. Dibangun dengan database The Movie DB dan JS, CSS, HTML"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://fatih20.github.io/Info-Film/",
@@ -109,7 +121,9 @@ const allContent = {
                         "subtitle" : null,
                         "timeStart" : "Desember 2020",
                         "timeEnd" : null,
-                        "summary" : "Situs penghitung body mass index yang menyertakan visualisasi tipe body mass index yang dihitung dan jaraknya dari tipe lain. Dibuat dengan framework React.js dan library Rechart.js",
+                        "summaryList" : [
+                            "Situs penghitung body mass index yang menyertakan visualisasi tipe body mass index yang dihitung dan jaraknya dari tipe lain. Dibuat dengan framework React.js dan library Rechart.js"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://fatih20.github.io/Better-BMI-Calculator/ ",
@@ -120,7 +134,9 @@ const allContent = {
                         "subtitle" : null,
                         "timeStart" : "September 2020",
                         "timeEnd" : null,
-                        "summary" : "Bekerjasama dengan seorang penulis untuk membuat sebuah game choose-your-own-adventure yang dibangun dengan menggunakan engine Take a Path",
+                        "summaryList" : [
+                            "Bekerjasama dengan seorang penulis untuk membuat sebuah game choose-your-own-adventure yang dibangun dengan menggunakan engine Take a Path"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://fatih20.github.io/Another-Life-Tough-Life/ ",
@@ -131,7 +147,9 @@ const allContent = {
                         "subtitle" : null,
                         "timeStart" : "September 2020",
                         "timeEnd" : null,
-                        "summary" : "Sebuah game engine dibuat dengan Javascript yang digunakan untuk membuat game choose-your-own-adventure berbasis web. ",
+                        "summaryList" : [
+                            "Sebuah game engine dibuat dengan Javascript yang digunakan untuk membuat game choose-your-own-adventure berbasis web"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://github.com/Fatih20/Take-a-Path",
@@ -147,7 +165,11 @@ const allContent = {
                         "subtitle" : "<em>Content Writer</em>",
                         "timeStart" : "Agustus 2021",
                         "timeEnd" : "Sekarang",
-                        "summary" : "Sebuah game engine dibuat dengan Javascript yang digunakan untuk membuat game choose-your-own-adventure berbasis web. ",
+                        "summaryList" : [
+                            "Menulis post-post bertipe microblog tentang kehidupan belajar para pelajar sekarang",
+                            "Menulis isi dari website TSF yang sedang dikembangkan",
+                            "Mengategorisasikan dan mengelompokkan semua konten dan event TSF yang akan diletakkan dalam website",
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://www.instagram.com/thestudyfriend/",
@@ -158,7 +180,9 @@ const allContent = {
                         "subtitle" : "<em>Content Writer</em>",
                         "timeStart" : "Agustus 2021",
                         "timeEnd" : "Sekarang",
-                        "summary" : "Menulis beragam post tentang topik-topik yang relevan bagi remaja bangsa",
+                        "summaryList" : [
+                            "Menulis beragam post tentang topik-topik yang relevan bagi remaja bangsa"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://www.instagram.com/thestudyfriend/",
@@ -169,7 +193,9 @@ const allContent = {
                         "subtitle" : "Menulis <em>Homepage</em>",
                         "timeStart" : "Agustus 2021",
                         "timeEnd" : null,
-                        "summary" : "Menulis dan membuat seluruh konten yang ada di homepage Xournalpp untuk mempromosikan software tersebut",
+                        "summaryList" : [
+                            "Menulis dan membuat seluruh konten yang ada di homepage Xournalpp untuk mempromosikan software tersebut"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://xournalpp.github.io",
@@ -180,7 +206,9 @@ const allContent = {
                         "subtitle" : "Kontributor",
                         "timeStart" : "Oktober 2020",
                         "timeEnd" : "Sekarang",
-                        "summary" : "Menulis hampir selusin artikel review dari beragam game yang ditulis dalam bahasa Inggris untuk pembaca internasional",
+                        "summaryList" : [
+                            "Menulis hampir selusin artikel review dari beragam game yang ditulis dalam bahasa Inggris untuk pembaca internasional"
+                        ],
                         "attachmentType" : "result",
                         "relevantLink" : [
                             "https://firesidedotreviews.wordpress.com/author/narahamsyah/",
@@ -196,7 +224,10 @@ const allContent = {
                         "subtitle" : "Ketua IPHO",
                         "timeStart" : "November 2019",
                         "timeEnd" : "Desember 2020",
-                        "summary" : "Menulis hampir selusin artikel review dari beragam game yang ditulis dalam bahasa Inggris untuk pembaca internasional",
+                        "summaryList" : [
+                            "Menjalankan ekskul IPHO di SMAN 2 Surabaya",
+                            "Menjadi panitia di setiap acara sekolah (internal maupun eksternal)",
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
 
@@ -207,7 +238,9 @@ const allContent = {
                         "subtitle" : "Tutor Akademik",
                         "timeStart" : "September 2021",
                         "timeEnd" : "Desember 2021",
-                        "summary" : "Membantu segenap mahasiswa TPB 2021 dalam hal-hal akademik dengan membuat pembahasan soal tutorial dan mengadakan tutor sebaya",
+                        "summaryList" : [
+                            "Membantu segenap mahasiswa TPB 2021 dalam hal-hal akademik dengan membuat pembahasan soal tutorial dan mengadakan tutor sebaya"
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
 
@@ -218,7 +251,9 @@ const allContent = {
                         "subtitle" : "Ketua Divisi Akademik",
                         "timeStart" : "Desember 2021",
                         "timeEnd" : "Sekarang",
-                        "summary" : "Memimpin divisi akademik dalam menjalankan tugasnya, yakni membantu segenap massa STEI 2021 dalam permasalahan dan urusan akademik.",
+                        "summaryList" : [
+                            "Memimpin divisi akademik dalam menjalankan tugasnya, yakni membantu segenap massa STEI 2021 dalam permasalahan dan urusan akademik."
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
                             
@@ -234,7 +269,9 @@ const allContent = {
                         "subtitle" : "Sekolah Teknik Elektro dan Informatika",
                         "timeStart" : "Agustus 2021",
                         "timeEnd" : "Sekarang",
-                        "summary" : "Diterima melalui jalur SBMPTN",
+                        "summaryList" : [
+                            "Diterima melalui jalur SBMPTN"
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
                             
@@ -245,7 +282,10 @@ const allContent = {
                         "subtitle" : "Jurusan MIPA",
                         "timeStart" : "Juli 2018",
                         "timeEnd" : "Mei 2021",
-                        "summary" : "Diterima melalui jalur SBMPTN",
+                        "summaryList" : [
+                            "Aktif dalam OSIS yang mengadakan acara-acara sekolah internal maupun eksternal",
+                            "Menjadi perwakilan sekolah dalam OSK dan KSK bidang Fisika pada tahun 2019 dan 2020",
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
                             
@@ -261,7 +301,9 @@ const allContent = {
                         "subtitle" : "Frontrunner 9-14",
                         "timeStart" : "Juli 2018",
                         "timeEnd" : "Maret 2020",
-                        "summary" : "Mempelajari konsep-konsep <em>advanced</em> dalam bahasa Inggris dengan bimbingan <em>native speaker</em>",
+                        "summaryList" : [
+                            "Mempelajari konsep-konsep <em>advanced</em> dalam bahasa Inggris dengan bimbingan <em>native speaker</em>"
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
                             
@@ -272,7 +314,10 @@ const allContent = {
                         "subtitle" : "Web Development Path",
                         "timeStart" : "Juli 2021",
                         "timeEnd" : "Agustus 2021",
-                        "summary" : "Mempelajari konsep-konsep <em>advanced</em> dalam bahasa Inggris dengan bimbingan <em>native speaker</em>",
+                        "summaryList" : [
+                            "Mengerjakan modul-modul Progate tentang hard skills yang diperlukan dalam web development",
+                            "Bekerja sama dalam sebuah proyek tim membuat situs",
+                        ],
                         "attachmentType" : "none",
                         "relevantLink" : [
                             
@@ -316,7 +361,7 @@ const allContent = {
                         "subtitle" : "Desain Ulang <em>Home Page</em>",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summary" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
+                        "summaryList" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
                         "attachmentType" : "both",
                         "relevantLink" : [
                             "https://github.com/xournalpp/xournalpp.github.io/pull/49",
@@ -328,7 +373,7 @@ const allContent = {
                         "subtitle" : "Desain Ulang <em>Home Page</em>",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summary" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
+                        "summaryList" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
                         "attachmentType" : "both",
                         "relevantLink" : [
                             "https://github.com/xournalpp/xournalpp.github.io/pull/49",
@@ -340,7 +385,7 @@ const allContent = {
                         "subtitle" : "Desain Ulang <em>Home Page</em>",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summary" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
+                        "summaryList" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
                         "attachmentType" : "both",
                         "relevantLink" : [
                             "https://github.com/xournalpp/xournalpp.github.io/pull/49",
@@ -358,7 +403,7 @@ const allContent = {
                         "subtitle" : "",
                         "timeStart" : "",
                         "timeEnd" : "",
-                        "summary" : "",
+                        "summaryList" : "",
                         "relevantLink" : [
                             
                         ],
@@ -373,7 +418,7 @@ const allContent = {
                         "subtitle" : "",
                         "timeStart" : "",
                         "timeEnd" : "",
-                        "summary" : "",
+                        "summaryList" : "",
                         "relevantLink" : [
                             
                         ],
@@ -388,7 +433,7 @@ const allContent = {
                         "subtitle" : "",
                         "timeStart" : "",
                         "timeEnd" : "",
-                        "summary" : "",
+                        "summaryList" : "",
                         "relevantLink" : [
                             
                         ],
@@ -403,7 +448,7 @@ const allContent = {
                         "subtitle" : "",
                         "timeStart" : "",
                         "timeEnd" : "",
-                        "summary" : "",
+                        "summaryList" : "",
                         "relevantLink" : [
                             
                         ],
@@ -418,7 +463,7 @@ const allContent = {
                         "subtitle" : "",
                         "timeStart" : "",
                         "timeEnd" : "",
-                        "summary" : "",
+                        "summaryList" : "",
                         "relevantLink" : [
                             
                         ],
