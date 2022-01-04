@@ -183,7 +183,7 @@ const Spacer = styled.div`
 `;
 
 export default function MainContent ({choiceDisplayed, handleChoiceClick, backToSelection}){
-    const {options} = useContent(); 
+    const {options, bodyTitle} = useContent(); 
 
 
     function optionMaker({name}) {
@@ -197,7 +197,7 @@ export default function MainContent ({choiceDisplayed, handleChoiceClick, backTo
     if (choiceDisplayed === "selection"){
         return (
             <Main>
-                <Title>Things I've done</Title>
+                <Title>{bodyTitle}</Title>
                 <OptionContainer>
                     {options.map((option) => optionMaker(option))}
                 </OptionContainer>

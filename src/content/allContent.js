@@ -25,6 +25,7 @@ const allContent = {
             "progress" : "Proses pengerjaan saya",
             "result" : "Pekerjaan saya",
         },
+        "bodyTitle" : "Hal yang Telah Saya Lakukan",
         "options" : [
             {
                 "name" : "Kontribusi Open-Source",
@@ -354,6 +355,7 @@ const allContent = {
             "progress" : "How my work was completed",
             "result" : "My work",
         },
+        "bodyTitle" : "Things I've Done",
         "options" : [
             {
                 "name" : "Open-Source Contribution",
