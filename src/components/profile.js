@@ -76,13 +76,16 @@ const Occupation = styled(VanillaButton)`
     box-sizing: border-box;
     color: ${({chosen, theme}) => chosen ? theme.regularText : theme.unselectedBareText};
     font-size: 1em;
-    transition: color 0s, background-color 0s, box-shadow 0s;
 
     /* border : solid 1px white; */
 
     & > h2 {
         font-weight: 600;
         text-align: left;
+    }
+
+    & * {
+        transition: color 0s, background-color 0s, box-shadow 0s;
     }
 
     &:hover {
@@ -124,6 +127,15 @@ export default function Profile (){
         )
     }
 
+    function rearrangedOccupations() {
+        let newOccupations = JSON.parse(JSON.stringify(occupations));
+        const selectedOccupation = occupations[indexOfShownOccupation];
+        newOccupations.splice(0, 0, selectedOccupation);
+        newOccupations.splice(indexOfShownOccupation+1, 1);
+        console.log(newOccupations)
+        return newOccupations;
+    }
+
 
 
     return (
@@ -133,7 +145,7 @@ export default function Profile (){
                 <BottomContainer>
                     <OccupationContainer>
                         <h2>{asAMaker(indexOfShownOccupation)}...</h2>
-                        {occupations.map(occupationMaker)}
+                        {rearrangedOccupations().map(occupationMaker)}
                     </OccupationContainer>
                     <SummaryContainer>
                         <p dangerouslySetInnerHTML={{ __html : occupations[indexOfShownOccupation]["summary"] }} />
