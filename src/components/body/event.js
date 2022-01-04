@@ -24,9 +24,9 @@ const Main = styled.div`
 `;
 
 const EventSectionContainer = styled.div`
-    border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
-    margin-bottom: 0.5em;
-    padding-bottom: 0.5em;
+    border-top: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
+    margin-top: 0.5em;
+    padding-top: 0.5em;
 `;
 
 const EventTitle = styled.h2`
@@ -38,8 +38,8 @@ const EventDate = styled.p`
 `;
 
 const EventSubtitle = styled.p`
+    display: ${({show}) => show? null : "none"};
     font-weight: 600;
-    margin-bottom: 0.5em;
 `;
 
 const Summary = styled.p`
@@ -102,18 +102,18 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
 
     return (
         <Main>
+            <EventTitle dangerouslySetInnerHTML={{ __html: title }}/>
+            <EventDate>{time}</EventDate>
+            <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: subtitle }}/>
             <EventSectionContainer>
-                <EventTitle dangerouslySetInnerHTML={{ __html: title }}/>
-                <EventDate>{time}</EventDate>
-            </EventSectionContainer>
-            <EventSectionContainer>
-                <EventSubtitle dangerouslySetInnerHTML={{ __html: subtitle }}/>
                 <Summary dangerouslySetInnerHTML={{ __html: summary }} />
             </EventSectionContainer>
-            <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText()} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
-            <LinkContainer show={showAttachment}>
-                {relevantLink.map((link) => <Link href={link}>{link}</Link>)}
-            </LinkContainer>
+            <EventSectionContainer>
+                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText()} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
+                <LinkContainer show={showAttachment}>
+                    {relevantLink.map((link) => <Link href={link}>{link}</Link>)}
+                </LinkContainer>
+            </EventSectionContainer>
    
         </Main>
     )
