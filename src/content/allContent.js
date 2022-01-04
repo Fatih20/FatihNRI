@@ -19,10 +19,10 @@ const allContent = {
             },
         
         ],
-        "seework" : {
-            "both" : "",
-            "progress" : "",
-            "result" : "",
+        "attachmentText" : {
+            "both" : "Pekerjaan saya dan proses pengerjaannya",
+            "progress" : "Proses pengerjaan saya",
+            "result" : "Pekerjaan saya",
         },
         "options" : [
             {
@@ -302,7 +302,7 @@ const allContent = {
             },
         
         ],
-        "seework" : {
+        "attachmentText" : {
             "both" : "My work and how it was completed",
             "progress" : "How my work was completed",
             "result" : "My work",
