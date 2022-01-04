@@ -6,6 +6,7 @@ import { VanillaButton } from "../GlobalComponent";
 import { useContent } from "../context/language";
 import { useIsEnglish } from "../context/language";
 
+import { shadeColor } from "../theme";
 
 const Main = styled.div`
     align-items: center;
@@ -56,6 +57,11 @@ const BottomContainer = styled.div`
     }
 `;
 
+const WhatAmILine = styled.h2`
+    border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
+    padding-bottom: 0.15em;
+`;
+
 const OccupationContainer = styled.div`
     align-items: flex-start;
     display: flex;
@@ -90,7 +96,7 @@ const Occupation = styled(VanillaButton)`
 
     &:hover {
         /* box-shadow: 0 3px 5px rgba(255, 255, 255, 0.35); */
-        color: ${({theme}) => theme.regularText};
+        color: ${({theme}) => theme.aboutToBeSelectedBareText};
     }
 `;
 
@@ -130,10 +136,12 @@ export default function Profile (){
     function rearrangedOccupations() {
         let newOccupations = JSON.parse(JSON.stringify(occupations));
         const selectedOccupation = occupations[indexOfShownOccupation];
-        newOccupations.splice(0, 0, selectedOccupation);
-        newOccupations.splice(indexOfShownOccupation+1, 1);
-        console.log(newOccupations)
+        newOccupations.splice(indexOfShownOccupation, 1);
         return newOccupations;
+    }
+
+    function whatAmI() {
+        return `${asAMaker(indexOfShownOccupation)} ${occupations[indexOfShownOccupation]["name"]}`
     }
 
 
@@ -144,7 +152,7 @@ export default function Profile (){
                 <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
                 <BottomContainer>
                     <OccupationContainer>
-                        <h2>{asAMaker(indexOfShownOccupation)}...</h2>
+                        <WhatAmILine dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
                         {rearrangedOccupations().map(occupationMaker)}
                     </OccupationContainer>
                     <SummaryContainer>
