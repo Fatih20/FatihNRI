@@ -16,6 +16,7 @@ const Main = styled.div`
   flex-direction: column;
   margin: 0 auto;
   min-height: 100vh;
+  position: relative;
 
   /* border: solid 1px white; */
 `;
@@ -45,21 +46,39 @@ const First = styled.div`
     /* border : solid 1px white; */
 `;
 
+// const FloatContainer = styled.div`
+//     background-color: rgba(0,0,0,0);
+//     display: flex;
+//     flex-direction: column;
+//     height: 100%;
+//     left: 0;
+//     justify-content: center;
+//     position: absolute;
+//     top: 0;
+//     width: 50%;
+//     z-index: -1;
+
+
+//     /* border: solid 1px white; */
+
+// `;
+
 const FloatContainer = styled.div`
+    align-items: center;
     background-color: rgba(0,0,0,0);
     display: flex;
     flex-direction: column;
-    height: 100%;
-    left: 0;
+    height: 100vh;
     justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 50%;
-    z-index: -1;
+    position: fixed;
+    width: 100%;
+    z-index : -1;
 
+    /* border : solid 1px white; */
+`;
 
-    /* border: solid 1px white; */
-
+const ScrollButtonContainer = styled.div`
+    
 `;
 
 const Border = styled.div`
@@ -79,6 +98,9 @@ function App() {
       <IsEnglishProvider>
         <IsDarkProvider>
           <Main>
+            <FloatContainer>
+
+            </FloatContainer>
             <Header />
               {/* <FirstContainer>
                 <First>
