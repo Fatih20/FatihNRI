@@ -19,7 +19,7 @@ const allContent = {
             },
         
         ],
-        "asA" : "Saya adalah",
+        "asA" : "Sebagai",
         "attachmentText" : {
             "both" : "Pekerjaan saya dan proses pengerjaannya",
             "progress" : "Proses pengerjaan saya",
@@ -35,7 +35,7 @@ const allContent = {
                         "timeStart" : "2021",
                         "timeEnd" : null,
                         "summaryList" : [
-                            "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek"
+                            "Merombak dan mendesain ulang homepage proyek ini yang menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek"
                         ],
                         "attachmentType" : "both",
                         "relevantLink" : [
@@ -337,7 +337,7 @@ const allContent = {
                 "a" : true,
             },
             {
-                "name" : "Open Source Contributor",
+                "name" : "Open-Source Contributor",
                 "summary" : "I contribute to open-source project",
                 "a" : false,
             },
@@ -356,14 +356,16 @@ const allContent = {
         },
         "options" : [
             {
-                "name" : "Kontribusi Open-Source",
+                "name" : "Open-Source Contribution",
                 "content" : [
                     {
                         "title" : "Xournalpp",
-                        "subtitle" : "Desain Ulang <em>Home Page</em>",
+                        "subtitle" : "Home Page Redesign",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summaryList" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
+                        "summaryList" : [
+                            "Overhaul and redesign the homepage of this project that is mainly built with HTML & CSS, taking into account critique and advice from the project maintainer",
+                        ],
                         "attachmentType" : "both",
                         "relevantLink" : [
                             "https://github.com/xournalpp/xournalpp.github.io/pull/49",
@@ -372,26 +374,44 @@ const allContent = {
                     },
                     {
                         "title" : "Xournalpp",
-                        "subtitle" : "Desain Ulang <em>Home Page</em>",
+                        "subtitle" : "Action Icons Redesign",
                         "timeStart" : "2021",
                         "timeEnd" : null,
-                        "summaryList" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
-                        "attachmentType" : "both",
+                        "summaryList" : [
+                            "Working together with project maintainer and UI designer to redesign all of the action icons that is used within the app",
+                        ],
+                        "attachmentType" : "progress",
                         "relevantLink" : [
-                            "https://github.com/xournalpp/xournalpp.github.io/pull/49",
-                            "https://xournalpp.github.io/",
+                            "https://github.com/xournalpp/xournalpp/pull/3154",
                         ],
                     },
                     {
-                        "title" : "Xournalpp",
-                        "subtitle" : "Desain Ulang <em>Home Page</em>",
-                        "timeStart" : "2021",
+                        "title" : "elementaryOS/icons",
+                        "subtitle" : "Create Action Icons",
+                        "timeStart" : "2020",
                         "timeEnd" : null,
-                        "summaryList" : "Merombak dan mendesain ulang homepage dari proyek ini menggunakan HTML & CSS, dengan mempertimbangkan kritik dan saran dari pemelihara proyek",
-                        "attachmentType" : "both",
+                        "summaryList" : [
+                            "Create some new action icon to the icon set used by the elementaryOS distro",
+                        ],
+                        "attachmentType" : "progress",
                         "relevantLink" : [
-                            "https://github.com/xournalpp/xournalpp.github.io/pull/49",
-                            "https://xournalpp.github.io/",
+                            "https://github.com/elementary/icons/pull/914",
+                            "https://github.com/elementary/icons/pull/912",
+                            "https://github.com/elementary/icons/pull/909",
+                            "https://github.com/elementary/icons/pull/908",
+                        ],
+                    },
+                    {
+                        "title" : "Hourglass",
+                        "subtitle" : "Create Application Icon",
+                        "timeStart" : "2020",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "Create new application icon that better suits the application name",
+                        ],
+                        "attachmentType" : "progress",
+                        "relevantLink" : [
+                            "https://github.com/sgpthomas/hourglass/pull/80",
                         ],
                     }
                 ]
@@ -401,75 +421,238 @@ const allContent = {
                 "name" : "Proyek Pribadi",
                 "content" : [
                     {
-                        "title" : "",
-                        "subtitle" : "",
-                        "timeStart" : "",
-                        "timeEnd" : "",
-                        "summaryList" : "",
-                        "relevantLink" : [
-                            
+                        "title" : "Info Film : React Edition",
+                        "subtitle" : null,
+                        "timeStart" : "November 2020",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "A list of the most popular film today. Built with The Movie DB databse and the React.js framework",
                         ],
-                    }
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://fatih20.github.io/Info-Film-React-Edition/ ",
+                        ],
+                    },
+                    {
+                        "title" : "Info Film",
+                        "subtitle" : null,
+                        "timeStart" : "October 2020",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "A list of the most popular film today. Built with The Movie DB databse and JS, CSS, HTML",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://fatih20.github.io/Info-Film/",
+                        ],
+                    },
+                    {
+                        "title" : "BMI Calculator",
+                        "subtitle" : null,
+                        "timeStart" : "December 2020",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "A site that calculate your body mass index and produce a visualization of the calculated body mass index type and its distance from other types. Built with React.js framework and Rechart.js library",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://fatih20.github.io/Better-BMI-Calculator/ ",
+                        ],
+                    },
+                    {
+                        "title" : "Another Life Tough Life",
+                        "subtitle" : null,
+                        "timeStart" : "September 2020",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "Collaborate with a writer to create a choose-your-own-adventure game built with the Take a Path engine",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://fatih20.github.io/Another-Life-Tough-Life/ ",
+                        ],
+                    },
+                    {
+                        "title" : "Take a Path",
+                        "subtitle" : null,
+                        "timeStart" : "September 2020",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "A game engine built on Javascript that is used to make choose-your-own-adventure game berbasis web",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://github.com/Fatih20/Take-a-Path",
+                        ],
+                    },
                 ]
             },
             {
                 "name" : "Pengalaman Menulis",
                 "content" : [
                     {
-                        "title" : "",
-                        "subtitle" : "",
-                        "timeStart" : "",
-                        "timeEnd" : "",
-                        "summaryList" : "",
-                        "relevantLink" : [
-                            
+                        "title" : "The Study Friend",
+                        "subtitle" : "Content Writer",
+                        "timeStart" : "August 2021",
+                        "timeEnd" : "Now",
+                        "summaryList" : [
+                            "Write microblog posts about the study life of today's student",
+                            "Write the content of the upcoming TSF's website",
+                            "Categorize and group all of TSF's content and event that is going to be inserted to the website",
                         ],
-                    }
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://www.instagram.com/thestudyfriend/",
+                        ],
+                    },
+                    {
+                        "title" : "Rangkul Rasa",
+                        "subtitle" : "Content Writer",
+                        "timeStart" : "August 2021",
+                        "timeEnd" : "Now",
+                        "summaryList" : [
+                            "Write various post about topics that are relevant and useful to today's teenager",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://www.instagram.com/thestudyfriend/",
+                        ],
+                    },
+                    {
+                        "title" : "Xournalpp",
+                        "subtitle" : "Write Homepage",
+                        "timeStart" : "August 2021",
+                        "timeEnd" : null,
+                        "summaryList" : [
+                            "Write and create all of the content in Xournalpp's homepage that is meant to promote the software",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://xournalpp.github.io",
+                        ],
+                    },
+                    {
+                        "title" : "Fireside Review",
+                        "subtitle" : "Contributor",
+                        "timeStart" : "October 2020",
+                        "timeEnd" : "Now",
+                        "summaryList" : [
+                            "Write in English almost a dozen of review articles of various game for international readers",
+                        ],
+                        "attachmentType" : "result",
+                        "relevantLink" : [
+                            "https://firesidedotreviews.wordpress.com/author/narahamsyah/",
+                        ],
+                    },
                 ]
             },
             {
                 "name" : "Pengalaman Organisasi",
                 "content" : [
                     {
-                        "title" : "",
-                        "subtitle" : "",
-                        "timeStart" : "",
-                        "timeEnd" : "",
-                        "summaryList" : "",
+                        "title" : "OSIS SMAN 2 Surabaya",
+                        "subtitle" : "Head of IPHO",
+                        "timeStart" : "November 2019",
+                        "timeEnd" : "December 2020",
+                        "summaryList" : [
+                            "Run the IPHO extracurricular activity of SMAN 2 Surabaya",
+                            "Be a part of the organizer in every school events be it internal or external",
+                        ],
+                        "attachmentType" : "none",
+                        "relevantLink" : [
+
+                        ],
+                    },
+                    {
+                        "title" : "Dewan Akademik TPB 2021",
+                        "subtitle" : "Academic Tutor",
+                        "timeStart" : "September 2021",
+                        "timeEnd" : "December 2021",
+                        "summaryList" : [
+                            "Help and assists TPB 2021 students in academic matters by creating solutions for tutorial problems and be a tutor in their tutor program",
+                        ],
+                        "attachmentType" : "none",
+                        "relevantLink" : [
+
+                        ],
+                    },
+                    {
+                        "title" : "Badan Pengurus Angkatan STEI 2021",
+                        "subtitle" : "Head of Academic Division",
+                        "timeStart" : "December 2021",
+                        "timeEnd" : "Now",
+                        "summaryList" : [
+                            "Lead the academic division in running its task of helping all STEI 2021 students in accademic matters"
+                        ],
+                        "attachmentType" : "none",
                         "relevantLink" : [
                             
                         ],
-                    }
+                    },
                 ]
             },
             {
                 "name" : "Pendidikan",
                 "content" : [
                     {
-                        "title" : "",
-                        "subtitle" : "",
-                        "timeStart" : "",
-                        "timeEnd" : "",
-                        "summaryList" : "",
+                        "title" : "Institut Teknologi Bandung",
+                        "subtitle" : "Sekolah Teknik Elektro dan Informatika",
+                        "timeStart" : "August 2021",
+                        "timeEnd" : "Now",
+                        "summaryList" : [
+                            "Accepted through SBMPTN"
+                        ],
+                        "attachmentType" : "none",
                         "relevantLink" : [
                             
                         ],
-                    }
+                    },
+                    {
+                        "title" : "SMAN 2 Surabaya",
+                        "subtitle" : "MIPA Major",
+                        "timeStart" : "July 2018",
+                        "timeEnd" : "May 2021",
+                        "summaryList" : [
+                            "Active within OSIS which held the school's internal and external events",
+                            "Be the school representative for Physics OSK and KSK in the year 2019 and 2020",
+                        ],
+                        "attachmentType" : "none",
+                        "relevantLink" : [
+                            
+                        ],
+                    },
                 ]
             },
             {
                 "name" : "Kursus dan Pelatihan",
                 "content" : [
                     {
-                        "title" : "",
-                        "subtitle" : "",
-                        "timeStart" : "",
-                        "timeEnd" : "",
-                        "summaryList" : "",
+                        "title" : "English First",
+                        "subtitle" : "Frontrunner 9-14",
+                        "timeStart" : "July 2018",
+                        "timeEnd" : "March 2020",
+                        "summaryList" : [
+                            "Study the English language many features and concepts with the help of native speakers",
+                        ],
+                        "attachmentType" : "none",
                         "relevantLink" : [
                             
                         ],
-                    }
+                    },
+                    {
+                        "title" : "Progate",
+                        "subtitle" : "Web Development Path",
+                        "timeStart" : "July 2021",
+                        "timeEnd" : "August 2021",
+                        "summaryList" : [
+                            "Work through Progate's module about hard skills that are required in web development",
+                            "Participate in a team project that consists of building a website",
+                        ],
+                        "attachmentType" : "none",
+                        "relevantLink" : [
+                            
+                        ],
+                    },
                 ]
             },
         ],
