@@ -15,7 +15,7 @@ const Main = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
     height: 100%;
     width: 100%;
@@ -24,14 +24,14 @@ const Main = styled.div`
 `;
 
 const Title = styled.h2`
-    font-size: 36px;
+    font-size: 2.25rem;
 `;
 
 const OptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 0.65rem;
     justify-content: center;
 `;
 
@@ -46,7 +46,7 @@ const Option = styled(VanillaButton)`
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
         text-align: center;
     }
@@ -70,7 +70,7 @@ const ShowingEventContainer = styled.div`
 `;
 
 const EventContainerTitle = styled.h2`
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-bottom: 5px;
     text-align: center;
 `;
@@ -81,7 +81,7 @@ const EventContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 1.25rem;
     padding-right: 0.5vw;
     scrollbar-width: thin;
     scrollbar-color: ${({theme}) => theme.scrollbarThumbFill} ${({theme}) => theme.scrollbarTrackFill};
@@ -125,8 +125,8 @@ const BackButton = styled(VanillaButton)`
     background-color: rgba(255, 255, 255, 0);
     color: ${({theme}) => theme.regularText};
     display: flex;
-    font-size: 18px;
-    gap: 5px;
+    font-size: 1.125rem;
+    gap: 0.3125rem;
     justify-content: center;
     padding-left: 3px;
     padding-right: 0;

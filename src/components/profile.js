@@ -13,14 +13,14 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 1rem;
 
     /* border: solid 1px white; */
 `;
 
 const Title = styled.h1`
-    font-size: 84px;
-    margin-top: 100px;
+    font-size: 5rem;
+    /* margin-top: 6rem; */
 `;
 
 const Buffer = styled.div`
@@ -42,7 +42,7 @@ const OccupationContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 0.65rem;
 
     /* border: solid 1px white; */
 `;
@@ -61,7 +61,7 @@ const Occupation = styled(VanillaButton)`
     /* border : solid 1px white; */
 
     & > h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
         text-align: left;
     }

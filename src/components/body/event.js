@@ -29,7 +29,7 @@ const EventSectionContainer = styled.div`
 `;
 
 const EventTitle = styled.h2`
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
 `;
 
@@ -50,7 +50,7 @@ const Summary = styled.p`
 const SeeWorkContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
 `;
 
 const SeeWork = styled.p`

@@ -12,7 +12,7 @@ const Main = styled.div`
     flex-direction: column;
     height: 7.5vh;
     justify-content: center;
-    max-height: 100px;
+    max-height: 6rem;
     margin: 0;
     padding: 10px;
     width: 100%;
@@ -26,9 +26,9 @@ const Main = styled.div`
 
 const IconsContainer = styled.div`
     display: flex;
-    font-size: 30px;
+    font-size: 2rem;
     justify-content: center;
-    gap: 25px;
+    gap: 1.5rem;
 `;
 
 const Icons = styled.a`
