@@ -1,6 +1,6 @@
 const allContent = {
-    "EN" : {
-        "greeting" : "Hello! I am",
+    "ID" : {
+        "greeting" : "Halo! Namaku",
         "occupations" : [
             {
                 "name" : "Web Developer",
@@ -19,6 +19,11 @@ const allContent = {
             },
         
         ],
+        "seework" : {
+            "both" : "",
+            "progress" : "",
+            "result" : "",
+        },
         "options" : [
             {
                 "name" : "Kontribusi Open-Source",
@@ -277,8 +282,8 @@ const allContent = {
             },
         ],
     },
-    "ID" : {
-        "greeting" : "Halo! Namaku",
+    "EN" : {
+        "greeting" : "Hello! I am",
         "occupations" : [
             {
                 "name" : "Web Developer",
@@ -297,6 +302,11 @@ const allContent = {
             },
         
         ],
+        "seework" : {
+            "both" : "My work and how it was completed",
+            "progress" : "How my work was completed",
+            "result" : "My work",
+        },
         "options" : [
             {
                 "name" : "Kontribusi Open-Source",
