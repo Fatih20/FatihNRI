@@ -129,11 +129,15 @@ const BackButton = styled(VanillaButton)`
     gap: 5px;
     justify-content: center;
     padding-left: 3px;
-    transition: padding-left 0.15s;
+    padding-right: 0;
+    transition: padding-left 0.15s, padding-right 0.15s;
     transition-timing-function: ease-in-out;
+
+    /* border : solid 1px white; */
 
     &:hover {
         padding-left: 0;
+        padding-right: 3px;
     }
 `;
 
