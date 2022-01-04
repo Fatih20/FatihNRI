@@ -58,10 +58,12 @@ const Occupation = styled(VanillaButton)`
     color: ${({chosen, theme}) => chosen ? theme.regularText : theme.unselectedBareText};
     transition: color 0s, background-color 0s, box-shadow 0s;
 
+    /* border : solid 1px white; */
+
     & > h2 {
         font-size: 24px;
         font-weight: 600;
-        text-align: center;
+        text-align: left;
     }
 
     &:hover {
