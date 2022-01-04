@@ -36,7 +36,9 @@ const MainWithinPadding = styled.div`
 
 const Title = styled.h1`
     font-size: 2.5em;
+    margin: 0 auto;
     /* margin-top: 6rem; */
+    /* border : solid 1px white; */
 `;
 
 const Buffer = styled.div`
@@ -46,20 +48,23 @@ const Buffer = styled.div`
 const BottomContainer = styled.div`
     align-items: flex-start;
     display: flex;
+    flex-direction: column;
     font-size: 0.6em;
+    gap: 0.25em;
     width: 100%;
+
+    & > * {
+        margin: 0 auto;
+    }
+
     /* height: calc(100vh - 1rem - 2.5em - 0.5em); */
 
     /* border : solid 1px white; */
-
-    & > * {
-        width: 50%;
-    }
 `;
 
 const WhatAmILine = styled.h2`
-    border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
-    padding-bottom: 0.15em;
+    /* border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)}; */
+    /* padding-bottom: 0.15em; */
 `;
 
 const OccupationContainer = styled.div`
@@ -153,7 +158,7 @@ export default function Profile (){
                 <BottomContainer>
                     <OccupationContainer>
                         <WhatAmILine dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
-                        {rearrangedOccupations().map(occupationMaker)}
+                        {/* {rearrangedOccupations().map(occupationMaker)} */}
                     </OccupationContainer>
                     <SummaryContainer>
                         <p dangerouslySetInnerHTML={{ __html : occupations[indexOfShownOccupation]["summary"] }} />
