@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 
-import { GlobalTransition } from "./GlobalComponent";
+import { GlobalTransition, VanillaButton } from "./GlobalComponent";
 import Footer from "./components/footer";
 import Body from "./components/body/body";
 import Profile from "./components/profile";
@@ -63,22 +63,31 @@ const First = styled.div`
 
 // `;
 
-const FloatContainer = styled.div`
-    align-items: center;
+const ScrollButtonContainer = styled.div`
     background-color: rgba(0,0,0,0);
-    display: flex;
+    bottom: 2.5rem;
+    display: none;
     flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    position: fixed;
+    pointer-events: none;
+    position: absolute;
+    top: 2rem;
     width: 100%;
-    z-index : -1;
+    z-index : 1;
 
-    /* border : solid 1px white; */
+    border : solid 1px white;
 `;
 
-const ScrollButtonContainer = styled.div`
-    
+const ScrollButton = styled(VanillaButton)`
+    background-color: white;
+    height: 100px;
+    pointer-events: auto;
+    width: 100px;
+
+    &:hover {
+      background-color: black;
+    }
+
+    border : solid 1px white;
 `;
 
 const Border = styled.div`
@@ -92,15 +101,23 @@ const Border = styled.div`
 `;
 
 function App() {
+  const bodyRef = useRef();
+
+  const handleScrollButtonClick = () => {
+    const targetY = bodyRef.current.offsetTop;
+    window.scrollTo({left : 0, top : targetY, behavior : "smooth"})
+    
+  }
+
   return (
     <>
       <GlobalTransition />
       <IsEnglishProvider>
         <IsDarkProvider>
           <Main>
-            <FloatContainer>
-
-            </FloatContainer>
+            <ScrollButtonContainer>
+                <ScrollButton onClick={handleScrollButtonClick} />
+            </ScrollButtonContainer>
             <Header />
               {/* <FirstContainer>
                 <First>
@@ -112,7 +129,7 @@ function App() {
                 </First>
               </FirstContainer> */}
               <Profile />
-              <Body />
+              <Body forwardedRef={bodyRef}  />
               <Footer />
           </Main>
         </IsDarkProvider>

@@ -25,7 +25,7 @@ const Main = styled.div`
 
 
 
-export default function Body (){
+export default function Body ({forwardedRef}){
     const[choiceDisplayed, setChoiceDisplayed] = useState("selection");
 
     function handleChoiceClick(newChoiceDisplayed) {
@@ -43,7 +43,7 @@ export default function Body (){
     
 
     return (
-        <Main>
+        <Main ref={forwardedRef}>
             <MainContent choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
         </Main>
     )
