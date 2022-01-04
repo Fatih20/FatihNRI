@@ -15,8 +15,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-
-  height: 100vh;
+  min-height: 100vh;
 
   /* border: solid 1px white; */
 `;
@@ -81,7 +80,7 @@ function App() {
         <IsDarkProvider>
           <Main>
             <Header />
-              <FirstContainer>
+              {/* <FirstContainer>
                 <First>
                   <FloatContainer>
                     <Border />
@@ -89,7 +88,9 @@ function App() {
                   <Profile />
                   <Body/>
                 </First>
-              </FirstContainer>
+              </FirstContainer> */}
+              <Profile />
+              <Body />
               <Footer />
           </Main>
         </IsDarkProvider>

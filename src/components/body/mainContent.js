@@ -15,24 +15,61 @@ const Main = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    justify-content: center;
+    font-size: 2rem;
+    /* gap: 0.75em; */
     height: 100%;
+    justify-content: center;
     width: 100%;
 
     /* border : solid 1px white; */
 `;
 
 const Title = styled.h2`
-    font-size: 2.25rem;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.375em 0;
+
+    /* border : solid 1px white; */
+    
 `;
 
 const OptionContainer = styled.div`
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     gap: 0.65rem;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: auto;
+
+    padding-right: 0.5vw;
+    scrollbar-width: thin;
+    scrollbar-color: ${({theme}) => theme.scrollbarThumbFill} ${({theme}) => theme.scrollbarTrackFill};
+
+    &::-webkit-scrollbar{
+        width: 0.5vw;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: ${({theme}) => theme.scrollbarThumbFill};
+        border: solid 1px ${({theme}) => theme.scrollbarThumbBorder};
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+        background-color: ${({theme}) => theme.scrollbarThumbHoveredFill};
+        border: solid 1px ${({theme}) => theme.scrollbarThumbHoveredBorder};
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: ${({theme}) => theme.scrollbarTrackFill};
+        border: solid 1px ${({theme}) => theme.scrollbarTrackBorder};
+    }
+
+    &::-webkit-scrollbar-track:hover{
+        background-color: ${({theme}) => theme.scrollbarTrackHoveredFill};
+        border: solid 1px ${({theme}) => theme.scrollbarTrackHoveredBorder};
+    }
+
+    /* border : solid 1px white; */
 `;
 
 const Option = styled(VanillaButton)`
@@ -42,11 +79,12 @@ const Option = styled(VanillaButton)`
     box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
     box-sizing: border-box;
     color: ${({theme}) => theme.regularText};
-    padding: 1rem;
+    font-size: 1em;
+    padding: 0.35em;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     & > h2 {
-        font-size: 1.5rem;
+        font-size: 0.8em;
         font-weight: 600;
         text-align: center;
     }
@@ -64,15 +102,10 @@ const ShowingEventContainer = styled.div`
     flex-direction: column;
     height: 100%;
     justify-content: flex-start;
+    max-width: 25em;
     width: 60%;
 
     /* border : solid 1px white; */
-`;
-
-const EventContainerTitle = styled.h2`
-    font-size: 1.75rem;
-    margin-bottom: 5px;
-    text-align: center;
 `;
 
 const EventContainer = styled.div`
@@ -80,12 +113,15 @@ const EventContainer = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
+    font-size: 0.5em;
     justify-content: flex-start;
     gap: 1.25rem;
     padding-right: 0.5vw;
     scrollbar-width: thin;
     scrollbar-color: ${({theme}) => theme.scrollbarThumbFill} ${({theme}) => theme.scrollbarTrackFill};
     overflow: auto;
+
+    /* border : solid 1px white; */
 
     &::-webkit-scrollbar{
         width: 0.5vw;
@@ -117,7 +153,7 @@ const EventContainer = styled.div`
 
 const BackContainer = styled.div`
     display: flex;
-    padding: 0.4rem 0;
+    padding-top: 0.4em;
     width: 100%;
 
     /* border : solid 1px white; */
@@ -127,9 +163,9 @@ const BackButton = styled(VanillaButton)`
     background-color: rgba(255, 255, 255, 0);
     color: ${({theme}) => theme.regularText};
     display: flex;
-    font-size: 1.125rem;
+    font-size: 0.5625em;
     justify-content: center;
-    padding-left: 3px;
+    padding-left: 0.1875em;
     padding-right: 0;
     transition: padding-left 0.15s, padding-right 0.15s;
     transition-timing-function: ease-in-out;
@@ -138,7 +174,7 @@ const BackButton = styled(VanillaButton)`
 
     &:hover {
         padding-left: 0;
-        padding-right: 3px;
+        padding-right: 0.1875em;
     }
 `;
 
@@ -171,7 +207,7 @@ export default function MainContent ({choiceDisplayed, handleChoiceClick, backTo
         return (
             <Main>
                 <ShowingEventContainer>
-                    <EventContainerTitle>{choiceDisplayed}</EventContainerTitle>
+                    <Title>{choiceDisplayed}</Title>
                     <EventContainer>
                         {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
                     </EventContainer>

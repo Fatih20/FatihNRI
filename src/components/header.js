@@ -18,11 +18,10 @@ const Main = styled.div`
     color: ${({theme}) => theme.regularText};
     display: flex;
     gap: 1.25rem;
-    height: 7.5vh;
+    font-size: 2rem;
     justify-content: flex-start;
-    max-height: 6rem;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0.2em;
     width: 100%;
 
     /* border : solid 1px white; */
@@ -35,13 +34,15 @@ const IconContainer = styled.div`
 const Language = styled(VanillaButton)`
     background-color: rgba(0, 0, 0, 0);
     color: ${({chosen, theme}) => chosen ? theme.regularText : theme.unselectedBareText};
-    font-size: 1.25rem;
+    font-size: 0.6em;
     font-weight: 600;
 `;
 
 const LanguageContainer = styled.div`
     display: flex;
     gap: 0.75rem;
+
+    /* border : solid 1px white; */
 `;
 
 export default function Header (){

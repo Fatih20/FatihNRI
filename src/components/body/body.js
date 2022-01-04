@@ -10,12 +10,15 @@ import { VanillaButton } from "../../GlobalComponent";
 
 const Main = styled.div`
     align-items: center;
+    box-sizing: border-box;
     color: ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
+    height: calc(100vh - 2.5rem);
     justify-content: center;
-    padding: 20px 0;
-    overflow: auto;
+    width: 100%;
+    /* overflow: auto; */
 
     /* border: solid 1px white; */
 `;

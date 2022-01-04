@@ -9,12 +9,11 @@ const Main = styled.div`
     align-items: center;
     box-sizing: border-box;
     display: flex;
+    font-size: 2.5rem;
     flex-direction: column;
-    height: 7.5vh;
     justify-content: center;
-    max-height: 6rem;
     margin: 0;
-    padding: 0.5rem;
+    padding: 0.1em;
     width: 100%;
 
     /* border : solid 1px white; */
@@ -28,7 +27,7 @@ const Main = styled.div`
 
 const IconsContainer = styled.div`
     display: flex;
-    font-size: 2rem;
+    font-size: 0.8em;
     justify-content: center;
     gap: 1.5rem;
 `;

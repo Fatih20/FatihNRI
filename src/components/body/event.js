@@ -17,19 +17,19 @@ const Main = styled.div`
     color : ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
     gap: 0;
-    padding: 15px 20px;
+    padding: 1em 1.25em;
     width: 100%;
 `;
 
 const EventSectionContainer = styled.div`
     border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
-    margin-bottom: 8px;
-    padding-bottom: 8px;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
 `;
 
 const EventTitle = styled.h2`
-    font-size: 1.5rem;
     text-align: center;
 `;
 
@@ -39,7 +39,7 @@ const EventDate = styled.p`
 
 const EventSubtitle = styled.p`
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
 `;
 
 const Summary = styled.p`
@@ -56,7 +56,6 @@ const SeeWorkContainer = styled.div`
 const SeeWork = styled.p`
     cursor: pointer;
     font-weight: 600;
-    margin-bottom: 5px;
 `;
 
 const IconContainer = styled.div`
@@ -71,6 +70,7 @@ const IconContainer = styled.div`
 const LinkContainer = styled.a`
     display: ${({show}) => show ? "flex" : "none"};
     flex-direction: column;
+    margin-top: 0.3125em;
     word-wrap: break-word;
 `;
 

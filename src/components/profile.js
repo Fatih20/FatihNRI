@@ -8,18 +8,33 @@ import { useContent } from "../context/language";
 
 
 const Main = styled.div`
-    align-items: flex-start;
+    align-items: center;
+    box-sizing: border-box;
     color: ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
+    font-size: 2rem;
+    height: calc(100vh - 1rem);
     justify-content: center;
-    gap: 1rem;
+    padding: 0 10px;
+    width: 100%;
+
+    /* border: solid 1px white; */
+`;
+
+const MainWithinPadding = styled.div`
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    height: 100%;
+    justify-content: center;
 
     /* border: solid 1px white; */
 `;
 
 const Title = styled.h1`
-    font-size: 5rem;
+    font-size: 2.5em;
     /* margin-top: 6rem; */
 `;
 
@@ -28,9 +43,13 @@ const Buffer = styled.div`
 `;
 
 const BottomContainer = styled.div`
-    align-items: center;
+    align-items: flex-start;
     display: flex;
+    font-size: 0.6em;
     width: 100%;
+    /* height: calc(100vh - 1rem - 2.5em - 0.5em); */
+
+    /* border : solid 1px white; */
 
     & > * {
         width: 50%;
@@ -42,7 +61,7 @@ const OccupationContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 0.65rem;
+    gap: 0.5em;
 
     /* border: solid 1px white; */
 `;
@@ -56,12 +75,12 @@ const Occupation = styled(VanillaButton)`
     background-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
     color: ${({chosen, theme}) => chosen ? theme.regularText : theme.unselectedBareText};
+    font-size: 1em;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
     /* border : solid 1px white; */
 
     & > h2 {
-        font-size: 1.5rem;
         font-weight: 600;
         text-align: left;
     }
@@ -93,16 +112,18 @@ export default function Profile (){
 
     return (
         <Main>
-            <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
-            <BottomContainer>
-                <OccupationContainer>
-                    <h2>As {occupations[indexOfShownOccupation]["a"] ? "a" : "an"}...</h2>
-                    {occupations.map(occupationMaker)}
-                </OccupationContainer>
-                <SummaryContainer>
-                    <p>{occupations[indexOfShownOccupation]["summary"]}</p>
-                </SummaryContainer>
-            </BottomContainer>
+            <MainWithinPadding>
+                <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
+                <BottomContainer>
+                    <OccupationContainer>
+                        <h2>As {occupations[indexOfShownOccupation]["a"] ? "a" : "an"}...</h2>
+                        {occupations.map(occupationMaker)}
+                    </OccupationContainer>
+                    <SummaryContainer>
+                        <p>{occupations[indexOfShownOccupation]["summary"]}</p>
+                    </SummaryContainer>
+                </BottomContainer>
+            </MainWithinPadding>
         </Main>
     )
 }
