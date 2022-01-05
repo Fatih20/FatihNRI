@@ -1,11 +1,8 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-import Profile from "./profile";
+// Components
 import MainContent from "./mainContent";
-
-import options from "../../content/allContent";
-import { VanillaButton } from "../../GlobalComponent";
 
 
 const Main = styled.div`
@@ -18,7 +15,10 @@ const Main = styled.div`
     height: calc(100vh - 2.5em);
     justify-content: center;
     width: 100%;
-    /* overflow: auto; */
+
+    @media (max-width: 601px){
+        height: calc(100vh - 3em);
+    }
 
     /* border: solid 1px white; */
 `;
@@ -29,7 +29,6 @@ export default function Body ({forwardedRef}){
     const[indexOfChoiceDisplayed, setIndexOfChoiceDisplayed] = useState(-1);
 
     function handleChoiceClick(newIndexOfChoiceDisplayed) {
-        console.log(newIndexOfChoiceDisplayed)
         if (newIndexOfChoiceDisplayed !== indexOfChoiceDisplayed){
             setIndexOfChoiceDisplayed(newIndexOfChoiceDisplayed);
         } else {

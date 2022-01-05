@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-import options from "../../content/allContent";
-import { VanillaButton } from "../../GlobalComponent";
-
+//Context
 import { useContent } from "../../context/language";
 
+// Custom Function
 import { shadeColor } from "../../theme";
 
 const Main = styled.div`
@@ -21,6 +21,7 @@ const Main = styled.div`
     flex-direction: column;
     font-size: 1em;
     gap: 0;
+    overflow-wrap: break-word;
     padding: 1em 1.25em;
     width: 100%;
 `;
@@ -57,19 +58,16 @@ const SummaryContainer = styled(EventSectionContainer)`
     gap: 0.3125em;
 `;
 
-const SeeWorkContainer = styled.div`
+const SeeWork = styled.div`
     display: flex;
-    flex-direction: column;
-    gap: 0.3125rem;
-`;
-
-const SeeWork = styled.p`
+    gap: 0.35em;
     cursor: pointer;
     font-weight: 600;
 `;
 
 const IconContainer = styled.div`
     display: inline-block;
+    height: fit-content;
     transform: ${({flip}) => flip ? "rotate(180deg)" : null};
     transition: transform 0.15s;
     transition-timing-function: ease-in-out;
@@ -77,7 +75,7 @@ const IconContainer = styled.div`
     /* border: solid 1px white; */
 `;
 
-const LinkContainer = styled.a`
+const LinkContainer = styled.div`
     display: ${({show}) => show ? "flex" : "none"};
     flex-direction: column;
     margin-top: 0.3125em;
@@ -89,10 +87,6 @@ const Link = styled.a`
     text-overflow: ellipsis;
 `;
 
-const WorkContainer = styled.div`
-    display: ${({show}) => show ? "flex" : "none"};
-`;
-
 export default function Event ({event : {title, subtitle, timeStart, timeEnd, summaryList, attachmentType, relevantLink}}){
     const[showAttachment, setShowAttachment] = useState(false);
     const {attachmentText} = useContent(); 
@@ -101,7 +95,7 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
 
     function summaryMaker() {
         return (
-            summaryList.map((summary) => <Summary dangerouslySetInnerHTML={{__html : summary}} />)
+            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : summary}} />)
         )
     }
 
@@ -114,9 +108,12 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
                 {summaryMaker()}
             </SummaryContainer>
             <EventSectionContainer show={attachmentType !== "none"}>
-                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText[attachmentType]} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
+                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
+                    {attachmentText[attachmentType]}
+                    <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
+                </SeeWork>
                 <LinkContainer show={showAttachment}>
-                    {relevantLink.map((link) => <Link href={link}>{link}</Link>)}
+                    {relevantLink.map((link) => <Link key={link} href={link}>{link}</Link>)}
                 </LinkContainer>
             </EventSectionContainer>
    

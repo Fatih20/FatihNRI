@@ -334,17 +334,17 @@ const allContent = {
         "occupations" : [
             {
                 "name" : "Web Developer",
-                "summary" : "I make sites",
+                "summary" : "Utilizing my proficiency in HTML, CSS, Javascript, and the React.js framework, I've created various personal projects and even contribute to and work on the website of others.I am currently learning back-end development.",
                 "a" : true,
             },
             {
                 "name" : "Open-Source Contributor",
-                "summary" : "I contribute to open-source project",
+                "summary" : "I have contributed to plenty of open-source project, from the popular to the obscure. My contribution varies from opening issues to report a bug to directly collaborating with the project maintainer in making pull request.",
                 "a" : false,
             },
             {
                 "name" : "Writer",
-                "summary" : "I write",
+                "summary" : "I've written various types of writing from game review article to educational content.",
                 "a" : true,
             },
         

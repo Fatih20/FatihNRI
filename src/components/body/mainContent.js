@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import options from "../../content/allContent";
+// Components
 import { VanillaButton } from "../../GlobalComponent";
-
-import { useContent } from "../../context/language";
-
 import Event from "./event";
+
+// Context
+import { useContent } from "../../context/language";
 
 const Main = styled.div`
     align-items: center;
@@ -21,6 +22,10 @@ const Main = styled.div`
     justify-content: center;
     width: 100%;
 
+    @media (max-width: 601px){
+        font-size: 2.4em;
+    }
+
     /* border : solid 1px white; */
 `;
 
@@ -28,6 +33,11 @@ const Title = styled.h2`
     font-size: 1em;
     text-align: center;
     padding: 0.375em 0;
+
+    @media (max-width: 601px){
+        padding: 0.6em 0 0.375em 0;
+
+    }
 
     /* border : solid 1px white; */
     
@@ -111,10 +121,6 @@ const ShowingEventContainer = styled.div`
         width: 80%;
     }
 
-    @media (max-width: 601px){
-        width: 100%;
-    }
-
     /* border : solid 1px white; */
 `;
 
@@ -182,6 +188,10 @@ const BackButton = styled(VanillaButton)`
 
     /* border : solid 1px white; */
 
+    @media (max-width: 601px){
+        font-size: 0.75em;
+    }
+
     &:hover {
         padding-left: 0;
         padding-right: 0.1875em;
@@ -195,10 +205,9 @@ const Spacer = styled.div`
 export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick, backToSelection}){
     const {options, bodyTitle} = useContent(); 
 
-
     function optionMaker({name}, indexOfOption) {
         return (
-            <Option onClick={() => handleChoiceClick(indexOfOption)} key={name} chosen={indexOfChoiceDisplayed === indexOfOption ? true : false}>
+            <Option key={`${name}${indexOfOption}`} onClick={() => handleChoiceClick(indexOfOption)} chosen={indexOfChoiceDisplayed === indexOfOption ? true : false}>
                 <h2>{name}</h2>
             </Option>
         )
@@ -219,7 +228,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
                 <ShowingEventContainer>
                     <Title>{options[indexOfChoiceDisplayed]["name"]}</Title>
                     <EventContainer>
-                        {options.filter((option, indexOfOption) => indexOfOption === indexOfChoiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
+                        {options.filter((option, indexOfOption) => indexOfOption === indexOfChoiceDisplayed)[0]["content"].map((event) => <Event key={`${event["title"]}${event["timeStart"]}${event["relevantLink"][0]}`} event={event}/>)}
                     </EventContainer>
                     <BackContainer>
                         <BackButton onClick={backToSelection}>

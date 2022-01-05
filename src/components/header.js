@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+// Context
 import { useIsDark } from "../context/darkTheme";
 import { useIsEnglish } from "../context/language";
-
-import { VanillaButton } from "../GlobalComponent";
-
 import { useTheme } from "styled-components";
 
+// Components
+import { VanillaButton } from "../GlobalComponent";
+
+// Icons
 import Icon from '@mdi/react'
 import { mdiWeatherSunny } from '@mdi/js';
 import { mdiWeatherNight } from '@mdi/js';
