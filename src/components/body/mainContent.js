@@ -34,6 +34,11 @@ const Title = styled.h2`
     text-align: center;
     padding: 0.375em 0;
 
+    @media (max-width: 601px){
+        padding: 0.6em 0 0.375em 0;
+
+    }
+
     /* border : solid 1px white; */
     
 `;
@@ -183,6 +188,10 @@ const BackButton = styled(VanillaButton)`
 
     /* border : solid 1px white; */
 
+    @media (max-width: 601px){
+        font-size: 0.75em;
+    }
+
     &:hover {
         padding-left: 0;
         padding-right: 0.1875em;
@@ -195,7 +204,6 @@ const Spacer = styled.div`
 
 export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick, backToSelection}){
     const {options, bodyTitle} = useContent(); 
-
 
     function optionMaker({name}, indexOfOption) {
         return (

@@ -30,6 +30,10 @@ const IconsContainer = styled.div`
     font-size: 0.8em;
     justify-content: center;
     gap: 1.5rem;
+
+    @media (max-width: 601px){
+        font-size: 1em;
+    }
 `;
 
 const Icons = styled.a`

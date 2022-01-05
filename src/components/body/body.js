@@ -16,6 +16,10 @@ const Main = styled.div`
     justify-content: center;
     width: 100%;
 
+    @media (max-width: 601px){
+        height: calc(100vh - 3em);
+    }
+
     /* border: solid 1px white; */
 `;
 
