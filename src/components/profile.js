@@ -40,9 +40,19 @@ const MainWithinPadding = styled.div`
     /* border: solid 1px white; */
 `;
 
-const Title = styled.h1`
-    font-size: 2.5em;
+const TitleContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
+`;
+
+const Greeting = styled.h2`
+    font-size: 1.5em;
+`;
+
+const Name = styled.h1`
+    font-size: 2.5em;
     /* margin-top: 6rem; */
     /* border : solid 1px white; */
 `;
@@ -233,7 +243,10 @@ export default function Profile (){
     return (
         <Main>
             <MainWithinPadding>
-                <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
+                <TitleContainer>
+                    <Greeting>{greeting}</Greeting>
+                    <Name>Fatih Nararya R. I.</Name>
+                </TitleContainer>
                 <BottomContainer>
                     <OccupationContainer>
                         <WhatAmILineContainer>
