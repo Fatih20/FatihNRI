@@ -22,6 +22,10 @@ const Main = styled.div`
     justify-content: center;
     width: 100%;
 
+    @media (max-width: 601px){
+        font-size: 2.4em;
+    }
+
     /* border : solid 1px white; */
 `;
 
@@ -110,10 +114,6 @@ const ShowingEventContainer = styled.div`
 
     @media (max-width: 901px){
         width: 80%;
-    }
-
-    @media (max-width: 601px){
-        width: 100%;
     }
 
     /* border : solid 1px white; */

@@ -21,6 +21,7 @@ const Main = styled.div`
     flex-direction: column;
     font-size: 1em;
     gap: 0;
+    overflow-wrap: break-word;
     padding: 1em 1.25em;
     width: 100%;
 `;
