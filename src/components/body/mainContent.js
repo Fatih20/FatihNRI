@@ -199,7 +199,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
 
     function optionMaker({name}, indexOfOption) {
         return (
-            <Option onClick={() => handleChoiceClick(indexOfOption)} key={name} chosen={indexOfChoiceDisplayed === indexOfOption ? true : false}>
+            <Option key={`${name}${indexOfOption}`} onClick={() => handleChoiceClick(indexOfOption)} chosen={indexOfChoiceDisplayed === indexOfOption ? true : false}>
                 <h2>{name}</h2>
             </Option>
         )
@@ -220,7 +220,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
                 <ShowingEventContainer>
                     <Title>{options[indexOfChoiceDisplayed]["name"]}</Title>
                     <EventContainer>
-                        {options.filter((option, indexOfOption) => indexOfOption === indexOfChoiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
+                        {options.filter((option, indexOfOption) => indexOfOption === indexOfChoiceDisplayed)[0]["content"].map((event) => <Event key={`${event["title"]}${event["timeStart"]}${event["relevantLink"][0]}`} event={event}/>)}
                     </EventContainer>
                     <BackContainer>
                         <BackButton onClick={backToSelection}>

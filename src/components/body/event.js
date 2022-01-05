@@ -91,7 +91,7 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
 
     function summaryMaker() {
         return (
-            summaryList.map((summary) => <Summary dangerouslySetInnerHTML={{__html : summary}} />)
+            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : summary}} />)
         )
     }
 
@@ -106,7 +106,7 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
             <EventSectionContainer show={attachmentType !== "none"}>
                 <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText[attachmentType]} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
                 <LinkContainer show={showAttachment}>
-                    {relevantLink.map((link) => <Link href={link}>{link}</Link>)}
+                    {relevantLink.map((link) => <Link key={link} href={link}>{link}</Link>)}
                 </LinkContainer>
             </EventSectionContainer>
    
