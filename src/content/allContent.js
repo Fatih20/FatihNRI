@@ -4,17 +4,17 @@ const allContent = {
         "occupations" : [
             {
                 "name" : "Pengembang Web",
-                "summary" : "Saya memiliki <em>skill</em> HTML, CSS, Javascript, dan bahkan sudah mempelajari <em>framework</em> React.js. Semua<em>skill</em> tersebut telah saya praktikkan dalam pembuatan proyek-proyek pribadi saya maupun situs milik pihak lain. Saya sekarang sedang mempelajari <em>back-end development</em>.",
+                "summary" : "Dengan <em>skill</em> HTML, CSS, Javascript, dan <em>framework</em> React.js yang saya pelajari, saya telah membuat beragam proyek pribadi dan bahkan berkontribusi ke situs milik pihak lain. Saya sekarang sedang mempelajari <em>back-end development</em>.",
                 "a" : true,
             },
             {
                 "name" : "Kontributor <em>Open-Source</em>",
-                "summary" : "Telah banyak kontribusi saya ke beragam proyek <em>open-source</em>, mulai dari yang besar sampai yang kecil. ",
+                "summary" : "Saya telah banyak berkontribusi ke beragam proyek <em>open-source</em>, mulai dari yang populer sampai yang <em>obscure</em>. Bentuk kontribusi saya bervariasi dari membuka <em>issue</em> untuk melaporkan <em>bug</em> sampai berkolaborasi langsung dengan pemelihara proyek dalam membuat <em>pull request</em>.",
                 "a" : false,
             },
             {
                 "name" : "Penulis",
-                "summary" : "Karya saya sangat beragam, mulai dari <em>review game</em> sampai ",
+                "summary" : "Beraneka macam jenis tulisan telah saya hasilkan, mulai dari <em>review game</em> sampai konten edukasional.",
                 "a" : true,
             },
         
