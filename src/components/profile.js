@@ -84,6 +84,7 @@ const WhatAmILineContainer = styled.div`
     align-items: center;
     display: flex;
     gap: 0.25em;
+    text-align: center;
     width: 100%;
 
 `;
