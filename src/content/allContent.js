@@ -420,7 +420,7 @@ const allContent = {
             },
             
             {
-                "name" : "Proyek Pribadi",
+                "name" : "Personal Projects",
                 "content" : [
                     {
                         "title" : "Info Film : React Edition",
@@ -490,7 +490,7 @@ const allContent = {
                 ]
             },
             {
-                "name" : "Pengalaman Menulis",
+                "name" : "Writing Experience",
                 "content" : [
                     {
                         "title" : "The Study Friend",
@@ -549,7 +549,7 @@ const allContent = {
                 ]
             },
             {
-                "name" : "Pengalaman Organisasi",
+                "name" : "Organizational Experience",
                 "content" : [
                     {
                         "title" : "OSIS SMAN 2 Surabaya",
@@ -594,7 +594,7 @@ const allContent = {
                 ]
             },
             {
-                "name" : "Pendidikan",
+                "name" : "Education",
                 "content" : [
                     {
                         "title" : "Institut Teknologi Bandung",
@@ -626,7 +626,7 @@ const allContent = {
                 ]
             },
             {
-                "name" : "Kursus dan Pelatihan",
+                "name" : "Courses and Training",
                 "content" : [
                     {
                         "title" : "English First",
