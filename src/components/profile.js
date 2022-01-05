@@ -8,6 +8,10 @@ import { useIsEnglish } from "../context/language";
 
 import { shadeColor } from "../theme";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
+
 const Main = styled.div`
     align-items: center;
     box-sizing: border-box;
@@ -62,9 +66,37 @@ const BottomContainer = styled.div`
     /* border : solid 1px white; */
 `;
 
+const WhatAmILineContainer = styled.div`
+    align-items: center;
+    display: flex;
+    gap: 0.25em;
+    width: 100%;
+
+`;
+
 const WhatAmILine = styled.h2`
     /* border-bottom: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)}; */
     /* padding-bottom: 0.15em; */
+`;
+
+const ChangeWhatAmI = styled(VanillaButton)`
+    background-color: rgba(0, 0 ,0, 0);
+    color: ${({theme}) => theme.unselectedBareText};
+    font-size: 2em;
+    transition: color 0s, background-color 0s, box-shadow 0s;
+
+    & > * {
+        transition: color 0s, background-color 0s, box-shadow 0s;
+    }
+
+    &:hover {
+        color: ${({theme}) => theme.aboutToBeSelectedBareText};
+
+    }
+
+    &:active {
+        color: ${({theme}) => theme.regularText};
+    }
 `;
 
 const OccupationContainer = styled.div`
@@ -73,6 +105,7 @@ const OccupationContainer = styled.div`
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0.5em;
+    width: 100%;
 
     /* border: solid 1px white; */
 `;
@@ -148,6 +181,14 @@ export default function Profile (){
     function whatAmI() {
         return `${asAMaker(indexOfShownOccupation)} ${occupations[indexOfShownOccupation]["name"]}`
     }
+    
+    function handleChangeWhatAmIClick(isLeft) {
+        if (isLeft){
+            setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation - 1) === -1 ? occupations.length-1 : (prevIndexOfShownOccupation - 1))
+        } else {
+            setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation + 1) % occupations.length)
+        }
+    }
 
 
 
@@ -157,8 +198,18 @@ export default function Profile (){
                 <Title>{greeting} <br/>Fatih Nararya R. I.</Title>
                 <BottomContainer>
                     <OccupationContainer>
-                        <WhatAmILine dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
-                        {/* {rearrangedOccupations().map(occupationMaker)} */}
+                        <WhatAmILineContainer>
+                            <ChangeWhatAmI onClick={() => handleChangeWhatAmIClick(true)}>
+                                <FontAwesomeIcon icon={faCaretLeft}/>
+                            </ChangeWhatAmI>
+                            <Buffer />
+                            <WhatAmILine dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
+                            <Buffer />
+                            <ChangeWhatAmI onClick={() => handleChangeWhatAmIClick(false)}>
+                                <FontAwesomeIcon icon={faCaretRight}/>
+                            </ChangeWhatAmI>
+                            {/* {rearrangedOccupations().map(occupationMaker)} */}
+                        </WhatAmILineContainer>
                     </OccupationContainer>
                     <SummaryContainer>
                         <p dangerouslySetInnerHTML={{ __html : occupations[indexOfShownOccupation]["summary"] }} />
