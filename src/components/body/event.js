@@ -57,7 +57,9 @@ const SummaryContainer = styled(EventSectionContainer)`
     gap: 0.3125em;
 `;
 
-const SeeWork = styled.p`
+const SeeWork = styled.div`
+    display: flex;
+    gap: 0.35em;
     cursor: pointer;
     font-weight: 600;
 `;
@@ -71,7 +73,7 @@ const IconContainer = styled.div`
     /* border: solid 1px white; */
 `;
 
-const LinkContainer = styled.a`
+const LinkContainer = styled.div`
     display: ${({show}) => show ? "flex" : "none"};
     flex-direction: column;
     margin-top: 0.3125em;
@@ -104,7 +106,10 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
                 {summaryMaker()}
             </SummaryContainer>
             <EventSectionContainer show={attachmentType !== "none"}>
-                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>{attachmentText[attachmentType]} <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer></SeeWork>
+                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
+                    {attachmentText[attachmentType]}
+                    <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
+                </SeeWork>
                 <LinkContainer show={showAttachment}>
                     {relevantLink.map((link) => <Link key={link} href={link}>{link}</Link>)}
                 </LinkContainer>
