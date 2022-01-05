@@ -43,6 +43,7 @@ const EventDate = styled.p`
 const EventSubtitle = styled.p`
     display: ${({show}) => show? null : "none"};
     font-weight: 600;
+    margin-top: 0.5em;
 `;
 
 const Summary = styled.p`
