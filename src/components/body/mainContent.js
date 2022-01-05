@@ -182,24 +182,24 @@ const Spacer = styled.div`
     flex-grow: 1;
 `;
 
-export default function MainContent ({choiceDisplayed, handleChoiceClick, backToSelection}){
+export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick, backToSelection}){
     const {options, bodyTitle} = useContent(); 
 
 
-    function optionMaker({name}) {
+    function optionMaker({name}, indexOfOption) {
         return (
-            <Option onClick={() => handleChoiceClick(name)} key={name} chosen={choiceDisplayed === name ? true : false}>
+            <Option onClick={() => handleChoiceClick(indexOfOption)} key={name} chosen={indexOfChoiceDisplayed === indexOfOption ? true : false}>
                 <h2>{name}</h2>
             </Option>
         )
     }
 
-    if (choiceDisplayed === "selection"){
+    if (indexOfChoiceDisplayed === -1){
         return (
             <Main>
                 <Title>{bodyTitle}</Title>
                 <OptionContainer>
-                    {options.map((option) => optionMaker(option))}
+                    {options.map((option, indexOfOption) => optionMaker(option, indexOfOption))}
                 </OptionContainer>
             </Main>
         )
@@ -207,9 +207,9 @@ export default function MainContent ({choiceDisplayed, handleChoiceClick, backTo
         return (
             <Main>
                 <ShowingEventContainer>
-                    <Title>{choiceDisplayed}</Title>
+                    <Title>{options[indexOfChoiceDisplayed]["name"]}</Title>
                     <EventContainer>
-                        {options.filter(option => option["name"] === choiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
+                        {options.filter((option, indexOfOption) => indexOfOption === indexOfChoiceDisplayed)[0]["content"].map((event) => <Event event={event}/>)}
                     </EventContainer>
                     <BackContainer>
                         <BackButton onClick={backToSelection}>

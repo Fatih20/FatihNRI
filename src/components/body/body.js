@@ -26,25 +26,26 @@ const Main = styled.div`
 
 
 export default function Body ({forwardedRef}){
-    const[choiceDisplayed, setChoiceDisplayed] = useState("selection");
+    const[indexOfChoiceDisplayed, setIndexOfChoiceDisplayed] = useState(-1);
 
-    function handleChoiceClick(newChoiceDisplayed) {
-        if (newChoiceDisplayed !== choiceDisplayed){
-            setChoiceDisplayed(newChoiceDisplayed);
+    function handleChoiceClick(newIndexOfChoiceDisplayed) {
+        console.log(newIndexOfChoiceDisplayed)
+        if (newIndexOfChoiceDisplayed !== indexOfChoiceDisplayed){
+            setIndexOfChoiceDisplayed(newIndexOfChoiceDisplayed);
         } else {
-            setChoiceDisplayed("selection");
+            setIndexOfChoiceDisplayed(-1);
         }
     }
 
     function backToSelection (){
-        setChoiceDisplayed("selection");
+        setIndexOfChoiceDisplayed(-1);
     }
 
     
 
     return (
         <Main ref={forwardedRef}>
-            <MainContent choiceDisplayed={choiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
+            <MainContent indexOfChoiceDisplayed={indexOfChoiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
         </Main>
     )
 }
