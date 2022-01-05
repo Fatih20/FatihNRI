@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
-import socialMediaList from "../content/socialMedia";
 
 const Main = styled.div`
     align-items: center;

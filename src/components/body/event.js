@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-import options from "../../content/allContent";
-import { VanillaButton } from "../../GlobalComponent";
-
+//Context
 import { useContent } from "../../context/language";
 
+// Custom Function
 import { shadeColor } from "../../theme";
 
 const Main = styled.div`
@@ -57,12 +57,6 @@ const SummaryContainer = styled(EventSectionContainer)`
     gap: 0.3125em;
 `;
 
-const SeeWorkContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 0.3125rem;
-`;
-
 const SeeWork = styled.p`
     cursor: pointer;
     font-weight: 600;
@@ -87,10 +81,6 @@ const LinkContainer = styled.a`
 const Link = styled.a`
     color : ${({theme}) => theme.regularText};
     text-overflow: ellipsis;
-`;
-
-const WorkContainer = styled.div`
-    display: ${({show}) => show ? "flex" : "none"};
 `;
 
 export default function Event ({event : {title, subtitle, timeStart, timeEnd, summaryList, attachmentType, relevantLink}}){

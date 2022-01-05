@@ -1,11 +1,8 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-import Profile from "./profile";
+// Components
 import MainContent from "./mainContent";
-
-import options from "../../content/allContent";
-import { VanillaButton } from "../../GlobalComponent";
 
 
 const Main = styled.div`
@@ -18,8 +15,7 @@ const Main = styled.div`
     height: calc(100vh - 2.5em);
     justify-content: center;
     width: 100%;
-    /* overflow: auto; */
-
+    
     /* border: solid 1px white; */
 `;
 

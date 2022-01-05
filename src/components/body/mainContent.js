@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import options from "../../content/allContent";
+// Components
 import { VanillaButton } from "../../GlobalComponent";
-
-import { useContent } from "../../context/language";
-
 import Event from "./event";
+
+// Context
+import { useContent } from "../../context/language";
 
 const Main = styled.div`
     align-items: center;
