@@ -17,11 +17,12 @@ const Main = styled.div`
     box-sizing: border-box;
     color: ${({theme}) => theme.regularText};
     display: flex;
-    gap: 1.25rem;
-    font-size: 2rem;
+    font-size: 2em;
+    gap: 1.25em;
+    height: 2em;
     justify-content: flex-start;
     margin: 0;
-    padding: 0.2em;
+    padding: 0 0.2em;
     width: 100%;
 
     /* border : solid 1px white; */

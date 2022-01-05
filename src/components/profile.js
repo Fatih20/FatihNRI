@@ -20,8 +20,8 @@ const Main = styled.div`
     color: ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
-    height: calc(100vh - 1rem);
+    font-size: 2em;
+    height: calc(100vh - 2em);
     justify-content: center;
     padding: 0 10px;
     width: 100%;

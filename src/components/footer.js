@@ -9,7 +9,7 @@ const Main = styled.div`
     align-items: center;
     box-sizing: border-box;
     display: flex;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     flex-direction: column;
     justify-content: center;
     margin: 0;

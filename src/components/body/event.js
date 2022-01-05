@@ -19,7 +19,7 @@ const Main = styled.div`
     color : ${({theme}) => theme.regularText};
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
+    font-size: 1em;
     gap: 0;
     padding: 1em 1.25em;
     width: 100%;

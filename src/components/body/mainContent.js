@@ -15,7 +15,7 @@ const Main = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 2em;
     /* gap: 0.75em; */
     height: 100%;
     justify-content: center;
@@ -98,12 +98,22 @@ const Option = styled(VanillaButton)`
 `;
 
 const ShowingEventContainer = styled.div`
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: flex-start;
     max-width: 25em;
+    padding: 0 0.5em;
     width: 60%;
+
+    @media (max-width: 901px){
+        width: 80%;
+    }
+
+    @media (max-width: 601px){
+        width: 100%;
+    }
 
     /* border : solid 1px white; */
 `;
@@ -116,7 +126,7 @@ const EventContainer = styled.div`
     font-size: 0.5em;
     justify-content: flex-start;
     gap: 1.25rem;
-    padding-right: 0.5vw;
+    padding-right: 0.5em;
     scrollbar-width: thin;
     scrollbar-color: ${({theme}) => theme.scrollbarThumbFill} ${({theme}) => theme.scrollbarTrackFill};
     overflow: auto;
@@ -124,7 +134,7 @@ const EventContainer = styled.div`
     /* border : solid 1px white; */
 
     &::-webkit-scrollbar{
-        width: 0.5vw;
+        width: 0.5em;
     }
 
     &::-webkit-scrollbar-thumb{

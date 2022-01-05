@@ -14,9 +14,14 @@ const Main = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
+
+  @media (max-width : 600px){
+    font-size: 0.75rem;
+  }
 
   /* border: solid 1px white; */
 `;
@@ -128,9 +133,9 @@ function App() {
                   <Body/>
                 </First>
               </FirstContainer> */}
-              <Profile />
-              <Body forwardedRef={bodyRef}  />
-              <Footer />
+            <Profile />
+            <Body forwardedRef={bodyRef}  />
+            <Footer />
           </Main>
         </IsDarkProvider>
       </IsEnglishProvider>
