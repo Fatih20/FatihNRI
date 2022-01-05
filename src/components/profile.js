@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import styled from "styled-components";
 
 import { VanillaButton } from "../GlobalComponent";
@@ -81,7 +81,7 @@ const WhatAmILine = styled.h2`
 
 const ChangeWhatAmI = styled(VanillaButton)`
     background-color: rgba(0, 0 ,0, 0);
-    color: ${({theme}) => theme.unselectedBareText};
+    color: ${({theme, whileClicking}) => whileClicking ? theme.aboutToBeSelectedBareText : theme.unselectedBareText};
     font-size: 2em;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
@@ -142,8 +142,27 @@ export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
     const {greeting, occupations, asA} = useContent();
     const[isEnglish, setIsEnglish] = useIsEnglish();
+    const [whileClicking, setWhileClicking] = useState(false);
+    const buttonFirstClicked = useRef(false);
+    
+    // const cycleThroughWhatAmI = setInterval(simulatedClick, 3000);
+    // setInterval()
 
+    let cycleThrough;
+    useEffect(() => {
+        console.log("Bruh 2")
+        cycleThrough = setInterval(simulatedClick, 3000);
+    }, [])
 
+    function simulatedClick() {
+        if (buttonFirstClicked.current) {
+            clearInterval(cycleThrough);
+            setWhileClicking(prevWhileClicking => !prevWhileClicking);
+            setTimeout(() => setWhileClicking(prevWhileClicking => !prevWhileClicking), 3000);
+        } else {
+            cycleOccupation(false);
+        }
+    }
 
     function handleOccupationClick (newIndex){
         setIndexOfShownOccupation(newIndex)
@@ -183,14 +202,20 @@ export default function Profile (){
     }
     
     function handleChangeWhatAmIClick(isLeft) {
+        buttonFirstClicked.current = true;
+        console.log("Bruh");
+        window.clearInterval(cycleThrough);
+        console.log(cycleThrough);
+        cycleOccupation(isLeft);
+    }
+
+    function cycleOccupation(isLeft) {
         if (isLeft){
             setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation - 1) === -1 ? occupations.length-1 : (prevIndexOfShownOccupation - 1))
         } else {
             setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation + 1) % occupations.length)
         }
     }
-
-
 
     return (
         <Main>
@@ -205,7 +230,7 @@ export default function Profile (){
                             <Buffer />
                             <WhatAmILine dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
                             <Buffer />
-                            <ChangeWhatAmI onClick={() => handleChangeWhatAmIClick(false)}>
+                            <ChangeWhatAmI onClick={() => handleChangeWhatAmIClick(false)} whileClicking={whileClicking}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
                             </ChangeWhatAmI>
                             {/* {rearrangedOccupations().map(occupationMaker)} */}
