@@ -67,6 +67,7 @@ const SeeWork = styled.div`
 
 const IconContainer = styled.div`
     display: inline-block;
+    height: fit-content;
     transform: ${({flip}) => flip ? "rotate(180deg)" : null};
     transition: transform 0.15s;
     transition-timing-function: ease-in-out;
