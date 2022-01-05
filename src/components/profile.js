@@ -12,6 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
+import { useTheme } from "styled-components";
+
 const Main = styled.div`
     align-items: center;
     box-sizing: border-box;
@@ -81,7 +83,7 @@ const WhatAmILine = styled.h2`
 
 const ChangeWhatAmI = styled(VanillaButton)`
     background-color: rgba(0, 0 ,0, 0);
-    color: ${({theme, whileClicking}) => whileClicking ? theme.aboutToBeSelectedBareText : theme.unselectedBareText};
+    color: ${({theme}) => theme.unselectedBareText};
     font-size: 2em;
     transition: color 0s, background-color 0s, box-shadow 0s;
 
@@ -141,12 +143,13 @@ const Occupation = styled(VanillaButton)`
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
     const {greeting, occupations, asA} = useContent();
-    const[isEnglish, setIsEnglish] = useIsEnglish();
-    const [whileClicking, setWhileClicking] = useState(false);
+    const[isEnglish, ] = useIsEnglish();
+
+    const theme = useTheme();
     const buttonFirstClicked = useRef(false);
-    
-    // const cycleThroughWhatAmI = setInterval(simulatedClick, 3000);
-    // setInterval()
+    const leftButton = useRef();
+    const rightButton = useRef();
+    const leftIsSimulated = true;
 
     let cycleThrough;
     useEffect(() => {
@@ -157,10 +160,9 @@ export default function Profile (){
     function simulatedClick() {
         if (buttonFirstClicked.current) {
             clearInterval(cycleThrough);
-            setWhileClicking(prevWhileClicking => !prevWhileClicking);
-            setTimeout(() => setWhileClicking(prevWhileClicking => !prevWhileClicking), 3000);
         } else {
-            cycleOccupation(false);
+            const simulatedTarget = leftIsSimulated ? leftButton : rightButton;
+            simulatedTarget.current.click();
         }
     }
 
@@ -201,12 +203,20 @@ export default function Profile (){
         return `${asAMaker(indexOfShownOccupation)} ${occupations[indexOfShownOccupation]["name"]}`
     }
     
-    function handleChangeWhatAmIClick(isLeft) {
-        buttonFirstClicked.current = true;
-        console.log("Bruh");
-        window.clearInterval(cycleThrough);
-        console.log(cycleThrough);
-        cycleOccupation(isLeft);
+    function handleChangeWhatAmIClick(isLeft, e) {
+        const simulatedTarget = leftIsSimulated ? leftButton : rightButton;
+        if (e.isTrusted) {
+            simulatedTarget.current.style.color = null;
+            console.log(e);
+            buttonFirstClicked.current = true;
+            cycleOccupation(isLeft);
+        } else {
+            simulatedTarget.current.style.color = theme.regularText;
+            setTimeout(() => {
+                simulatedTarget.current.style.color = theme.unselectedBareText;
+            }, 100)
+            setTimeout(() => {cycleOccupation(isLeft)}, 200);
+        }
     }
 
     function cycleOccupation(isLeft) {
@@ -224,13 +234,13 @@ export default function Profile (){
                 <BottomContainer>
                     <OccupationContainer>
                         <WhatAmILineContainer>
-                            <ChangeWhatAmI onClick={() => handleChangeWhatAmIClick(true)}>
+                            <ChangeWhatAmI ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
                                 <FontAwesomeIcon icon={faCaretLeft}/>
                             </ChangeWhatAmI>
                             <Buffer />
                             <WhatAmILine dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
                             <Buffer />
-                            <ChangeWhatAmI onClick={() => handleChangeWhatAmIClick(false)} whileClicking={whileClicking}>
+                            <ChangeWhatAmI ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
                             </ChangeWhatAmI>
                             {/* {rearrangedOccupations().map(occupationMaker)} */}
