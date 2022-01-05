@@ -53,10 +53,12 @@ const Buffer = styled.div`
 
 const BottomContainer = styled.div`
     align-items: flex-start;
+    align-self: center;
     display: flex;
     flex-direction: column;
     font-size: 0.6em;
     gap: 0.25em;
+    max-width: 35em;
     width: 100%;
 
     & > * {
@@ -114,6 +116,7 @@ const OccupationContainer = styled.div`
 
 const SummaryContainer = styled.div`
     align-self: flex-start;
+    min-height: 10em;
     /* border: solid 1px white; */
 `;
 
@@ -154,7 +157,7 @@ export default function Profile (){
     let cycleThrough;
     useEffect(() => {
         console.log("Bruh 2")
-        cycleThrough = setInterval(simulatedClick, 3000);
+        cycleThrough = setInterval(simulatedClick, 6000);
     }, [])
 
     function simulatedClick() {
