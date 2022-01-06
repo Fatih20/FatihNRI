@@ -19,7 +19,7 @@ const allContent = {
             },
         
         ],
-        "asA" : "Sebagai",
+        "asA" : "Seorang",
         "attachmentText" : {
             "both" : "Pekerjaan saya dan proses pengerjaannya",
             "progress" : "Proses pengerjaan saya",
