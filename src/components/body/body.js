@@ -23,8 +23,6 @@ const Main = styled.div`
     /* border: solid 1px white; */
 `;
 
-
-
 export default function Body ({forwardedRef}){
     const[indexOfChoiceDisplayed, setIndexOfChoiceDisplayed] = useState(-1);
 

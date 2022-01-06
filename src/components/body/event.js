@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import DOMPurify from "dompurify";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -87,6 +88,11 @@ const Link = styled.a`
     text-overflow: ellipsis;
 `;
 
+function sanitizeSafely(contentToSanitize) {
+    const sanitizedContent = DOMPurify.sanitize(contentToSanitize, {USE_PROFILES : {html: true}, ALLOWED_TAGS : ['em', 'strong']})
+    return sanitizedContent;
+}
+
 export default function Event ({event : {title, subtitle, timeStart, timeEnd, summaryList, attachmentType, relevantLink}}){
     const[showAttachment, setShowAttachment] = useState(false);
     const {attachmentText} = useContent(); 
@@ -95,15 +101,15 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
 
     function summaryMaker() {
         return (
-            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : summary}} />)
+            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : sanitizeSafely(summary)}} />)
         )
     }
 
     return (
         <Main>
-            <EventTitle dangerouslySetInnerHTML={{ __html: title }}/>
+            <EventTitle dangerouslySetInnerHTML={{ __html: sanitizeSafely(title) }}/>
             <EventDate>{time}</EventDate>
-            <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: subtitle }}/>
+            <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: sanitizeSafely(subtitle) }}/>
             <SummaryContainer>
                 {summaryMaker()}
             </SummaryContainer>
