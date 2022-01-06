@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
+// Custom Function
 import { sanitizeSafely } from "../utilities";
 
 const Main = styled.div`
