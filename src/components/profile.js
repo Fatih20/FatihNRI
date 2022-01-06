@@ -14,7 +14,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
-
+// Custom Function
+import { sanitizeSafely } from "../utilities";
 
 const Main = styled.div`
     align-items: center;
@@ -204,7 +205,7 @@ export default function Profile (){
                                 <FontAwesomeIcon icon={faCaretLeft}/>
                             </ChangeWhatAmI>
                             <Buffer />
-                            <h2 dangerouslySetInnerHTML={{ __html : whatAmI() }}/>
+                            <h2 dangerouslySetInnerHTML={{ __html : sanitizeSafely(whatAmI()) }}/>
                             <Buffer />
                             <ChangeWhatAmI ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
@@ -212,7 +213,7 @@ export default function Profile (){
                         </WhatAmILineContainer>
                     </OccupationContainer>
                     <SummaryContainer>
-                        <p dangerouslySetInnerHTML={{ __html : occupations[indexOfShownOccupation]["summary"] }} />
+                        <p dangerouslySetInnerHTML={{ __html : sanitizeSafely(occupations[indexOfShownOccupation]["summary"]) }} />
                     </SummaryContainer>
                 </BottomContainer>
             </MainWithinPadding>

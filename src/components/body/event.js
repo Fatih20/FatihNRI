@@ -9,7 +9,7 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { useContent } from "../../context/language";
 
 // Custom Function
-import { shadeColor } from "../../theme";
+import { shadeColor, sanitizeSafely } from "../../utilities";
 
 const Main = styled.div`
     background-color: ${({theme}) => theme.regularContainer};
@@ -95,15 +95,15 @@ export default function Event ({event : {title, subtitle, timeStart, timeEnd, su
 
     function summaryMaker() {
         return (
-            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : summary}} />)
+            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : sanitizeSafely(summary)}} />)
         )
     }
 
     return (
         <Main>
-            <EventTitle dangerouslySetInnerHTML={{ __html: title }}/>
+            <EventTitle dangerouslySetInnerHTML={{ __html: sanitizeSafely(title) }}/>
             <EventDate>{time}</EventDate>
-            <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: subtitle }}/>
+            <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: sanitizeSafely(subtitle) }}/>
             <SummaryContainer>
                 {summaryMaker()}
             </SummaryContainer>
