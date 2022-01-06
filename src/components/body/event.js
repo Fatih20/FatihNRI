@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import DOMPurify from "dompurify";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +9,7 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { useContent } from "../../context/language";
 
 // Custom Function
-import { shadeColor } from "../../theme";
+import { shadeColor, sanitizeSafely } from "../../utilities";
 
 const Main = styled.div`
     background-color: ${({theme}) => theme.regularContainer};
@@ -87,11 +86,6 @@ const Link = styled.a`
     color : ${({theme}) => theme.regularText};
     text-overflow: ellipsis;
 `;
-
-function sanitizeSafely(contentToSanitize) {
-    const sanitizedContent = DOMPurify.sanitize(contentToSanitize, {USE_PROFILES : {html: true}, ALLOWED_TAGS : ['em', 'strong']})
-    return sanitizedContent;
-}
 
 export default function Event ({event : {title, subtitle, timeStart, timeEnd, summaryList, attachmentType, relevantLink}}){
     const[showAttachment, setShowAttachment] = useState(false);
