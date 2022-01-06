@@ -13,8 +13,8 @@ const allContent = {
                 "a" : false,
             },
             {
-                "name" : "Penulis",
-                "summary" : "Beraneka macam jenis tulisan telah saya hasilkan, mulai dari <em>review game</em> sampai konten edukasional.",
+                "name" : "Penulis Konten",
+                "summary" : "Saya telah menulis berbagai macam jenis konten, mulai dari article <em>game review</em> sampai postingan edukasional yang memerlukan riset. <em>Copywriting</em> juga telah saya coba dengan menulis konten dari <em>homepage</em> sebuah <em>software</em>.",
                 "a" : true,
             },
         
@@ -343,8 +343,8 @@ const allContent = {
                 "a" : false,
             },
             {
-                "name" : "Writer",
-                "summary" : "I've written various types of writing from game review article to educational content.",
+                "name" : "Content Writer",
+                "summary" : "I've written various types of content from game review article to throughly researched educational post. And even dabbled with some copywriting through making the content of a software's homepage.",
                 "a" : true,
             },
         
