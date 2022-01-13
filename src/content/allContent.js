@@ -102,7 +102,7 @@ const allContent = {
                         ],
                         "attachmentType" : "result",
                         "relevantLink" : [
-                            "https://fatih20.github.io/Info-Film-React-Edition/ ",
+                            "https://fatih20.github.io/Info-Film-React-Edition/",
                         ],
                     },
                     {
@@ -128,7 +128,7 @@ const allContent = {
                         ],
                         "attachmentType" : "result",
                         "relevantLink" : [
-                            "https://fatih20.github.io/Better-BMI-Calculator/ ",
+                            "https://fatih20.github.io/Better-BMI-Calculator/",
                         ],
                     },
                     {
@@ -141,7 +141,7 @@ const allContent = {
                         ],
                         "attachmentType" : "result",
                         "relevantLink" : [
-                            "https://fatih20.github.io/Another-Life-Tough-Life/ ",
+                            "https://fatih20.github.io/Another-Life-Tough-Life/",
                         ],
                     },
                     {
