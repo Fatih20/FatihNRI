@@ -203,12 +203,13 @@ const Spacer = styled.div`
 `;
 
 export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick, backToSelection}){
-    const {options, bodyTitle} = useContent(); 
+    const {allCategoryInTheBody, bodyTitle} = useContent();
+    const chosenCategory = allCategoryInTheBody.filter((category, indexOfCategory) => indexOfCategory === indexOfChoiceDisplayed)[0];
 
-    function optionMaker({name}, indexOfOption) {
+    function categoryMaker({titleOfCategory}, indexOfCategory) {
         return (
-            <Option key={`${name}${indexOfOption}`} onClick={() => handleChoiceClick(indexOfOption)} chosen={indexOfChoiceDisplayed === indexOfOption ? true : false}>
-                <h2>{name}</h2>
+            <Option key={`${titleOfCategory}${indexOfCategory}`} onClick={() => handleChoiceClick(indexOfCategory)} chosen={indexOfChoiceDisplayed === indexOfCategory ? true : false}>
+                <h2>{titleOfCategory}</h2>
             </Option>
         )
     }
@@ -218,17 +219,18 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
             <Main>
                 <Title>{bodyTitle}</Title>
                 <OptionContainer>
-                    {options.map((option, indexOfOption) => optionMaker(option, indexOfOption))}
+                    {allCategoryInTheBody.map((category, indexOfCategory) => categoryMaker(category.fields, indexOfCategory))}
                 </OptionContainer>
             </Main>
         )
     } else {
+        console.log(chosenCategory.fields["contentOfCategory"])
         return (
             <Main>
                 <ShowingEventContainer>
-                    <Title>{options[indexOfChoiceDisplayed]["name"]}</Title>
+                    <Title>{allCategoryInTheBody[indexOfChoiceDisplayed].fields["titleOfCategory"]}</Title>
                     <EventContainer>
-                        {options.filter((option, indexOfOption) => indexOfOption === indexOfChoiceDisplayed)[0]["content"].map((event) => <Event key={`${event["title"]}${event["timeStart"]}${event["relevantLink"][0]}`} event={event}/>)}
+                        {chosenCategory.fields["contentOfCategory"].map(({fields : event}) => <Event key={`${event["title"]}${event["timeOfStart"]}${event["allOfTheRelevantLinks"][0]}`} event={event}/>)}
                     </EventContainer>
                     <BackContainer>
                         <BackButton onClick={backToSelection}>

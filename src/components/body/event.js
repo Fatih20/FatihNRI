@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import MD from 'react-markdown';
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -87,33 +88,33 @@ const Link = styled.a`
     text-overflow: ellipsis;
 `;
 
-export default function Event ({event : {title, subtitle, timeStart, timeEnd, summaryList, attachmentType, relevantLink}}){
+export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd, listOfSummary, typeOfAttachment, allOfTheRelevantLinks}}){
     const[showAttachment, setShowAttachment] = useState(false);
-    const {attachmentText} = useContent(); 
+    const {textForAllAttachmentTypes : {fields : textForAllAttachmentTypes}} = useContent(); 
 
-    const time = timeEnd === null || timeEnd === undefined ? `(${timeStart})` : `(${timeStart} — ${timeEnd})`
+    const time = timeOfEnd === null || timeOfEnd === undefined ? `(${timeOfStart})` : `(${timeOfStart} — ${timeOfEnd})`;
 
     function summaryMaker() {
         return (
-            summaryList.map((summary) => <Summary key={summary} dangerouslySetInnerHTML={{__html : sanitizeSafely(summary)}} />)
+            listOfSummary.map(({fields : {oneLineSummary}}) => <Summary key={oneLineSummary}><MD>{oneLineSummary}</MD></Summary>)
         )
     }
 
     return (
         <Main>
-            <EventTitle dangerouslySetInnerHTML={{ __html: sanitizeSafely(title) }}/>
+            <EventTitle><MD>{title}</MD></EventTitle>
             <EventDate>{time}</EventDate>
-            <EventSubtitle show={subtitle !== null ? true : false} dangerouslySetInnerHTML={{ __html: sanitizeSafely(subtitle) }}/>
+            <EventSubtitle show={subtitle !== null ? true : false}><MD>{subtitle}</MD></EventSubtitle>
             <SummaryContainer>
                 {summaryMaker()}
             </SummaryContainer>
-            <EventSectionContainer show={attachmentType !== "none"}>
+            <EventSectionContainer show={typeOfAttachment !== "none"}>
                 <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
-                    {attachmentText[attachmentType]}
+                    {textForAllAttachmentTypes[typeOfAttachment]}
                     <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
                 </SeeWork>
                 <LinkContainer show={showAttachment}>
-                    {relevantLink.map((link) => <Link key={link} href={link}>{link}</Link>)}
+                    {allOfTheRelevantLinks.map(({fields : {link}}) => <Link key={link} href={link}>{link}</Link>)}
                 </LinkContainer>
             </EventSectionContainer>
    
