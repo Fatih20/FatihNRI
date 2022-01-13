@@ -214,7 +214,7 @@ export default function Profile (){
                         </WhatAmILineContainer>
                     </OccupationContainer>
                     <SummaryContainer>
-                        {/* <p><MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD></p> */}
+                        <MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD>
                     </SummaryContainer>
                 </BottomContainer>
             </MainWithinPadding>

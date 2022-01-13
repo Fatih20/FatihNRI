@@ -219,7 +219,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
             <Main>
                 <Title>{bodyTitle}</Title>
                 <OptionContainer>
-                    {allCategoryInTheBody.map((category, indexOfCategory) => categoryMaker(category.fields, indexOfCategory))}
+                    {allCategoryInTheBody.map(({fields : category}, indexOfCategory) => categoryMaker(category, indexOfCategory))}
                 </OptionContainer>
             </Main>
         )
@@ -230,7 +230,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
                 <ShowingEventContainer>
                     <Title>{allCategoryInTheBody[indexOfChoiceDisplayed].fields["titleOfCategory"]}</Title>
                     <EventContainer>
-                        {chosenCategory.fields["contentOfCategory"].map(({fields : event}) => <Event key={`${event["title"]}${event["timeOfStart"]}${event["allOfTheRelevantLinks"][0]}`} event={event}/>)}
+                        {chosenCategory.fields["contentOfCategory"].map(({fields : event}) => <Event key={`${Math.random()}`} event={event}/>)}
                     </EventContainer>
                     <BackContainer>
                         <BackButton onClick={backToSelection}>

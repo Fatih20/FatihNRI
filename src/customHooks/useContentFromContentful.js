@@ -14,9 +14,7 @@ export default function useContentFromContentful (){
             }
         fetchContent();
     }, []);
-    console.log(content);
-
-    // console.log([content, isLoading]);
+    // console.log(content);
 
     return [content, isLoading];
 }

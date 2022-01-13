@@ -24,14 +24,13 @@ export function useContent() {
 export default function IsEnglishProvider({children}) {
     const[isEnglish, setIsEnglish] = useState(false);
     const[allContent, isLoading] = useContentFromContentful();
-    
+
     function contentLanguageSelector() {
         const usedLanguageID = isEnglish ? "EN" : "ID";
         return allContent.filter(languageSpecificContent => languageSpecificContent.fields.language === usedLanguageID)
     }
 
     const usedContent = contentLanguageSelector()[0];
-    // console.log(usedContent);
     
     return (
         <IsEnglish.Provider value={[isEnglish, setIsEnglish]}>

@@ -42,13 +42,14 @@ const EventDate = styled.p`
     text-align: center;
 `;
 
-const EventSubtitle = styled.p`
-    display: ${({show}) => show? null : "none"};
+const EventSubtitle = styled.div`
+    display: ${({show}) => show? "inline" : "none"};
     font-weight: 600;
     margin-top: 0.5em;
 `;
 
-const Summary = styled.p`
+const Summary = styled.div`
+    display: inline;
     margin: 0;
     padding: 0;
 `;
