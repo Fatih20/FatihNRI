@@ -119,28 +119,28 @@ function App() {
   return (
     <>
       <GlobalTransition />
-      <IsEnglishProvider>
         <IsDarkProvider>
           <Main>
-            <ScrollButtonContainer>
-                <ScrollButton onClick={handleScrollButtonClick} />
-            </ScrollButtonContainer>
-            <Header />
-              {/* <FirstContainer>
-                <First>
-                  <FloatContainer>
-                    <Border />
-                  </FloatContainer>
-                  <Profile />
-                  <Body/>
-                </First>
-              </FirstContainer> */}
-            <Profile />
-            <Body forwardedRef={bodyRef}  />
-            <Footer />
+            <IsEnglishProvider>
+              <ScrollButtonContainer>
+                  <ScrollButton onClick={handleScrollButtonClick} />
+              </ScrollButtonContainer>
+              <Header />
+                {/* <FirstContainer>
+                  <First>
+                    <FloatContainer>
+                      <Border />
+                    </FloatContainer>
+                    <Profile />
+                    <Body/>
+                  </First>
+                </FirstContainer> */}
+              <Profile />
+              <Body forwardedRef={bodyRef}  />
+              <Footer />
+            </IsEnglishProvider>
           </Main>
         </IsDarkProvider>
-      </IsEnglishProvider>
     </>
   )
 }

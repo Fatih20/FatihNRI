@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from "react";
 import styled from "styled-components";
+import MD from 'react-markdown'
 
 // Components
 import { VanillaButton } from "../GlobalComponent";
@@ -13,9 +14,6 @@ import { useTheme } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-
-// Custom Function
-import { sanitizeSafely } from "../utilities";
 
 const Main = styled.div`
     align-items: center;
@@ -129,7 +127,7 @@ const SummaryContainer = styled.div`
 
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
-    const {greeting, occupations, asA} = useContent();
+    const {greetings, listOfOccupation, asA} = useContent();
     const[isEnglish, ] = useIsEnglish();
 
     const theme = useTheme();
@@ -154,7 +152,7 @@ export default function Profile (){
 
     function asAMaker() {
         if (isEnglish){
-            if (occupations[indexOfShownOccupation]["a"]) {
+            if (listOfOccupation[indexOfShownOccupation].fields["a"]) {
                 return `${asA} a`
             } else {
                 return `${asA} an`
@@ -165,7 +163,7 @@ export default function Profile (){
     }
 
     function whatAmI() {
-        return `${asAMaker(indexOfShownOccupation)} ${occupations[indexOfShownOccupation]["name"]}`
+        return `${asAMaker()} ${listOfOccupation[indexOfShownOccupation].fields["occupationName"]}`
     }
     
     function handleChangeWhatAmIClick(isLeft, e) {
@@ -185,9 +183,9 @@ export default function Profile (){
 
     function cycleOccupation(isLeft) {
         if (isLeft){
-            setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation - 1) === -1 ? occupations.length-1 : (prevIndexOfShownOccupation - 1))
+            setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation - 1) === -1 ? listOfOccupation.length-1 : (prevIndexOfShownOccupation - 1))
         } else {
-            setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation + 1) % occupations.length)
+            setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation + 1) % listOfOccupation.length)
         }
     }
 
@@ -195,7 +193,7 @@ export default function Profile (){
         <Main>
             <MainWithinPadding>
                 <TitleContainer>
-                    <Greeting>{greeting}</Greeting>
+                    <Greeting>{greetings}</Greeting>
                     <Name>Fatih Nararya R. I.</Name>
                 </TitleContainer>
                 <BottomContainer>
@@ -205,7 +203,7 @@ export default function Profile (){
                                 <FontAwesomeIcon icon={faCaretLeft}/>
                             </ChangeWhatAmI>
                             <Buffer />
-                            <h2 dangerouslySetInnerHTML={{ __html : sanitizeSafely(whatAmI()) }}/>
+                            <h2><MD>{whatAmI()}</MD></h2>
                             <Buffer />
                             <ChangeWhatAmI ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
@@ -213,7 +211,7 @@ export default function Profile (){
                         </WhatAmILineContainer>
                     </OccupationContainer>
                     <SummaryContainer>
-                        <p dangerouslySetInnerHTML={{ __html : sanitizeSafely(occupations[indexOfShownOccupation]["summary"]) }} />
+                        <MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD>
                     </SummaryContainer>
                 </BottomContainer>
             </MainWithinPadding>
