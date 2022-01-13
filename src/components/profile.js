@@ -137,7 +137,7 @@ export default function Profile (){
     const leftButton = useRef();
     const rightButton = useRef();
     const leftIsSimulated = true;
-
+    
     let cycleThrough;
     useEffect(() => {
         cycleThrough = setInterval(simulatedClick, 6000);
