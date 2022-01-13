@@ -10,7 +10,7 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { useContent } from "../../context/language";
 
 // Custom Function
-import { shadeColor, sanitizeSafely } from "../../utilities";
+import { shadeColor } from "../../utilities";
 
 const Main = styled.div`
     background-color: ${({theme}) => theme.regularContainer};

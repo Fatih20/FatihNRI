@@ -1,5 +1,3 @@
-import DOMPurify from "dompurify";
-
 export function shadeColor(color, percent) {
 
     var R = parseInt(color.substring(1,3),16);
@@ -20,8 +18,3 @@ export function shadeColor(color, percent) {
 
     return "#"+RR+GG+BB;
 };
-
-export function sanitizeSafely(contentToSanitize) {
-    const sanitizedContent = DOMPurify.sanitize(contentToSanitize, {ALLOWED_TAGS : ['em', 'strong']})
-    return sanitizedContent;
-}
