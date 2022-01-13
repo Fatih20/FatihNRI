@@ -115,7 +115,7 @@ export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd
                     <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
                 </SeeWork>
                 <LinkContainer show={showAttachment}>
-                    {allOfTheRelevantLinks.map(({fields : {link}}) => <Link key={link} href={link}>{link}</Link>)}
+                    {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <Link key={link} href={link}>{link}</Link>)}
                 </LinkContainer>
             </EventSectionContainer>
    
