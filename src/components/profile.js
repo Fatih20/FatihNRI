@@ -130,7 +130,7 @@ const SummaryContainer = styled.div`
 
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
-    const {greeting, listOfOccupation, asA} = useContent();
+    const {greetings, listOfOccupation, asA} = useContent();
     const[isEnglish, ] = useIsEnglish();
 
     const theme = useTheme();
@@ -196,7 +196,7 @@ export default function Profile (){
         <Main>
             <MainWithinPadding>
                 <TitleContainer>
-                    <Greeting>{greeting}</Greeting>
+                    <Greeting>{greetings}</Greeting>
                     <Name>Fatih Nararya R. I.</Name>
                 </TitleContainer>
                 <BottomContainer>
