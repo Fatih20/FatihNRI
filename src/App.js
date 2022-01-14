@@ -12,46 +12,46 @@ import Header from "./components/header";
 import IsEnglishProvider from "./context/language";
 import IsDarkProvider from "./context/darkTheme";
 
-const Main = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  margin: 0 auto;
-  min-height: 100vh;
-  position: relative;
+// const Main = styled.div`
+//   align-items: center;
+//   display: flex;
+//   flex-direction: column;
+//   font-size: 1rem;
+//   margin: 0 auto;
+//   min-height: 100vh;
+//   position: relative;
 
-  @media (max-width : 600px){
-    font-size: 0.75rem;
-  }
+//   @media (max-width : 600px){
+//     font-size: 0.75rem;
+//   }
 
-  /* border: solid 1px white; */
-`;
+//   /* border: solid 1px white; */
+// `;
 
-const FirstContainer = styled.div`
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 100%;
-    justify-content: center;
-    overflow: hidden;
-    padding: 0 20px;
-    width: 100%;
-`;
+// const FirstContainer = styled.div`
+//     box-sizing: border-box;
+//     display: flex;
+//     flex-direction: column;
+//     flex-grow: 1;
+//     height: 100%;
+//     justify-content: center;
+//     overflow: hidden;
+//     padding: 0 20px;
+//     width: 100%;
+// `;
 
-const First = styled.div`
-    display: flex;
-    height: 80%;
-    position: relative;
-    width: 100%;
+// const First = styled.div`
+//     display: flex;
+//     height: 80%;
+//     position: relative;
+//     width: 100%;
 
-    & > * {
-      width: 50%;
-    }
+//     & > * {
+//       width: 50%;
+//     }
 
-    /* border : solid 1px white; */
-`;
+//     /* border : solid 1px white; */
+// `;
 
 // const FloatContainer = styled.div`
 //     background-color: rgba(0,0,0,0);
@@ -70,42 +70,42 @@ const First = styled.div`
 
 // `;
 
-const ScrollButtonContainer = styled.div`
-    background-color: rgba(0,0,0,0);
-    bottom: 2.5rem;
-    display: none;
-    flex-direction: column;
-    pointer-events: none;
-    position: absolute;
-    top: 2rem;
-    width: 100%;
-    z-index : 1;
+// const ScrollButtonContainer = styled.div`
+//     background-color: rgba(0,0,0,0);
+//     bottom: 2.5rem;
+//     display: none;
+//     flex-direction: column;
+//     pointer-events: none;
+//     position: absolute;
+//     top: 2rem;
+//     width: 100%;
+//     z-index : 1;
 
-    border : solid 1px white;
-`;
+//     border : solid 1px white;
+// `;
 
-const ScrollButton = styled(VanillaButton)`
-    background-color: white;
-    height: 100px;
-    pointer-events: auto;
-    width: 100px;
+// const ScrollButton = styled(VanillaButton)`
+//     background-color: white;
+//     height: 100px;
+//     pointer-events: auto;
+//     width: 100px;
 
-    &:hover {
-      background-color: black;
-    }
+//     &:hover {
+//       background-color: black;
+//     }
 
-    border : solid 1px white;
-`;
+//     border : solid 1px white;
+// `;
 
-const Border = styled.div`
-    border-right: solid 2px ${({theme}) => theme.standaloneBorder};
-    height: 100%;
-    margin-right: -2px;
-    width: 100%;
+// const Border = styled.div`
+//     border-right: solid 2px ${({theme}) => theme.standaloneBorder};
+//     height: 100%;
+//     margin-right: -2px;
+//     width: 100%;
 
-    /* border: solid 1px red; */
+//     /* border: solid 1px red; */
 
-`;
+// `;
 
 function App() {
   const bodyRef = useRef();
@@ -120,11 +120,11 @@ function App() {
     <>
       <GlobalTransition />
         <IsDarkProvider>
-          <Main>
+          <div className="flex-col items-center sm:text-base my-0 mx-auto min-h-screen relative text-xs">
             <IsEnglishProvider>
-              <ScrollButtonContainer>
-                  <ScrollButton onClick={handleScrollButtonClick} />
-              </ScrollButtonContainer>
+              <div className="absolute hidden flex-col bg-[#000000] opacity-0 bottom-[2.5rem] top-[2rem] w-full z-[1] pointer-events-none	">
+                <VanillaButton className="bg-white h-[100px] pointer-events-auto w-[100px] hover:bg-[#00000]" onClick={handleScrollButtonClick} />
+              </div>
               <Header />
                 {/* <FirstContainer>
                   <First>
@@ -139,7 +139,7 @@ function App() {
               <Body forwardedRef={bodyRef}  />
               <Footer />
             </IsEnglishProvider>
-          </Main>
+          </div>
         </IsDarkProvider>
     </>
   )
