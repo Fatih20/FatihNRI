@@ -152,7 +152,8 @@ export default function Profile (){
 
     function asAMaker() {
         if (isEnglish){
-            if (listOfOccupation[indexOfShownOccupation].fields["a"]) {
+            console.log(listOfOccupation[indexOfShownOccupation].fields)
+            if (listOfOccupation[indexOfShownOccupation].fields["occupationNameUseA"]) {
                 return `${asA} a`
             } else {
                 return `${asA} an`
