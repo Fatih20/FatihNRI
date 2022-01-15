@@ -88,25 +88,25 @@ const BottomContainer = styled.div`
 
 // `;
 
-const ChangeWhatAmI = styled(VanillaButton)`
-    background-color: rgba(0, 0 ,0, 0);
-    color: ${({theme}) => theme.unselectedBareText};
-    font-size: 2em;
-    transition: color 0s, background-color 0s, box-shadow 0s;
+// const ChangeWhatAmI = styled(VanillaButton)`
+//     background-color: rgba(0, 0 ,0, 0);
+//     color: ${({theme}) => theme.unselectedBareText};
+//     font-size: 2em;
+//     transition: color 0s, background-color 0s, box-shadow 0s;
 
-    & > * {
-        transition: color 0s, background-color 0s, box-shadow 0s;
-    }
+//     & > * {
+//         transition: color 0s, background-color 0s, box-shadow 0s;
+//     }
 
-    &:hover {
-        color: ${({theme}) => theme.aboutToBeSelectedBareText};
+//     &:hover {
+//         color: ${({theme}) => theme.aboutToBeSelectedBareText};
 
-    }
+//     }
 
-    &:active {
-        color: ${({theme}) => theme.regularText};
-    }
-`;
+//     &:active {
+//         color: ${({theme}) => theme.regularText};
+//     }
+// `;
 
 // const OccupationContainer = styled.div`
 //     align-items: flex-start;
@@ -188,26 +188,7 @@ export default function Profile (){
             setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation + 1) % listOfOccupation.length)
         }
     }
-
-const ChangeWhatAmI = styled(VanillaButton)`
-    background-color: rgba(0, 0 ,0, 0);
-    color: ${({theme}) => theme.unselectedBareText};
-    font-size: 2em;
-    transition: color 0s, background-color 0s, box-shadow 0s;
-
-    & > * {
-        transition: color 0s, background-color 0s, box-shadow 0s;
-    }
-
-    &:hover {
-        color: ${({theme}) => theme.aboutToBeSelectedBareText};
-
-    }
-
-    &:active {
-        color: ${({theme}) => theme.regularText};
-    }
-`;
+    
     return (
         <div className={`text-[${theme.regularText}] items-center box-border flex flex-col text-[2em] h-[calc(100vh-2em)] py-0 px-[10px] w-full justify-center`}>
             <div className="items-start flex flex-col gap-[0.5em] justify-center h-full">
