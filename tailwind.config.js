@@ -19,6 +19,9 @@ module.exports = {
       padding : {
         '3.5' : '0.875rem',
       },
+      width : {
+        '1.5' : '0.375rem',
+      },
       colors : {
         backgroundTopStop : ({opacityVariable}) => `rgba(var(--backgroundTopStop)/var(${opacityVariable}))`,
         backgroundBelowStop : ({opacityVariable}) => `rgba(var(--backgroundBelowStop)/var(${opacityVariable}))`,

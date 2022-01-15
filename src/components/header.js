@@ -51,7 +51,7 @@ var classNames = require('classnames');
 // `;
 
 function Language({children, chosen, ...rest}) {
-    return <button className={classNames("bg-transparent text-lg font-semibold", chosen ? "text-regularText" : "text-unselectedBareText")} {...rest}>{children}</button>
+    return <button className={classNames("bg-transparent sm:text-lg text-sm font-semibold", chosen ? "text-regularText" : "text-unselectedBareText")} {...rest}>{children}</button>
 }
 
 export default function Header (){

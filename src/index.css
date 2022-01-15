@@ -70,6 +70,7 @@
     @apply items-center flex flex-col text-[0.5em] justify-start gap-[1.25rem] pr-[0.5em] overflow-auto;
   }
 
+
   .event-container, .option-container {
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbarTrackFill);
@@ -79,8 +80,12 @@
     width: 0.5vw;
   }
 
+  .event-container::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
   .option-container::-webkit-scrollbar-thumb, .event-container::-webkit-scrollbar-thumb {
-    @apply bg-scrollbarThumbFill border-solid border border-scrollbarThumbBorder rounded-[4px];
+    @apply bg-scrollbarThumbFill border-solid border border-scrollbarThumbBorder rounded-sm;
   }
 
   .option-container::-webkit-scrollbar-thumb:hover, .event-container::-webkit-scrollbar-thumb:hover {
@@ -88,14 +93,10 @@
   }
 
   .option-container::-webkit-scrollbar-track, .event-container::-webkit-scrollbar-track {
-    @apply bg-scrollbarTrackFill border-solid border border-scrollbarTrackFill;
+    @apply bg-scrollbarTrackFill opacity-0 border-none border border-scrollbarTrackFill;
   }
   .option-container::-webkit-scrollbar-track:hover, .event-container::-webkit-scrollbar-track:hover {
-    @apply bg-scrollbarTrackHoveredFill border-solid border border-scrollbarTrackHoveredFill;
-  }
-
-  .event-container::-webkit-scrollbar-thumb:hover {
-    @apply bg-scrollbarThumbHoveredFill border-solid border border-scrollbarThumbHoveredFill;
+    @apply bg-scrollbarTrackHoveredFill border-none border border-scrollbarTrackHoveredFill;
   }
 
   .option > h2 {

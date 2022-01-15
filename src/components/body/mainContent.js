@@ -218,7 +218,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
     if (indexOfChoiceDisplayed === -1){
         return (
             <div className="items-center flex flex-col h-full justify-center w-full text-regularText">
-                <h2 className="text-3.5xl text-center sm:py-4 px-0 inline-block">{bodyTitle}</h2>
+                <h2 className="sm:text-3.5xl text-3xl text-center sm:py-4 py-2 px-0 inline-block">{bodyTitle}</h2>
                 <div className="option-container">
                     {allCategoryInTheBody.map(({fields : category}, indexOfCategory) => categoryMaker(category, indexOfCategory))}
                 </div>
@@ -229,7 +229,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
         return (
             <div className="items-center flex flex-col h-full justify-center w-full text-regularText">
                 <div className="box-border flex flex-col h-full justify-start py-0 px-2 max-w-3xl md:w-3/5 w-4/5">
-                    <h2 className="text-3.5xl text-center py-2 px-0">{allCategoryInTheBody[indexOfChoiceDisplayed].fields["titleOfCategory"]}</h2>
+                    <h2 className="sm:text-3.5xl text-3xl text-center py-2 px-0">{allCategoryInTheBody[indexOfChoiceDisplayed].fields["titleOfCategory"]}</h2>
                     <div className="event-container">
                         {chosenCategory.fields["contentOfCategory"].map(({fields : event}) => <Event key={`${Math.random()}`} event={event}/>)}
                     </div>

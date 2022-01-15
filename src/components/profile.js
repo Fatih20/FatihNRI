@@ -193,24 +193,24 @@ export default function Profile (){
         <div className="items-center box-border flex flex-col h-[calc(100vh-3.25rem)] py-0 px-3 w-full justify-center text-regularText">
             <div className="items-start flex flex-col gap-2 justify-center h-full">
                 <div className="flex flex-col justify-center my-0 mx-auto">
-                    <h2 className="text-5xl leading-tight">{greetings}</h2>
-                    <h1 className="text-7.5xl leading-tight">Fatih Nararya R. I.</h1>
+                    <h2 className="sm:text-5xl text-4xl leading-tight">{greetings}</h2>
+                    <h1 className="sm:text-7.5xl text-6xl leading-tight">Fatih Nararya R. I.</h1>
                 </div>
-                <div className="items-start self-center flex flex-col text-xl gap-1 max-w-[35em] w-full bottom-container">
+                <div className="items-start self-center flex flex-col gap-1 max-w-[35em] w-full bottom-container">
                     <div className="items-start flex flex-nowrap gap-1 w-full">
                         <div className="flex gap-1 text-center w-full items-center">
                             <button className="change-what-am-i" ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
                                 <FontAwesomeIcon icon={faCaretLeft}/>
                             </button>
                             <div className="flex-grow" />
-                            <h2 className="text-3xl"><MD>{whatAmI()}</MD></h2>
+                            <h2 className="sm:text-3xl text-xl"><MD>{whatAmI()}</MD></h2>
                             <div className="flex-grow" />
                             <button className="change-what-am-i" ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
                             </button>
                         </div>
                     </div>
-                    <div className="self-start min-h-fit">
+                    <div className="self-start text-sm sm:text-xl min-h-fit">
                         <MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD>
                     </div>
                 </div>

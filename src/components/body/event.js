@@ -104,19 +104,19 @@ export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd
     }
 
     return (
-        <div className="bg-regularContainer rounded-md shadow-sm shadow-regularContainerShadow box-border text-regularText flex flex-col gap-0 break-words px-5 py-4 w-full">
-            <h2 className="text-center text-2xl"><MD>{title}</MD></h2>
-            <p className="text-center text-base">{time}</p>
+        <div className="bg-regularContainer rounded-md shadow-sm shadow-regularContainerShadow box-border text-regularText flex flex-col gap-0 break-words sm:px-5 sm:py-4 px-4 py-3 w-full">
+            <h2 className="text-center sm:text-2xl text-xl"><MD>{title}</MD></h2>
+            <p className="text-center sm:text-base text-lb">{time}</p>
             <h2 className={classNames("font-semibold mt-1 text-lb", subtitle !== null ? "inline" : "hidden")} show={subtitle !== null ? true : false}><MD>{subtitle}</MD></h2>
-            <div className={classNames("flex flex-col gap-1 mt-2 pt-2 border-standaloneBorder border-solid border-t", typeOfAttachment !== "none" ? "block" : "hidden")}>
+            <div className={classNames("flex flex-col gap-1 mt-2 pt-2 border-standaloneBorder border-solid border-t")}>
                 {summaryMaker()}
             </div>
             <div className={classNames("border-standaloneBorder border-solid border-t mt-2 pt-2", typeOfAttachment !== "none" ? "block" : "hidden")}>
                 <div className="gap-2 cursor-pointer font-medium flex justify-start" onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
-                    <p className="text-base">{textForAllAttachmentTypes[typeOfAttachment]}</p>
+                    <p className="sm:text-base text-lb font-semibold">{textForAllAttachmentTypes[typeOfAttachment]}</p>
                     <div className={classNames("text-base h-min transition-transform ease-in-out", showAttachment ? "rotate-180" : "" )} ><FontAwesomeIcon icon={faCaretDown}/></div>
                 </div>
-                <div className={classNames("mt-0 text-base break-words flex-col", showAttachment ? "flex" : "hidden")}>
+                <div className={classNames("mt-1 sm:text-base text-lb break-words flex-col", showAttachment ? "flex" : "hidden")}>
                     {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <a className="underline text-regularText text-ellipsis" key={link} href={link}>{link}</a>)}
                 </div>
             </div>
