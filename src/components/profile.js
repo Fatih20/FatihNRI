@@ -15,52 +15,52 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Main = styled.div`
-    align-items: center;
-    box-sizing: border-box;
-    color: ${({theme}) => theme.regularText};
-    display: flex;
-    flex-direction: column;
-    font-size: 2em;
-    height: calc(100vh - 2em);
-    justify-content: center;
-    padding: 0 10px;
-    width: 100%;
+// const Main = styled.div`
+//     align-items: center;
+//     box-sizing: border-box;
+//     color: ${({theme}) => theme.regularText};
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 2em;
+//     height: calc(100vh - 2em);
+//     justify-content: center;
+//     padding: 0 10px;
+//     width: 100%;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const MainWithinPadding = styled.div`
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    height: 100%;
-    justify-content: center;
+// const MainWithinPadding = styled.div`
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5em;
+//     height: 100%;
+//     justify-content: center;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-`;
+// const TitleContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin: 0 auto;
+// `;
 
-const Greeting = styled.h2`
-    font-size: 1.5em;
-`;
+// const Greeting = styled.h2`
+//     font-size: 1.5em;
+// `;
 
-const Name = styled.h1`
-    font-size: 2.5em;
+// const Name = styled.h1`
+//     font-size: 2.5em;
 
-    /* border : solid 1px white; */
-`;
+//     /* border : solid 1px white; */
+// `;
 
-const Buffer = styled.div`
-    flex-grow: 1;
-`;
+// const Buffer = styled.div`
+//     flex-grow: 1;
+// `;
 
 const BottomContainer = styled.div`
     align-items: flex-start;
@@ -79,14 +79,14 @@ const BottomContainer = styled.div`
     /* border : solid 1px white; */
 `;
 
-const WhatAmILineContainer = styled.div`
-    align-items: center;
-    display: flex;
-    gap: 0.25em;
-    text-align: center;
-    width: 100%;
+// const WhatAmILineContainer = styled.div`
+//     align-items: center;
+//     display: flex;
+//     gap: 0.25em;
+//     text-align: center;
+//     width: 100%;
 
-`;
+// `;
 
 const ChangeWhatAmI = styled(VanillaButton)`
     background-color: rgba(0, 0 ,0, 0);
@@ -108,22 +108,22 @@ const ChangeWhatAmI = styled(VanillaButton)`
     }
 `;
 
-const OccupationContainer = styled.div`
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 0.5em;
-    width: 100%;
+// const OccupationContainer = styled.div`
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     gap: 0.5em;
+//     width: 100%;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const SummaryContainer = styled.div`
-    align-self: flex-start;
-    min-height: 10em;
-    /* border: solid 1px white; */
-`;
+// const SummaryContainer = styled.div`
+//     align-self: flex-start;
+//     min-height: 10em;
+//     /* border: solid 1px white; */
+// `;
 
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
@@ -189,32 +189,51 @@ export default function Profile (){
         }
     }
 
+const ChangeWhatAmI = styled(VanillaButton)`
+    background-color: rgba(0, 0 ,0, 0);
+    color: ${({theme}) => theme.unselectedBareText};
+    font-size: 2em;
+    transition: color 0s, background-color 0s, box-shadow 0s;
+
+    & > * {
+        transition: color 0s, background-color 0s, box-shadow 0s;
+    }
+
+    &:hover {
+        color: ${({theme}) => theme.aboutToBeSelectedBareText};
+
+    }
+
+    &:active {
+        color: ${({theme}) => theme.regularText};
+    }
+`;
     return (
-        <Main>
-            <MainWithinPadding>
-                <TitleContainer>
-                    <Greeting>{greetings}</Greeting>
-                    <Name>Fatih Nararya R. I.</Name>
-                </TitleContainer>
-                <BottomContainer>
-                    <OccupationContainer>
-                        <WhatAmILineContainer>
-                            <ChangeWhatAmI ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
+        <div className={`text-[${theme.regularText}] items-center box-border flex flex-col text-[2em] h-[calc(100vh-2em)] py-0 px-[10px] w-full justify-center`}>
+            <div className="items-start flex flex-col gap-[0.5em] justify-center h-full">
+                <div className="flex flex-col justify-center my-0 mx-auto">
+                    <h2 className="text-[1.5em]">{greetings}</h2>
+                    <h1 className="text-[2.5em]">Fatih Nararya R. I.</h1>
+                </div>
+                <div className="items-start self-center flex flex-col text-[0.6em] g-[0.25em] max-w-[35em] w-full bottom-container">
+                    <div className="items-start flex flex-nowrap gap-[0.5em] w-full">
+                        <div className="flex gap-[0.25em] text-center w-full items-center">
+                            <button className="what-am-i" ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
                                 <FontAwesomeIcon icon={faCaretLeft}/>
-                            </ChangeWhatAmI>
-                            <Buffer />
+                            </button>
+                            <div className="flex-grow" />
                             <h2><MD>{whatAmI()}</MD></h2>
-                            <Buffer />
-                            <ChangeWhatAmI ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
+                            <div className="flex-grow" />
+                            <button className="what-am-i" ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
-                            </ChangeWhatAmI>
-                        </WhatAmILineContainer>
-                    </OccupationContainer>
-                    <SummaryContainer>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="self-start min-h-[10em]">
                         <MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD>
-                    </SummaryContainer>
-                </BottomContainer>
-            </MainWithinPadding>
-        </Main>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

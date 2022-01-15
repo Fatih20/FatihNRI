@@ -1,10 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,3 +14,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.what-am-i {
+  @apply text-[2em] bg-transparent transition-colors delay-[0]
+
+}
+
+.what-am-i > * {
+  @apply text-[2em] bg-transparent transition-colors delay-[0]
+}
+
+.bottom-container > * {
+ @apply mx-auto my-0
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
