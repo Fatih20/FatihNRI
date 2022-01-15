@@ -122,8 +122,8 @@ function App() {
         <IsDarkProvider>
           <div className="flex-col items-center my-0 mx-auto min-h-screen relative text-base">
             <IsEnglishProvider>
-              <div className="absolute hidden flex-col bg-[#000000] opacity-0 bottom-[2.5rem] top-[2rem] w-full z-[1] pointer-events-none	">
-                <button className="bg-white h-[100px] pointer-events-auto w-[100px] hover:bg-[#00000]" onClick={handleScrollButtonClick} />
+              <div className="absolute hidden flex-col bg-black opacity-0 bottom-[2.5rem] top-[2rem] w-full z-[1] pointer-events-none">
+                <button className="bg-white h-24 pointer-events-auto w-24 hover:bg-black" onClick={handleScrollButtonClick} />
               </div>
               <Header />
                 {/* <FirstContainer>

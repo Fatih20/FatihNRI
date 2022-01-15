@@ -190,27 +190,27 @@ export default function Profile (){
     }
     
     return (
-        <div className={`items-center box-border flex flex-col text-[2em] h-[calc(100vh-2em)] py-0 px-[10px] w-full justify-center text-regularText`}>
-            <div className="items-start flex flex-col gap-[0.5em] justify-center h-full">
+        <div className={`items-center box-border flex flex-col text-3xl h-[calc(100vh-2em)] py-0 px-3 w-full justify-center text-regularText`}>
+            <div className="items-start flex flex-col gap-2 justify-center h-full">
                 <div className="flex flex-col justify-center my-0 mx-auto">
-                    <h2 className="text-[1.5em] leading-tight">{greetings}</h2>
-                    <h1 className="text-[2.5em] leading-tight">Fatih Nararya R. I.</h1>
+                    <h2 className="text-5xl leading-tight">{greetings}</h2>
+                    <h1 className="text-7.5xl leading-tight">Fatih Nararya R. I.</h1>
                 </div>
-                <div className="items-start self-center flex flex-col text-[0.6em] g-[0.25em] max-w-[35em] w-full bottom-container">
-                    <div className="items-start flex flex-nowrap gap-[0.5em] w-full">
-                        <div className="flex gap-[0.25em] text-center w-full items-center">
+                <div className="items-start self-center flex flex-col text-xl gap-1 max-w-[35em] w-full bottom-container">
+                    <div className="items-start flex flex-nowrap gap-1 w-full">
+                        <div className="flex gap-1 text-center w-full items-center">
                             <button className="change-what-am-i" ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
                                 <FontAwesomeIcon icon={faCaretLeft}/>
                             </button>
                             <div className="flex-grow" />
-                            <h2 className="text-[1.25em]"><MD>{whatAmI()}</MD></h2>
+                            <h2 className="text-3xl"><MD>{whatAmI()}</MD></h2>
                             <div className="flex-grow" />
                             <button className="change-what-am-i" ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
                             </button>
                         </div>
                     </div>
-                    <div className="self-start min-h-[10em]">
+                    <div className="self-start min-h-fit">
                         <MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD>
                     </div>
                 </div>

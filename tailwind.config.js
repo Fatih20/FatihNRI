@@ -8,8 +8,11 @@ module.exports = {
       'md' : '900px',
     },
     extend: {
-      fontFamiy : {
+      fontFamily : {
         basic : ['Inter', 'sans-serif'],
+      },
+      fontSize : {
+        '7.5xl' : '5.25rem'
       },
       colors : {
         backgroundTopStop : ({opacityVariable}) => `rgba(var(--backgroundTopStop)/var(${opacityVariable}))`,
