@@ -120,7 +120,7 @@ function App() {
     <>
       <GlobalTransition />
         <IsDarkProvider>
-          <div className="flex-col items-center my-0 mx-auto min-h-screen relative font-basic">
+          <div className="flex-col items-center my-0 mx-auto min-h-screen relative">
             <IsEnglishProvider>
               <div className="absolute hidden flex-col bg-[#000000] opacity-0 bottom-[2.5rem] top-[2rem] w-full z-[1] pointer-events-none	">
                 <VanillaButton className="bg-white h-[100px] pointer-events-auto w-[100px] hover:bg-[#00000]" onClick={handleScrollButtonClick} />

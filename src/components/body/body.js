@@ -5,23 +5,23 @@ import styled from "styled-components";
 import MainContent from "./mainContent";
 
 
-const Main = styled.div`
-    align-items: center;
-    box-sizing: border-box;
-    color: ${({theme}) => theme.regularText};
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    height: calc(100vh - 2.5em);
-    justify-content: center;
-    width: 100%;
+// const Main = styled.div`
+//     align-items: center;
+//     box-sizing: border-box;
+//     color: ${({theme}) => theme.regularText};
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 1em;
+//     height: calc(100vh - 2.5em);
+//     justify-content: center;
+//     width: 100%;
 
-    @media (max-width: 601px){
-        height: calc(100vh - 3em);
-    }
+//     @media (max-width: 601px){
+//         height: calc(100vh - 3em);
+//     }
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
 export default function Body ({forwardedRef}){
     const[indexOfChoiceDisplayed, setIndexOfChoiceDisplayed] = useState(-1);
@@ -41,8 +41,8 @@ export default function Body ({forwardedRef}){
     
 
     return (
-        <Main ref={forwardedRef}>
+        <div className="items-center box-border flex flex-col text-[1em] h-[calc(100vh-3em)] justify-center w-full sm:h-[calc(100vh-2.5em)]" ref={forwardedRef}>
             <MainContent indexOfChoiceDisplayed={indexOfChoiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
-        </Main>
+        </div>
     )
 }

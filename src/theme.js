@@ -20,9 +20,6 @@ export const dark = {
     scrollbarTrackBorder : "rgba(0, 0, 0, 0)",
     scrollbarTrackHoveredFill : "rgba(0, 0, 0, 0)",
     scrollbarTrackHoveredBorder : "rgba(0, 0, 0, 0)",
-    
-
-
 };
 
 export const light = {

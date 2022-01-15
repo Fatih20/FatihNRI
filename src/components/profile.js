@@ -62,22 +62,22 @@ import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 //     flex-grow: 1;
 // `;
 
-const BottomContainer = styled.div`
-    align-items: flex-start;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.6em;
-    gap: 0.25em;
-    max-width: 35em;
-    width: 100%;
+// const BottomContainer = styled.div`
+//     align-items: flex-start;
+//     align-self: center;
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 0.6em;
+//     gap: 0.25em;
+//     max-width: 35em;
+//     width: 100%;
 
-    & > * {
-        margin: 0 auto;
-    }
+//     & > * {
+//         margin: 0 auto;
+//     }
 
-    /* border : solid 1px white; */
-`;
+//     /* border : solid 1px white; */
+// `;
 
 // const WhatAmILineContainer = styled.div`
 //     align-items: center;
@@ -190,22 +190,22 @@ export default function Profile (){
     }
     
     return (
-        <div className={`text-[${theme.regularText}] items-center box-border flex flex-col text-[2em] h-[calc(100vh-2em)] py-0 px-[10px] w-full justify-center`}>
+        <div className={`items-center box-border flex flex-col text-[2em] h-[calc(100vh-2em)] py-0 px-[10px] w-full justify-center text-regularText`}>
             <div className="items-start flex flex-col gap-[0.5em] justify-center h-full">
                 <div className="flex flex-col justify-center my-0 mx-auto">
-                    <h2 className="text-[1.5em]">{greetings}</h2>
-                    <h1 className="text-[2.5em]">Fatih Nararya R. I.</h1>
+                    <h2 className="text-[1.5em] leading-tight">{greetings}</h2>
+                    <h1 className="text-[2.5em] leading-tight">Fatih Nararya R. I.</h1>
                 </div>
                 <div className="items-start self-center flex flex-col text-[0.6em] g-[0.25em] max-w-[35em] w-full bottom-container">
                     <div className="items-start flex flex-nowrap gap-[0.5em] w-full">
                         <div className="flex gap-[0.25em] text-center w-full items-center">
-                            <button className="what-am-i" ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
+                            <button className="change-what-am-i" ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
                                 <FontAwesomeIcon icon={faCaretLeft}/>
                             </button>
                             <div className="flex-grow" />
-                            <h2><MD>{whatAmI()}</MD></h2>
+                            <h2 className="text-[1.25em]"><MD>{whatAmI()}</MD></h2>
                             <div className="flex-grow" />
-                            <button className="what-am-i" ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
+                            <button className="change-what-am-i" ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
                             </button>
                         </div>

@@ -34,13 +34,13 @@ const EventSectionContainer = styled.div`
     padding-top: 0.5em;
 `;
 
-const EventTitle = styled.h2`
-    text-align: center;
-`;
+// const EventTitle = styled.h2`
+//     text-align: center;
+// `;
 
-const EventDate = styled.p`
-    text-align: center;
-`;
+// const EventDate = styled.p`
+//     text-align: center;
+// `;
 
 const EventSubtitle = styled.div`
     display: ${({show}) => show? "inline" : "none"};
@@ -48,11 +48,11 @@ const EventSubtitle = styled.div`
     margin-top: 0.5em;
 `;
 
-const Summary = styled.div`
-    display: inline;
-    margin: 0;
-    padding: 0;
-`;
+// const Summary = styled.div`
+//     display: inline;
+//     margin: 0;
+//     padding: 0;
+// `;
 
 const SummaryContainer = styled(EventSectionContainer)`
     display: flex;
@@ -60,12 +60,12 @@ const SummaryContainer = styled(EventSectionContainer)`
     gap: 0.3125em;
 `;
 
-const SeeWork = styled.div`
-    display: flex;
-    gap: 0.35em;
-    cursor: pointer;
-    font-weight: 600;
-`;
+// const SeeWork = styled.div`
+//     display: flex;
+//     gap: 0.35em;
+//     cursor: pointer;
+//     font-weight: 600;
+// `;
 
 const IconContainer = styled.div`
     display: inline-block;
@@ -97,23 +97,23 @@ export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd
 
     function summaryMaker() {
         return (
-            listOfSummary.map(({fields : {oneLineSummary}}) => <Summary key={oneLineSummary}><MD>{oneLineSummary}</MD></Summary>)
+            listOfSummary.map(({fields : {oneLineSummary}}) => <div className="inline m-0 p-0" key={oneLineSummary}><MD>{oneLineSummary}</MD></div>)
         )
     }
 
     return (
         <Main>
-            <EventTitle><MD>{title}</MD></EventTitle>
-            <EventDate>{time}</EventDate>
+            <h2 className="text-center"><MD>{title}</MD></h2>
+            <p className="text-center">{time}</p>
             <EventSubtitle show={subtitle !== null ? true : false}><MD>{subtitle}</MD></EventSubtitle>
             <SummaryContainer>
                 {summaryMaker()}
             </SummaryContainer>
             <EventSectionContainer show={typeOfAttachment !== "none"}>
-                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
+                <div className="g-[0.35em] cursor-pointer font-medium flex" onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
                     {textForAllAttachmentTypes[typeOfAttachment]}
                     <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
-                </SeeWork>
+                </div>
                 <LinkContainer show={showAttachment}>
                     {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <Link key={link} href={link}>{link}</Link>)}
                 </LinkContainer>
