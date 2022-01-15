@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 
 // Components
-import { GlobalTransition, VanillaButton } from "./GlobalComponent";
+// import { GlobalTransition, VanillaButton } from "./GlobalComponent";
 import Footer from "./components/footer";
 import Body from "./components/body/body";
 import Profile from "./components/profile";
@@ -118,12 +118,12 @@ function App() {
 
   return (
     <>
-      <GlobalTransition />
+      {/* <GlobalTransition /> */}
         <IsDarkProvider>
-          <div className="flex-col items-center my-0 mx-auto min-h-screen relative">
+          <div className="flex-col items-center my-0 mx-auto min-h-screen relative text-base">
             <IsEnglishProvider>
               <div className="absolute hidden flex-col bg-[#000000] opacity-0 bottom-[2.5rem] top-[2rem] w-full z-[1] pointer-events-none	">
-                <VanillaButton className="bg-white h-[100px] pointer-events-auto w-[100px] hover:bg-[#00000]" onClick={handleScrollButtonClick} />
+                <button className="bg-white h-[100px] pointer-events-auto w-[100px] hover:bg-[#00000]" onClick={handleScrollButtonClick} />
               </div>
               <Header />
                 {/* <FirstContainer>
