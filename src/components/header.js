@@ -60,7 +60,7 @@ export default function Header (){
     const themeFromHook = useTheme();
 
     return (
-        <div className="items-center box-border text-regularText flex gap-4 h-12 justify-start m-0 py-0 px-[0.2em] w-full">
+        <div className="items-center box-border text-regularText flex gap-4 h-12 justify-start m-0 py-0 px-1 w-full">
             {/* <IconContainer>
                 <Icon onClick={() => setIsDark(prevIsDark => !prevIsDark)} path={isDark ? mdiWeatherNight : mdiWeatherSunny} color={themeFromHook.regularText} size={1} />
             </IconContainer> */}
