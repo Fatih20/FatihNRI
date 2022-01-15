@@ -11,7 +11,7 @@
     --emphasizedContainerShadow : 255 255 255;
     --unselectedBareText : 51 51 51;
     --aboutToBeSelectedBareText : 77 77 77;
-    --standaloneBorder : 255 255 255;
+    --standaloneBorder : 128 128 128;
     --scrollbarThumbFill : 51 51 51;
     --scrollbarThumbBorder : 0 0 0;
     --scrollbarThumbHoveredFill : 102 102 102;
@@ -99,6 +99,10 @@
 
   .back-button {
     transition: padding-left 0.15s, padding-right 0.15s;
+  }
+
+  .footer > p {
+    @apply text-[#d4d4d4] font-semibold mb-[10px];
   }
   
 }

@@ -12,27 +12,29 @@ import { useContent } from "../../context/language";
 // Custom Function
 import { shadeColor } from "../../utilities";
 
-const Main = styled.div`
-    background-color: ${({theme}) => theme.regularContainer};
-    border-radius: 7.5px;
-    box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
-    box-sizing: border-box;
-    color : ${({theme}) => theme.regularText};
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    gap: 0;
-    overflow-wrap: break-word;
-    padding: 1em 1.25em;
-    width: 100%;
-`;
+var classNames = require('classnames');
 
-const EventSectionContainer = styled.div`
-    display: ${({show}) => show === undefined || show === true ? "block" : "none"};
-    border-top: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-`;
+// const Main = styled.div`
+//     background-color: ${({theme}) => theme.regularContainer};
+//     border-radius: 7.5px;
+//     box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
+//     box-sizing: border-box;
+//     color : ${({theme}) => theme.regularText};
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 1em;
+//     gap: 0;
+//     overflow-wrap: break-word;
+//     padding: 1em 1.25em;
+//     width: 100%;
+// `;
+
+// const EventSectionContainer = styled.div`
+//     display: ${({show}) => show === undefined || show === true ? "block" : "none"};
+//     border-top: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
+//     margin-top: 0.5em;
+//     padding-top: 0.5em;
+// `;
 
 // const EventTitle = styled.h2`
 //     text-align: center;
@@ -42,11 +44,11 @@ const EventSectionContainer = styled.div`
 //     text-align: center;
 // `;
 
-const EventSubtitle = styled.div`
-    display: ${({show}) => show? "inline" : "none"};
-    font-weight: 600;
-    margin-top: 0.5em;
-`;
+// const EventSubtitle = styled.div`
+//     display: ${({show}) => show? "inline" : "none"};
+//     font-weight: 600;
+//     margin-top: 0.5em;
+// `;
 
 // const Summary = styled.div`
 //     display: inline;
@@ -54,11 +56,11 @@ const EventSubtitle = styled.div`
 //     padding: 0;
 // `;
 
-const SummaryContainer = styled(EventSectionContainer)`
-    display: flex;
-    flex-direction: column;
-    gap: 0.3125em;
-`;
+// const SummaryContainer = styled(EventSectionContainer)`
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.3125em;
+// `;
 
 // const SeeWork = styled.div`
 //     display: flex;
@@ -67,27 +69,27 @@ const SummaryContainer = styled(EventSectionContainer)`
 //     font-weight: 600;
 // `;
 
-const IconContainer = styled.div`
-    display: inline-block;
-    height: fit-content;
-    transform: ${({flip}) => flip ? "rotate(180deg)" : null};
-    transition: transform 0.15s;
-    transition-timing-function: ease-in-out;
+// const IconContainer = styled.div`
+//     display: inline-block;
+//     height: fit-content;
+//     transform: ${({flip}) => flip ? "rotate(180deg)" : null};
+//     transition: transform 0.15s;
+//     transition-timing-function: ease-in-out;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const LinkContainer = styled.div`
-    display: ${({show}) => show ? "flex" : "none"};
-    flex-direction: column;
-    margin-top: 0.3125em;
-    word-wrap: break-word;
-`;
+// const LinkContainer = styled.div`
+//     display: ${({show}) => show ? "flex" : "none"};
+//     flex-direction: column;
+//     margin-top: 0.3125em;
+//     word-wrap: break-word;
+// `;
 
-const Link = styled.a`
-    color : ${({theme}) => theme.regularText};
-    text-overflow: ellipsis;
-`;
+// const Link = styled.a`
+//     color : ${({theme}) => theme.regularText};
+//     text-overflow: ellipsis;
+// `;
 
 export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd, listOfSummary, typeOfAttachment, allOfTheRelevantLinks}}){
     const[showAttachment, setShowAttachment] = useState(false);
@@ -102,23 +104,23 @@ export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd
     }
 
     return (
-        <Main>
+        <div className="bg-regularContainer rounded-[7.5px] shadow-sm shadow-regularContainerShadow box-border text-regularText flex flex-col text-[1em] gap-0 break-words px-[1.25em] py[1em] w-full">
             <h2 className="text-center"><MD>{title}</MD></h2>
             <p className="text-center">{time}</p>
-            <EventSubtitle show={subtitle !== null ? true : false}><MD>{subtitle}</MD></EventSubtitle>
-            <SummaryContainer>
+            <h2 className={("font-semibold mt-[0.5em]", subtitle !== null ? "inline" : "hidden")} show={subtitle !== null ? true : false}><MD>{subtitle}</MD></h2>
+            <div className={classNames("flex flex-col gap-[0.3125em] mt-[0.5em] pt-[0.5em] border-standaloneBorder border-solid border-t", typeOfAttachment !== "none" ? "block" : "hidden")}>
                 {summaryMaker()}
-            </SummaryContainer>
-            <EventSectionContainer show={typeOfAttachment !== "none"}>
+            </div>
+            <div className={classNames("mt-[0.5em] pt-[0.5em]", typeOfAttachment !== "none" ? "block" : "hidden")}>
                 <div className="g-[0.35em] cursor-pointer font-medium flex" onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
                     {textForAllAttachmentTypes[typeOfAttachment]}
-                    <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
+                    <div className={("inline-block h-fit transition-transform ease-in-out", showAttachment ? "rotate-180" : "" )} ><FontAwesomeIcon icon={faCaretDown}/></div>
                 </div>
-                <LinkContainer show={showAttachment}>
-                    {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <Link key={link} href={link}>{link}</Link>)}
-                </LinkContainer>
-            </EventSectionContainer>
+                <div className={classNames("mt-[0.3125em] break-words flex-col", showAttachment ? "flex" : "hidden")}>
+                    {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <a className="underline text-regularText text-ellipsis" key={link} href={link}>{link}</a>)}
+                </div>
+            </div>
    
-        </Main>
+        </div>
     )
 }

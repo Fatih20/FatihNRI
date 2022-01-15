@@ -16,25 +16,25 @@ import { mdiWeatherNight } from '@mdi/js';
 
 var classNames = require('classnames');
 
-const Main = styled.div`
-    align-items: center;
-    box-sizing: border-box;
-    color: ${({theme}) => theme.regularText};
-    display: flex;
-    font-size: 2em;
-    gap: 1.25em;
-    height: 2em;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0 0.2em;
-    width: 100%;
+// const Main = styled.div`
+//     align-items: center;
+//     box-sizing: border-box;
+//     color: ${({theme}) => theme.regularText};
+//     display: flex;
+//     font-size: 2em;
+//     gap: 1.25em;
+//     height: 2em;
+//     justify-content: flex-start;
+//     margin: 0;
+//     padding: 0 0.2em;
+//     width: 100%;
 
-    /* border : solid 1px white; */
-`;
+//     /* border : solid 1px white; */
+// `;
 
-const IconContainer = styled.div`
-    /* border : solid 1px white; */
-`;
+// const IconContainer = styled.div`
+//     /* border : solid 1px white; */
+// `;
 
 // const Language = styled(VanillaButton)`
 //     background-color: rgba(0, 0, 0, 0);
