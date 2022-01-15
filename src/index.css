@@ -29,7 +29,7 @@
 @layer base {
 
   * {
-    @apply transition-colors duration-200;
+    @apply transition-colors duration-200 delay-[0] ease-out;
   }
 
   h1 {
@@ -50,12 +50,12 @@
 
 @layer components {
   .change-what-am-i {
-    @apply text-[1em] bg-transparent transition-none text-unselectedBareText hover:text-aboutToBeSelectedBareText active:text-regularText;
+    @apply text-base bg-transparent transition-none text-unselectedBareText hover:text-aboutToBeSelectedBareText active:text-regularText;
   
   }
   
   .change-what-am-i > * {
-    @apply text-[2em] bg-transparent transition-none;
+    @apply text-4xl bg-transparent transition-none;
   }
   
   .bottom-container > * {
@@ -110,4 +110,10 @@
     @apply text-[#d4d4d4] font-semibold mb-[10px];
   }
   
+}
+
+@layer utilities {
+  .debug {
+    @apply border border-white;
+  }
 }

@@ -208,7 +208,7 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
 
     function categoryMaker({titleOfCategory}, indexOfCategory) {
         return (
-            <button className="text-regularText rounded-[5px] border-solid border border-regularContainerBorder shadow-sm shadow-regularContainerShadow bg-regularContainer p-[0.35em] transition-none option hover:bg-emphasizedContainer hover:border-emphasizedContainerBorder hover:shadow-emphasizedContainerShadow hover:text-emphasizedText" key={`${titleOfCategory}${indexOfCategory}`} onClick={() => handleChoiceClick(indexOfCategory)} chosen={indexOfChoiceDisplayed === indexOfCategory ? true : false}>
+            <button className="text-regularText text-3xl rounded-md border-solid border border-regularContainerBorder drop-shadow-xl shadow-regularContainerShadow bg-regularContainer p-2 transition-none option hover:bg-emphasizedContainer hover:border-emphasizedContainerBorder hover:shadow-emphasizedContainerShadow hover:text-emphasizedText" key={`${titleOfCategory}${indexOfCategory}`} onClick={() => handleChoiceClick(indexOfCategory)} chosen={indexOfChoiceDisplayed === indexOfCategory ? true : false}>
                 <h2>{titleOfCategory}</h2>
             </button>
         )
@@ -217,8 +217,8 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
 
     if (indexOfChoiceDisplayed === -1){
         return (
-            <div className="items-center flex flex-col sm:text-[2em] h-full justify-center w-full text-[2.4em] text-regularText">
-                <h2 className="text-[1em] text-center sm:py-[0.375em] px-0 pt-[0.6em] pb-[0.375em]">{bodyTitle}</h2>
+            <div className="items-center flex flex-col h-full justify-center w-full text-regularText">
+                <h2 className="text-3.5xl text-center sm:py-4 px-0 inline-block">{bodyTitle}</h2>
                 <div className="option-container">
                     {allCategoryInTheBody.map(({fields : category}, indexOfCategory) => categoryMaker(category, indexOfCategory))}
                 </div>
@@ -227,14 +227,14 @@ export default function MainContent ({indexOfChoiceDisplayed, handleChoiceClick,
     } else {
         console.log(chosenCategory.fields["contentOfCategory"])
         return (
-            <div className="items-center flex flex-col sm:text-[2em] h-full justify-center w-full text-[2.4em] text-regularText">
-                <div className="box-border flex flex-col h-full justify-start max-w-[25em] py-0 px-[0.5em] md:w-3/5 w-4/5">
-                    <h2 className="text-[1em] text-center py-[0.375em] px-[0]">{allCategoryInTheBody[indexOfChoiceDisplayed].fields["titleOfCategory"]}</h2>
+            <div className="items-center flex flex-col h-full justify-center w-full text-regularText">
+                <div className="box-border flex flex-col h-full justify-start py-0 px-2 max-w-3xl md:w-3/5 w-4/5">
+                    <h2 className="text-3.5xl text-center py-2 px-0">{allCategoryInTheBody[indexOfChoiceDisplayed].fields["titleOfCategory"]}</h2>
                     <div className="event-container">
                         {chosenCategory.fields["contentOfCategory"].map(({fields : event}) => <Event key={`${Math.random()}`} event={event}/>)}
                     </div>
-                    <div className="flex text-[0.4em] w-full">
-                        <div className="bg-transparent text-regularText flex text-[0.5625em] justify-center pl-[0.1875em] pr-0 ease-in-out back-button hover:pl-0 hover:-pr[0.1875em]" onClick={backToSelection}>
+                    <div className="flex w-full pt-3">
+                        <div className="cursor-pointer bg-transparent text-regularText flex text-base justify-center pl-2 pr-0 ease-in-out back-button hover:pl-0 hover:pr-2" onClick={backToSelection}>
                             <FontAwesomeIcon icon={faArrowLeft}/>
                         </div>
                         <div className="flex-grow" />

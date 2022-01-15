@@ -51,7 +51,7 @@ var classNames = require('classnames');
 // `;
 
 function Language({children, chosen, ...rest}) {
-    return <button className={classNames("bg-transparent text-[0.6em] font-semibold", chosen ? "text-regularText" : "text-unselectedBareText")} {...rest}>{children}</button>
+    return <button className={classNames("bg-transparent text-lg font-semibold", chosen ? "text-regularText" : "text-unselectedBareText")} {...rest}>{children}</button>
 }
 
 export default function Header (){
@@ -60,11 +60,11 @@ export default function Header (){
     const themeFromHook = useTheme();
 
     return (
-        <div className="items-center box-border text-regularText flex text-[2em] gap-[1.25em] h-[2em] justify-start m-0 py-0 px-[0.2em] w-full">
+        <div className="items-center box-border text-regularText flex gap-4 h-12 justify-start m-0 py-0 px-[0.2em] w-full">
             {/* <IconContainer>
                 <Icon onClick={() => setIsDark(prevIsDark => !prevIsDark)} path={isDark ? mdiWeatherNight : mdiWeatherSunny} color={themeFromHook.regularText} size={1} />
             </IconContainer> */}
-            <div className="flex gap-[0.75em]">
+            <div className="flex gap-3">
                 <Language chosen={!isEnglish} onClick={() => setIsEnglish(false)}>ID</Language>
                 <Language chosen={isEnglish} onClick={() => setIsEnglish(true)}>EN</Language>
             </div>

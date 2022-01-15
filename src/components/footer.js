@@ -45,13 +45,13 @@ import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-
 // `;
 
 function Icons({children, ...rest}) {
-    return <a className="text-unselectedBareText hover:text-regularText">{children}</a>
+    return <a className="text-unselectedBareText hover:text-regularText ease-linear">{children}</a>
 }
 
 export default function Footer (){
     return (
-        <div className="items-center box-border flex text-[2.5em] flex-col justify-center m-0 p-[0.1em] w-full footer">
-            <div className="flex sm:text-[0.8em] justify-center gap-[1.5rem] text-[1em]">
+        <div className="items-center box-border flex flex-col justify-center m-0 p-[0.1em] w-full footer">
+            <div className="flex sm:text-3.5xl justify-center gap-6 text-3xl">
                 <Icons href="https://www.instagram.com/fatih_nararya/"><FontAwesomeIcon icon={faInstagram} /></Icons>
                 <Icons href="https://www.linkedin.com/in/fatih-nararya-088a86215/"><FontAwesomeIcon icon={faLinkedin} /></Icons>
                 <Icons href="https://github.com/Fatih20"><FontAwesomeIcon icon={faGithub} /></Icons>

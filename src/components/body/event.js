@@ -99,24 +99,24 @@ export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd
 
     function summaryMaker() {
         return (
-            listOfSummary.map(({fields : {oneLineSummary}}) => <div className="inline m-0 p-0" key={oneLineSummary}><MD>{oneLineSummary}</MD></div>)
+            listOfSummary.map(({fields : {oneLineSummary}}) => <div className="text-lb inline m-0 p-0" key={oneLineSummary}><MD>{oneLineSummary}</MD></div>)
         )
     }
 
     return (
-        <div className="bg-regularContainer rounded-[7.5px] shadow-sm shadow-regularContainerShadow box-border text-regularText flex flex-col text-[1em] gap-0 break-words px-[1.25em] py[1em] w-full">
-            <h2 className="text-center"><MD>{title}</MD></h2>
-            <p className="text-center">{time}</p>
-            <h2 className={("font-semibold mt-[0.5em]", subtitle !== null ? "inline" : "hidden")} show={subtitle !== null ? true : false}><MD>{subtitle}</MD></h2>
-            <div className={classNames("flex flex-col gap-[0.3125em] mt-[0.5em] pt-[0.5em] border-standaloneBorder border-solid border-t", typeOfAttachment !== "none" ? "block" : "hidden")}>
+        <div className="bg-regularContainer rounded-md shadow-sm shadow-regularContainerShadow box-border text-regularText flex flex-col gap-0 break-words px-5 py-4 w-full">
+            <h2 className="text-center text-2xl"><MD>{title}</MD></h2>
+            <p className="text-center text-base">{time}</p>
+            <h2 className={classNames("font-semibold mt-1 text-lb", subtitle !== null ? "inline" : "hidden")} show={subtitle !== null ? true : false}><MD>{subtitle}</MD></h2>
+            <div className={classNames("flex flex-col gap-1 mt-2 pt-2 border-standaloneBorder border-solid border-t", typeOfAttachment !== "none" ? "block" : "hidden")}>
                 {summaryMaker()}
             </div>
-            <div className={classNames("mt-[0.5em] pt-[0.5em]", typeOfAttachment !== "none" ? "block" : "hidden")}>
-                <div className="g-[0.35em] cursor-pointer font-medium flex" onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
-                    {textForAllAttachmentTypes[typeOfAttachment]}
-                    <div className={("inline-block h-fit transition-transform ease-in-out", showAttachment ? "rotate-180" : "" )} ><FontAwesomeIcon icon={faCaretDown}/></div>
+            <div className={classNames("border-standaloneBorder border-solid border-t mt-2 pt-2", typeOfAttachment !== "none" ? "block" : "hidden")}>
+                <div className="gap-2 cursor-pointer font-medium flex justify-start" onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
+                    <p className="text-base">{textForAllAttachmentTypes[typeOfAttachment]}</p>
+                    <div className={classNames("text-base h-min transition-transform ease-in-out", showAttachment ? "rotate-180" : "" )} ><FontAwesomeIcon icon={faCaretDown}/></div>
                 </div>
-                <div className={classNames("mt-[0.3125em] break-words flex-col", showAttachment ? "flex" : "hidden")}>
+                <div className={classNames("mt-0 text-base break-words flex-col", showAttachment ? "flex" : "hidden")}>
                     {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <a className="underline text-regularText text-ellipsis" key={link} href={link}>{link}</a>)}
                 </div>
             </div>

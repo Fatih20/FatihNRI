@@ -41,7 +41,7 @@ export default function Body ({forwardedRef}){
     
 
     return (
-        <div className="items-center box-border flex flex-col text-[1em] h-[calc(100vh-3em)] justify-center w-full sm:h-[calc(100vh-2.5em)]" ref={forwardedRef}>
+        <div className="items-center box-border flex flex-col h-[calc(100vh-3em)] justify-center w-full sm:h-[calc(100vh-3.25em)]" ref={forwardedRef}>
             <MainContent indexOfChoiceDisplayed={indexOfChoiceDisplayed} handleChoiceClick={handleChoiceClick} backToSelection={backToSelection}/>
         </div>
     )

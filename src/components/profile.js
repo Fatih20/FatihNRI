@@ -190,7 +190,7 @@ export default function Profile (){
     }
     
     return (
-        <div className={`items-center box-border flex flex-col text-3xl h-[calc(100vh-2em)] py-0 px-3 w-full justify-center text-regularText`}>
+        <div className="items-center box-border flex flex-col h-[calc(100vh-3.25rem)] py-0 px-3 w-full justify-center text-regularText">
             <div className="items-start flex flex-col gap-2 justify-center h-full">
                 <div className="flex flex-col justify-center my-0 mx-auto">
                     <h2 className="text-5xl leading-tight">{greetings}</h2>

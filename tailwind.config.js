@@ -12,7 +12,12 @@ module.exports = {
         basic : ['Inter', 'sans-serif'],
       },
       fontSize : {
-        '7.5xl' : '5.25rem'
+        "lb" : ["0.9375rem", {lineHeight : "1.375rem"}],
+        '3.5xl' : '2.0625rem',
+        '7.5xl' : '5.25rem',
+      },
+      padding : {
+        '3.5' : '0.875rem',
       },
       colors : {
         backgroundTopStop : ({opacityVariable}) => `rgba(var(--backgroundTopStop)/var(${opacityVariable}))`,

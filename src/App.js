@@ -120,12 +120,15 @@ function App() {
     <>
       {/* <GlobalTransition /> */}
         <IsDarkProvider>
-          <div className="flex-col items-center my-0 mx-auto min-h-screen relative text-base">
+          <div className="flex-col items-center my-0 mx-auto min-h-screen relative">
             <IsEnglishProvider>
               <div className="absolute hidden flex-col bg-black opacity-0 bottom-[2.5rem] top-[2rem] w-full z-[1] pointer-events-none">
                 <button className="bg-white h-24 pointer-events-auto w-24 hover:bg-black" onClick={handleScrollButtonClick} />
               </div>
               <Header />
+              <Profile />
+              <Body forwardedRef={bodyRef}  />
+              <Footer />
                 {/* <FirstContainer>
                   <First>
                     <FloatContainer>
@@ -135,9 +138,6 @@ function App() {
                     <Body/>
                   </First>
                 </FirstContainer> */}
-              <Profile />
-              <Body forwardedRef={bodyRef}  />
-              <Footer />
             </IsEnglishProvider>
           </div>
         </IsDarkProvider>
