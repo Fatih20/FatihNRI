@@ -11,7 +11,7 @@ export const dark = {
     emphasizedContainerShadow : "rgba(255, 255, 255, 0.35)",
     unselectedBareText : "#333333",
     aboutToBeSelectedBareText : "#4d4d4d",
-    standaloneBorder : "#ffffff",
+    standaloneBorder : "#808080",
     scrollbarThumbFill : "#333333",
     scrollbarThumbBorder : "#000000",
     scrollbarThumbHoveredFill : "#666666",
@@ -20,9 +20,6 @@ export const dark = {
     scrollbarTrackBorder : "rgba(0, 0, 0, 0)",
     scrollbarTrackHoveredFill : "rgba(0, 0, 0, 0)",
     scrollbarTrackHoveredBorder : "rgba(0, 0, 0, 0)",
-    
-
-
 };
 
 export const light = {

@@ -27,7 +27,9 @@ export default function IsDarkProvider({children}) {
         <ThemeProvider theme={theme}>
             <IsDark.Provider value={[isDark, setIsDark]}>
                 <Theme.Provider value={isDark ? dark : light}>
-                    {children}
+                    <div className={`theme-${isDark ? "dark" : "light"}`}>
+                        {children}  
+                    </div>
                 </Theme.Provider>
             </IsDark.Provider>
         </ThemeProvider>

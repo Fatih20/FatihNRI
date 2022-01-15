@@ -12,82 +12,84 @@ import { useContent } from "../../context/language";
 // Custom Function
 import { shadeColor } from "../../utilities";
 
-const Main = styled.div`
-    background-color: ${({theme}) => theme.regularContainer};
-    border-radius: 7.5px;
-    box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
-    box-sizing: border-box;
-    color : ${({theme}) => theme.regularText};
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    gap: 0;
-    overflow-wrap: break-word;
-    padding: 1em 1.25em;
-    width: 100%;
-`;
+var classNames = require('classnames');
 
-const EventSectionContainer = styled.div`
-    display: ${({show}) => show === undefined || show === true ? "block" : "none"};
-    border-top: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-`;
+// const Main = styled.div`
+//     background-color: ${({theme}) => theme.regularContainer};
+//     border-radius: 7.5px;
+//     box-shadow: 0 3px 5px ${({theme}) => theme.regularContainerShadow};
+//     box-sizing: border-box;
+//     color : ${({theme}) => theme.regularText};
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 1em;
+//     gap: 0;
+//     overflow-wrap: break-word;
+//     padding: 1em 1.25em;
+//     width: 100%;
+// `;
 
-const EventTitle = styled.h2`
-    text-align: center;
-`;
+// const EventSectionContainer = styled.div`
+//     display: ${({show}) => show === undefined || show === true ? "block" : "none"};
+//     border-top: solid 1px ${({theme}) => shadeColor(theme.standaloneBorder, -50)};
+//     margin-top: 0.5em;
+//     padding-top: 0.5em;
+// `;
 
-const EventDate = styled.p`
-    text-align: center;
-`;
+// const EventTitle = styled.h2`
+//     text-align: center;
+// `;
 
-const EventSubtitle = styled.div`
-    display: ${({show}) => show? "inline" : "none"};
-    font-weight: 600;
-    margin-top: 0.5em;
-`;
+// const EventDate = styled.p`
+//     text-align: center;
+// `;
 
-const Summary = styled.div`
-    display: inline;
-    margin: 0;
-    padding: 0;
-`;
+// const EventSubtitle = styled.div`
+//     display: ${({show}) => show? "inline" : "none"};
+//     font-weight: 600;
+//     margin-top: 0.5em;
+// `;
 
-const SummaryContainer = styled(EventSectionContainer)`
-    display: flex;
-    flex-direction: column;
-    gap: 0.3125em;
-`;
+// const Summary = styled.div`
+//     display: inline;
+//     margin: 0;
+//     padding: 0;
+// `;
 
-const SeeWork = styled.div`
-    display: flex;
-    gap: 0.35em;
-    cursor: pointer;
-    font-weight: 600;
-`;
+// const SummaryContainer = styled(EventSectionContainer)`
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.3125em;
+// `;
 
-const IconContainer = styled.div`
-    display: inline-block;
-    height: fit-content;
-    transform: ${({flip}) => flip ? "rotate(180deg)" : null};
-    transition: transform 0.15s;
-    transition-timing-function: ease-in-out;
+// const SeeWork = styled.div`
+//     display: flex;
+//     gap: 0.35em;
+//     cursor: pointer;
+//     font-weight: 600;
+// `;
 
-    /* border: solid 1px white; */
-`;
+// const IconContainer = styled.div`
+//     display: inline-block;
+//     height: fit-content;
+//     transform: ${({flip}) => flip ? "rotate(180deg)" : null};
+//     transition: transform 0.15s;
+//     transition-timing-function: ease-in-out;
 
-const LinkContainer = styled.div`
-    display: ${({show}) => show ? "flex" : "none"};
-    flex-direction: column;
-    margin-top: 0.3125em;
-    word-wrap: break-word;
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const Link = styled.a`
-    color : ${({theme}) => theme.regularText};
-    text-overflow: ellipsis;
-`;
+// const LinkContainer = styled.div`
+//     display: ${({show}) => show ? "flex" : "none"};
+//     flex-direction: column;
+//     margin-top: 0.3125em;
+//     word-wrap: break-word;
+// `;
+
+// const Link = styled.a`
+//     color : ${({theme}) => theme.regularText};
+//     text-overflow: ellipsis;
+// `;
 
 export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd, listOfSummary, typeOfAttachment, allOfTheRelevantLinks}}){
     const[showAttachment, setShowAttachment] = useState(false);
@@ -97,28 +99,28 @@ export default function Event ({event : {title, subtitle, timeOfStart, timeOfEnd
 
     function summaryMaker() {
         return (
-            listOfSummary.map(({fields : {oneLineSummary}}) => <Summary key={oneLineSummary}><MD>{oneLineSummary}</MD></Summary>)
+            listOfSummary.map(({fields : {oneLineSummary}}) => <div className="text-lb inline m-0 p-0" key={oneLineSummary}><MD>{oneLineSummary}</MD></div>)
         )
     }
 
     return (
-        <Main>
-            <EventTitle><MD>{title}</MD></EventTitle>
-            <EventDate>{time}</EventDate>
-            <EventSubtitle show={subtitle !== null ? true : false}><MD>{subtitle}</MD></EventSubtitle>
-            <SummaryContainer>
+        <div className="bg-regularContainer rounded-md shadow-sm shadow-regularContainerShadow box-border text-regularText flex flex-col gap-0 break-words sm:px-5 sm:py-4 px-4 py-3 w-full">
+            <h2 className="text-center sm:text-2xl text-xl"><MD>{title}</MD></h2>
+            <p className="text-center sm:text-base text-lb">{time}</p>
+            <h2 className={classNames("font-semibold mt-1 text-lb", subtitle !== null ? "inline" : "hidden")} show={subtitle !== null ? true : false}><MD>{subtitle}</MD></h2>
+            <div className={classNames("flex flex-col gap-1 mt-2 pt-2 border-standaloneBorder border-solid border-t")}>
                 {summaryMaker()}
-            </SummaryContainer>
-            <EventSectionContainer show={typeOfAttachment !== "none"}>
-                <SeeWork onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
-                    {textForAllAttachmentTypes[typeOfAttachment]}
-                    <IconContainer flip={showAttachment}><FontAwesomeIcon icon={faCaretDown}/></IconContainer>
-                </SeeWork>
-                <LinkContainer show={showAttachment}>
-                    {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <Link key={link} href={link}>{link}</Link>)}
-                </LinkContainer>
-            </EventSectionContainer>
+            </div>
+            <div className={classNames("border-standaloneBorder border-solid border-t mt-2 pt-2", typeOfAttachment !== "none" ? "block" : "hidden")}>
+                <div className="gap-2 cursor-pointer font-medium flex justify-start" onClick={() => setShowAttachment(prevShowAttachment => !prevShowAttachment)}>
+                    <p className="sm:text-base text-lb font-semibold">{textForAllAttachmentTypes[typeOfAttachment]}</p>
+                    <div className={classNames("text-base h-min transition-transform ease-in-out", showAttachment ? "rotate-180" : "" )} ><FontAwesomeIcon icon={faCaretDown}/></div>
+                </div>
+                <div className={classNames("mt-1 sm:text-base text-lb break-words flex-col", showAttachment ? "flex" : "hidden")}>
+                    {allOfTheRelevantLinks === undefined ? null : allOfTheRelevantLinks.map(({fields : {link}}) => <a className="underline text-regularText text-ellipsis" key={link} href={link}>{link}</a>)}
+                </div>
+            </div>
    
-        </Main>
+        </div>
     )
 }

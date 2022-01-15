@@ -15,115 +15,115 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Main = styled.div`
-    align-items: center;
-    box-sizing: border-box;
-    color: ${({theme}) => theme.regularText};
-    display: flex;
-    flex-direction: column;
-    font-size: 2em;
-    height: calc(100vh - 2em);
-    justify-content: center;
-    padding: 0 10px;
-    width: 100%;
+// const Main = styled.div`
+//     align-items: center;
+//     box-sizing: border-box;
+//     color: ${({theme}) => theme.regularText};
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 2em;
+//     height: calc(100vh - 2em);
+//     justify-content: center;
+//     padding: 0 10px;
+//     width: 100%;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const MainWithinPadding = styled.div`
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    height: 100%;
-    justify-content: center;
+// const MainWithinPadding = styled.div`
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5em;
+//     height: 100%;
+//     justify-content: center;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-`;
+// const TitleContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin: 0 auto;
+// `;
 
-const Greeting = styled.h2`
-    font-size: 1.5em;
-`;
+// const Greeting = styled.h2`
+//     font-size: 1.5em;
+// `;
 
-const Name = styled.h1`
-    font-size: 2.5em;
+// const Name = styled.h1`
+//     font-size: 2.5em;
 
-    /* border : solid 1px white; */
-`;
+//     /* border : solid 1px white; */
+// `;
 
-const Buffer = styled.div`
-    flex-grow: 1;
-`;
+// const Buffer = styled.div`
+//     flex-grow: 1;
+// `;
 
-const BottomContainer = styled.div`
-    align-items: flex-start;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.6em;
-    gap: 0.25em;
-    max-width: 35em;
-    width: 100%;
+// const BottomContainer = styled.div`
+//     align-items: flex-start;
+//     align-self: center;
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 0.6em;
+//     gap: 0.25em;
+//     max-width: 35em;
+//     width: 100%;
 
-    & > * {
-        margin: 0 auto;
-    }
+//     & > * {
+//         margin: 0 auto;
+//     }
 
-    /* border : solid 1px white; */
-`;
+//     /* border : solid 1px white; */
+// `;
 
-const WhatAmILineContainer = styled.div`
-    align-items: center;
-    display: flex;
-    gap: 0.25em;
-    text-align: center;
-    width: 100%;
+// const WhatAmILineContainer = styled.div`
+//     align-items: center;
+//     display: flex;
+//     gap: 0.25em;
+//     text-align: center;
+//     width: 100%;
 
-`;
+// `;
 
-const ChangeWhatAmI = styled(VanillaButton)`
-    background-color: rgba(0, 0 ,0, 0);
-    color: ${({theme}) => theme.unselectedBareText};
-    font-size: 2em;
-    transition: color 0s, background-color 0s, box-shadow 0s;
+// const ChangeWhatAmI = styled(VanillaButton)`
+//     background-color: rgba(0, 0 ,0, 0);
+//     color: ${({theme}) => theme.unselectedBareText};
+//     font-size: 2em;
+//     transition: color 0s, background-color 0s, box-shadow 0s;
 
-    & > * {
-        transition: color 0s, background-color 0s, box-shadow 0s;
-    }
+//     & > * {
+//         transition: color 0s, background-color 0s, box-shadow 0s;
+//     }
 
-    &:hover {
-        color: ${({theme}) => theme.aboutToBeSelectedBareText};
+//     &:hover {
+//         color: ${({theme}) => theme.aboutToBeSelectedBareText};
 
-    }
+//     }
 
-    &:active {
-        color: ${({theme}) => theme.regularText};
-    }
-`;
+//     &:active {
+//         color: ${({theme}) => theme.regularText};
+//     }
+// `;
 
-const OccupationContainer = styled.div`
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 0.5em;
-    width: 100%;
+// const OccupationContainer = styled.div`
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     gap: 0.5em;
+//     width: 100%;
 
-    /* border: solid 1px white; */
-`;
+//     /* border: solid 1px white; */
+// `;
 
-const SummaryContainer = styled.div`
-    align-self: flex-start;
-    min-height: 10em;
-    /* border: solid 1px white; */
-`;
+// const SummaryContainer = styled.div`
+//     align-self: flex-start;
+//     min-height: 10em;
+//     /* border: solid 1px white; */
+// `;
 
 export default function Profile (){
     const[indexOfShownOccupation, setIndexOfShownOccupation] = useState(0);
@@ -188,33 +188,33 @@ export default function Profile (){
             setIndexOfShownOccupation(prevIndexOfShownOccupation => (prevIndexOfShownOccupation + 1) % listOfOccupation.length)
         }
     }
-
+    
     return (
-        <Main>
-            <MainWithinPadding>
-                <TitleContainer>
-                    <Greeting>{greetings}</Greeting>
-                    <Name>Fatih Nararya R. I.</Name>
-                </TitleContainer>
-                <BottomContainer>
-                    <OccupationContainer>
-                        <WhatAmILineContainer>
-                            <ChangeWhatAmI ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
+        <div className="items-center box-border flex flex-col h-[calc(100vh-3.25rem)] py-0 px-3 w-full justify-center text-regularText">
+            <div className="items-start flex flex-col gap-2 justify-center h-full">
+                <div className="flex flex-col justify-center my-0 mx-auto">
+                    <h2 className="sm:text-5xl text-4xl leading-tight">{greetings}</h2>
+                    <h1 className="sm:text-7.5xl text-6xl leading-tight">Fatih Nararya R. I.</h1>
+                </div>
+                <div className="items-start self-center flex flex-col gap-1 max-w-[35em] w-full bottom-container">
+                    <div className="items-start flex flex-nowrap gap-1 w-full">
+                        <div className="flex gap-1 text-center w-full items-center">
+                            <button className="change-what-am-i" ref={leftButton} onClick={(e) => handleChangeWhatAmIClick(true, e)}>
                                 <FontAwesomeIcon icon={faCaretLeft}/>
-                            </ChangeWhatAmI>
-                            <Buffer />
-                            <h2><MD>{whatAmI()}</MD></h2>
-                            <Buffer />
-                            <ChangeWhatAmI ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
+                            </button>
+                            <div className="flex-grow" />
+                            <h2 className="sm:text-3xl text-xl"><MD>{whatAmI()}</MD></h2>
+                            <div className="flex-grow" />
+                            <button className="change-what-am-i" ref={rightButton} onClick={(e) => handleChangeWhatAmIClick(false, e)}>
                                 <FontAwesomeIcon icon={faCaretRight}/>
-                            </ChangeWhatAmI>
-                        </WhatAmILineContainer>
-                    </OccupationContainer>
-                    <SummaryContainer>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="self-start text-sm sm:text-xl min-h-fit">
                         <MD>{listOfOccupation[indexOfShownOccupation].fields["occupationDescription"]}</MD>
-                    </SummaryContainer>
-                </BottomContainer>
-            </MainWithinPadding>
-        </Main>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

@@ -35,7 +35,7 @@ export default function IsEnglishProvider({children}) {
     return (
         <IsEnglish.Provider value={[isEnglish, setIsEnglish]}>
             <Content.Provider value={isLoading ? null : usedContent.fields}>
-                {isLoading ? <Main/> : children}
+                {isLoading ? <div className="bg-black h-full w-full"/> : children}
             </Content.Provider>
         </IsEnglish.Provider>
     )
