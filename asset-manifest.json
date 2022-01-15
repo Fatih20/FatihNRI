@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FatihNRI/static/css/main.ca39a33a.css",
-    "main.js": "/FatihNRI/static/js/main.83e43123.js",
+    "main.css": "/FatihNRI/static/css/main.07f913e8.css",
+    "main.js": "/FatihNRI/static/js/main.5a9f8c74.js",
     "index.html": "/FatihNRI/index.html",
-    "main.ca39a33a.css.map": "/FatihNRI/static/css/main.ca39a33a.css.map",
-    "main.83e43123.js.map": "/FatihNRI/static/js/main.83e43123.js.map"
+    "main.07f913e8.css.map": "/FatihNRI/static/css/main.07f913e8.css.map",
+    "main.5a9f8c74.js.map": "/FatihNRI/static/js/main.5a9f8c74.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca39a33a.css",
-    "static/js/main.83e43123.js"
+    "static/css/main.07f913e8.css",
+    "static/js/main.5a9f8c74.js"
   ]
 }
